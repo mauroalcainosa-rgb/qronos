@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Qronos · Claves de acceso</title>
+<style>
+:root{--ac:#007aff;--ink:#1c1c1e;--mu:#6e6e73;--ln:rgba(60,60,67,.14);--bg:#f2f2f7;--sf:#fff;--cr:#d70015;--ok:#248a3d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+.w{max-width:980px;margin:0 auto;padding:22px 16px 60px}h1{font-size:1.6rem;margin:0}h2{font-size:1.1rem;margin:0 0 10px}
+.card{background:var(--sf);border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);margin-top:16px}
+.mu{color:var(--mu)}.sm{font-size:.82rem}
+input,select{font:inherit;border:0;background:rgba(118,118,128,.12);border-radius:10px;padding:10px 12px;min-height:42px}
+button{font:inherit;font-weight:600;border:0;border-radius:999px;padding:9px 16px;cursor:pointer;background:rgba(118,118,128,.14);color:var(--ink)}
+button.p{background:var(--ac);color:#fff}button.cr{background:rgba(255,59,48,.12);color:var(--cr)}button.s{padding:5px 11px;font-size:.8rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+table{width:100%;border-collapse:collapse;font-size:.86rem}th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--ln);vertical-align:top}th{color:var(--mu);font-weight:600;font-size:.76rem;text-transform:uppercase;letter-spacing:.03em}
+.chip{display:inline-block;border-radius:999px;padding:2px 9px;font-size:.74rem;font-weight:700}.ok{background:rgba(52,199,89,.16);color:var(--ok)}.no{background:rgba(255,59,48,.12);color:var(--cr)}.gr{background:rgba(118,118,128,.14);color:var(--mu)}
+.nueva{margin-top:14px;padding:16px;border-radius:14px;background:#eef6ff;border:1px solid #b9d8ff}
+.nueva code{font-size:1.5rem;font-weight:800;letter-spacing:.06em}
+.e{color:var(--cr);min-height:1.2em}.tw{overflow:auto}
+</style></head><body><div class="w">
+<div class="row" style="justify-content:space-between"><div><h1>Qronos™ · Claves de acceso</h1><p class="mu" style="margin:4px 0 0">Claves personales para revisores. Cada clave queda vinculada al primer dispositivo donde se usa y vence en la fecha indicada.</p></div><a href="./" class="sm">Ir a la aplicación ›</a></div>
+<div id="login" class="card"><h2>Ingrese la clave de administración</h2><form id="fl" class="row"><input id="ka" autocomplete="off" placeholder="Clave de administración" style="flex:1;min-width:220px"><button class="p">Entrar</button></form><div class="e" id="el"></div></div>
+<div id="app" hidden>
+  <div class="card"><h2>Crear clave para un revisor</h2>
+    <form id="fn" class="row"><input id="nn" placeholder="Nombre del revisor (ej.: Juan Pérez, MINSAL)" required style="flex:1;min-width:240px">
+      <select id="nd"><option value="1">Vence en 1 día</option><option value="3">Vence en 3 días</option><option value="7" selected>Vence en 7 días</option><option value="14">Vence en 14 días</option><option value="30">Vence en 30 días</option></select>
+      <button class="p">Crear clave</button></form>
+    <div id="nueva"></div><div class="e" id="en"></div></div>
+  <div class="card"><div class="row" style="justify-content:space-between"><h2 style="margin:0">Claves</h2><button class="s" id="rf">Actualizar</button></div><div class="tw"><table><thead><tr><th>Revisor</th><th>Estado</th><th>Vence</th><th>Dispositivo</th><th>Último ingreso</th><th>Rechazos</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+    <p class="mu sm">«Liberar dispositivo» permite que la persona vuelva a entrar desde un equipo nuevo (por ejemplo, si cambió de celular). Los rechazos son intentos de usar la clave en otro equipo, vencida o desactivada: si aparecen, la clave probablemente fue reenviada.</p></div>
+  <div class="card"><h2>Registro de ingresos</h2><div class="tw"><table><thead><tr><th>Fecha y hora</th><th>Revisor</th><th>Resultado</th><th>Dispositivo</th></tr></thead><tbody id="tl"></tbody></table></div></div>
+</div></div>
+<script>
+const SB='https://yjarzztqinhszmjxtcjh.supabase.co',KEY='sb_publishable_sIh5FPDFtvnq8aOE4TIR5w_ujWUZJr_';let K='';
+const rpc=async(fn,body)=>{const r=await fetch(`${SB}/rest/v1/rpc/${fn}`,{method:'POST',headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:JSON.stringify(body)});const t=await r.text();if(!r.ok){let m=t;try{m=JSON.parse(t).message||t}catch(e){}throw new Error(m)}return t?JSON.parse(t):null};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const f=d=>d?new Date(d).toLocaleString('es-CL',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'}):'—';
+const $=s=>document.querySelector(s);const corto=d=>d?d.slice(-6):'—';
+async function cargar(){const ks=await rpc('q_k_list',{k:K});const now=Date.now();
+  $('#tb').innerHTML=ks.map(q=>{const venc=q.expira&&Date.parse(q.expira)<=now;const st=q.revocada?'<span class="chip no">Desactivada</span>':venc?'<span class="chip gr">Vencida</span>':'<span class="chip ok">Activa</span>';
+    return `<tr><td><b>${esc(q.nombre||'—')}</b><div class="mu sm">${q.role==='admin'?'Administración':'Revisor'} · creada ${f(q.creada)}</div></td><td>${st}</td><td>${q.role==='admin'?'—':f(q.expira)}</td><td>${!q.vincular?'<span class="mu">sin vínculo</span>':q.vinculado?'Vinculada '+f(q.vinculada):'<span class="mu">aún no usada</span>'}</td><td>${f(q.ultimo)}</td><td>${q.intentos_rechazados?`<span class="chip no">${q.intentos_rechazados}</span>`:'0'}</td>
+    <td>${q.role==='admin'?'':`<div class="row" style="gap:4px">${q.revocada?`<button class="s" data-k="${q.id}" data-a="reactivar">Reactivar</button>`:`<button class="s cr" data-k="${q.id}" data-a="revocar">Desactivar</button>`}<button class="s" data-k="${q.id}" data-a="extender7">+7 días</button>${q.vinculado?`<button class="s" data-k="${q.id}" data-a="liberar">Liberar dispositivo</button>`:''}</div>`}</td></tr>`}).join('');
+  const lg=await rpc('q_k_log',{k:K});$('#tl').innerHTML=lg.map(a=>`<tr><td>${f(a.ts)}</td><td>${esc(a.nombre||'—')}</td><td>${a.ok?'<span class="chip ok">Ingresó</span>':`<span class="chip no">Rechazado</span> <span class="mu sm">${esc(a.motivo)}</span>`}</td><td class="mu">…${esc(corto(a.dispositivo))}</td></tr>`).join('')||'<tr><td colspan="4" class="mu">Sin ingresos registrados.</td></tr>'}
+$('#fl').onsubmit=async e=>{e.preventDefault();K=$('#ka').value.trim().toUpperCase()+'|panel';try{await cargar();$('#login').hidden=true;$('#app').hidden=false}catch(x){$('#el').textContent='Clave de administración incorrecta.'}};
+$('#fn').onsubmit=async e=>{e.preventDefault();$('#en').textContent='';try{const n=$('#nn').value.trim(),d=+$('#nd').value;const c=await rpc('q_k_new',{k:K,nombre:n,dias:d});const url=location.href.replace(/claves\.html.*$/,'');
+  const msg=`Hola ${n.split(/[ ,]/)[0]}. Te comparto el acceso de revisión a Qronos, prototipo de coordinación de pabellones del Hospital de La Florida (datos ficticios).\n\nEnlace: ${url}\nClave personal: ${c}\n\nLa clave queda vinculada al primer dispositivo donde la uses y vence en ${d} día${d>1?'s':''}. Es personal: no la compartas.`;
+  $('#nueva').innerHTML=`<div class="nueva"><div class="mu sm">Clave para ${esc(n)} · se muestra una sola vez</div><code>${c}</code><p class="sm" style="white-space:pre-wrap;margin:10px 0">${esc(msg)}</p><div class="row"><button class="p s" id="cp">Copiar mensaje</button><a class="s" href="https://wa.me/?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">Enviar por WhatsApp ›</a></div></div>`;
+  $('#cp').onclick=()=>{navigator.clipboard.writeText(msg).then(()=>$('#cp').textContent='✓ Copiado')};$('#nn').value='';cargar()}catch(x){$('#en').textContent=x.message}};
+document.addEventListener('click',async e=>{const b=e.target.closest('button[data-a]');if(!b)return;if(b.dataset.a==='revocar'&&!confirm('¿Desactivar esta clave? La persona dejará de tener acceso de inmediato.'))return;b.disabled=true;try{await rpc('q_k_set',{k:K,kid:b.dataset.k,accion:b.dataset.a});await cargar()}catch(x){alert(x.message)}});
+$('#rf').onclick=cargar;
+</script></body></html>

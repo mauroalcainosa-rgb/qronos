@@ -1007,6 +1007,8 @@ function salir(msg){if(S)log('Cierre de sesión',msg||'Manual');S=null;store.clr
 ['pointerdown','keydown','touchstart'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
 setInterval(()=>{const lim=(general.compartido?5:(+general.inactividadMin||15))*6e4;if(S&&Date.now()-lastAct>lim)salir('Sesión cerrada por inactividad')},20000);
 setInterval(()=>motor(),20000);
+/* Mantiene la hora vigente al día: redibuja cada minuto si no se está escribiendo ni hay una ventana abierta */
+setInterval(()=>{const a=document.activeElement;if(!S||($('#modal')&&!$('#modal').hidden)||(a&&/INPUT|TEXTAREA|SELECT/.test(a.tagName)))return;const y=scrollY;render();scrollTo(0,y)},60000);
 addEventListener('online',()=>render());addEventListener('offline',()=>render());
 
 /* ---------- Arranque ---------- */
@@ -1658,7 +1660,7 @@ seguridad(){return `<div class="card"><h2>Seguridad del dispositivo y la sesión
   <label class="row sm"><input type="checkbox" name="exp" ${general.exportRestr!==false?'checked':''}> Restringir exportaciones a perfiles con atribución «Emitir informes»</label>
   <label class="row sm"><input type="checkbox" name="demoA" ${general.demoAbierto?'checked':''}> Permitir perfiles ficticios a cualquier usuario con acceso (demostración)</label><button class="btn p">Guardar</button></form>
   <ul class="sm mu"><li>Identidad: cuenta Claude del usuario; en producción, autenticación institucional con segundo factor.</li><li>Revocación inmediata desde Usuarios y perfiles.</li><li>En el dispositivo solo se guarda la sesión activa (no datos clínicos); la aplicación instalable almacena únicamente su interfaz.</li><li>Validaciones críticas: bloqueadas sin conexión y verificadas contra la versión vigente del servidor.</li><li>Auditoría encadenada por usuario: cada registro contiene el hash del anterior.</li></ul></div>`},
-demo(){const off=general.demo?.offsetMin||0;return `<div class="card"><h2>Escenario de demostración</h2><p class="sm">Carga una jornada completa simulada a las 10:30: cirugías realizadas, en curso, suspendidas y por iniciar; programación de 3 días; solicitudes en todos los estados (pendientes, escaladas, en Dirección, cerradas); incidencias abiertas y cerradas; liberación de pabellón en curso; compromisos; mensajes; informes y 8 semanas de producción. Todo ficticio.</p>
+demo(){const off=general.demo?.offsetMin||0;return `<div class="card"><h2>Escenario de demostración</h2><p class="sm">Carga una jornada completa simulada a la hora actual: cirugías realizadas, en curso, suspendidas y por iniciar; programación de 3 días; solicitudes en todos los estados (pendientes, escaladas, en Dirección, cerradas); incidencias abiertas y cerradas; liberación de pabellón en curso; compromisos; mensajes; informes y 8 semanas de producción. Todo ficticio.</p>
   <div class="acts"><button class="btn p" data-a="seed">Cargar escenario</button><button class="btn cr" data-a="wipe">Borrar todos los datos operacionales</button></div></div>
   <div class="card"><h2>Reloj simulado</h2><p class="sm">Permite demostrar vencimientos y escalamientos sin esperar. Hora simulada: <b>${fDT(nowMs())}</b> (${off?'+'+Math.round(off/6)/10+' h':'hora real'}).</p><div class="acts"><button class="btn" data-a="reloj" data-m="60">+1 h</button><button class="btn" data-a="reloj" data-m="120">+2 h</button><button class="btn" data-a="reloj" data-m="0">Volver a la hora real</button></div></div>`}
 };
@@ -1876,12 +1878,12 @@ async function pruebaBD(){const el=$('#pbd');const out=[];const ok=(n,c,d='')=>o
 
 /* ---------- Escenario de demostración (todo ficticio) ---------- */
 async function seed(){
-  toast('Cargando simulación…');const t=new Date();t.setHours(10,30,0,0);const off=Math.round((t.getTime()-Date.now())/6e4);
+  toast('Cargando simulación…');const t=new Date();const off=0;
   for(const c of ['camas','pabellones','cirugias','tareas','incidencias','liberaciones','mensajes','notifs','compromisos','informes','salidas','produccion','registro'])await Promise.all(L(c).slice().map(x=>del(c,x._id)));
   await put('config','general',{...clean(general),institucion:'Hospital Clínico Dra. Eloísa Díaz Insunza de La Florida',demo:{activo:true,offsetMin:off,sim:true,cargarSim:false}});
   const sim=generarSimulacion(t.getTime());
   for(const [c,docs] of Object.entries(sim))await Promise.all(Object.entries(docs).map(([id,d])=>put(c,id,d)));
-  log('Carga simulación operacional','Datos ficticios',{atrib:'Administrar configuraciones'});toast('Simulación cargada: hora simulada 10:30');setTimeout(motor,800);
+  log('Carga simulación operacional','Datos ficticios',{atrib:'Administrar configuraciones'});toast('Simulación cargada a la hora actual');setTimeout(motor,800);
 }
 async function wipe(){for(const c of ['camas','pabellones','cirugias','tareas','incidencias','liberaciones','mensajes','notifs','compromisos','informes','salidas','produccion','registro']){for(const x of L(c).slice())await del(c,x._id)}
   await put('config','general',{...clean(general),demo:{activo:false,offsetMin:0}});log('Borra datos operacionales','Auditoría conservada',{atrib:'Administrar configuraciones'});toast('Datos operacionales borrados')}

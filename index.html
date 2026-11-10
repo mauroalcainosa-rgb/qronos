@@ -315,6 +315,9 @@ sup.tm{font-size:.5em;font-weight:600;margin-left:1px;vertical-align:super;opaci
 .wm{position:fixed;inset:0;z-index:2147483000;pointer-events:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22420%22%20height%3D%22260%22%3E%3Ctext%20x%3D%22210%22%20y%3D%22140%22%20text-anchor%3D%22middle%22%20transform%3D%22rotate%28-28%20210%20130%29%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%231c1c1e%22%20fill-opacity%3D%220.07%22%20letter-spacing%3D%221%22%3EVERSI%C3%93N%20DE%20PRUEBA%200.1%20%C2%B7%20MAS%3C/text%3E%3C/svg%3E");background-repeat:repeat;background-size:420px 260px}
 @media print{.wm{display:block}}
 @media (prefers-color-scheme:dark){.wm{filter:invert(1)}}
+
+.mnb{border-bottom:1px solid var(--ln);padding:4px 0}.mnb:last-child{border-bottom:0}.mnb summary{list-style:none;display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:10px 2px;font-size:.95rem}.mnb summary::-webkit-details-marker{display:none}
+.mnb[open] summary .chev{transform:rotate(90deg)}.mnb .chev{transition:transform .15s;color:var(--mu)}.mnb ol{margin:0 0 10px;padding-left:22px;line-height:1.6;font-size:.9rem}.mnb li{margin:3px 0}.mnl{margin:0;padding-left:20px;line-height:1.7}
 </style></head><body>
 <div class="app">
  <aside class="side"><div class="brand" data-a="appmenu" role="button" tabindex="0" aria-label="Menú de sesión y datos de la aplicación" title="Sesión y datos de la aplicación"><span class="logo"><svg class="mark" viewBox="5 8 54 48" aria-label="Qronos: tiempo quirúrgico que se recupera"><rect x="8" y="12" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="12" width="16" height="8" rx="4" fill="#34c759"/><rect x="25" y="12" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="28" y="12" width="10" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="10;10;0;0;10" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="39" y="12" width="13" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="39;39;28;28;39" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/><animate attributeName="width" values="13;13;28;28;13" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="8" y="28" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="28" width="8" height="8" rx="4" fill="#34c759"/><rect x="17" y="28" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="20" y="28" width="9" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="9;9;0;0;9" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="30" y="28" width="22" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="30;30;20;20;30" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/><animate attributeName="width" values="22;22;36;36;22" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="8" y="44" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="44" width="24" height="8" rx="4" fill="#34c759"/><rect x="33" y="44" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="36" y="44" width="7" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="7;7;0;0;7" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect><rect x="44" y="44" width="8" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="44;44;36;36;44" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/><animate attributeName="width" values="8;8;20;20;8" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect></svg></span><div><b>Qronos<sup class="tm">™</sup></b><small>Coordinación de pabellones HLF · ver. 0.1</small></div></div>
@@ -1172,7 +1175,7 @@ const SEC={lastplanner:['#0f9d58','#34c759','#007aff','#30d158','#0b7a43'],inici
  indicadores:['#5856d6','#7d7aff','#30b0c7','#5e5ce6','#3a37b8'],informes:['#30b0c7','#64d2ff','#007aff','#40c8e0','#1d8fa6'],auditoria:['#8e8e93','#aeaeb2','#636366','#8e8e93','#48484a'],config:['#636366','#8e8e93','#3a3a3c','#636366','#2c2c2e'],
  pruebas:['#64d2ff','#5ac8fa','#007aff','#0a84ff','#1a7fd0'],guia:['#007aff','#5ac8fa','#34c759','#0a84ff','#2f6fe8'],mas:['#007aff','#5ac8fa','#5e5ce6','#0a84ff','#2f6fe8']};
 const MODS=[['hoy','Hoy','inicio',['inicio']],['quirofanos','Quirófanos','ocupacion',['ocupacion','programacion','perioperatorio','pabellones','incidencias']],['bandeja','Bandeja','tareas',['tareas','mensajes','notificaciones']],['gestion','Gestión','direccion',['direccion','lastplanner','indicadores','compromisos','informes']],['sistema','Administración','config',['auditoria','config','pruebas','guia']]];
-const SUBN={inicio:'Hoy',ocupacion:'Línea de tiempo',perioperatorio:'Camas y perioperatorio',programacion:'Programación',pabellones:'Pabellones',incidencias:'Incidencias',tareas:'Solicitudes',mensajes:'Mensajes',notificaciones:'Alertas',direccion:'Tablero ejecutivo',lastplanner:'Last Planner y base de datos',indicadores:'Indicadores Minsal',compromisos:'Compromisos',informes:'Informes',auditoria:'Auditoría',config:'Configuración',pruebas:'Pruebas',guia:'Guía'};
+const SUBN={inicio:'Hoy',ocupacion:'Línea de tiempo',perioperatorio:'Camas y perioperatorio',programacion:'Programación',pabellones:'Pabellones',incidencias:'Incidencias',tareas:'Solicitudes',mensajes:'Mensajes',notificaciones:'Alertas',direccion:'Tablero ejecutivo',manual:'Manual de uso',lastplanner:'Last Planner y base de datos',indicadores:'Indicadores Minsal',compromisos:'Compromisos',informes:'Informes',auditoria:'Auditoría',config:'Configuración',pruebas:'Pruebas',guia:'Guía'};
 const modDe=k=>MODS.find(m=>m[3].includes(k))||MODS[0];
 const modVis=m=>m[3].filter(navOk);
 const modLbl=m=>m[0]==='sistema'&&S?.rol!=='admin'?(navOk('auditoria')?'Auditoría y ayuda':'Ayuda'):m[0]==='gestion'&&['director','subop'].includes(S?.rol)?'Dirección':m[1];
@@ -1196,7 +1199,7 @@ function linea(pts,col='#34c759',suf='%',h=130){if(pts.length<2)return '<p class
   const d=pts.map((p,i)=>`${i?'L':'M'}${X(i)},${Y(p[1])}`).join('');return `<svg class="svg" viewBox="0 0 ${W} ${h+16}" width="100%"><path d="${d} L${X(pts.length-1)},${h-10} L${X(0)},${h-10}Z" fill="${col}" opacity=".12"/><path d="${d}" fill="none" stroke="${col}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
   ${pts.map((p,i)=>`<circle cx="${X(i)}" cy="${Y(p[1])}" r="4" fill="#fff" stroke="${col}" stroke-width="2.5"/><text x="${X(i)}" y="${Y(p[1])-9}" text-anchor="middle" style="font-weight:700;fill:var(--ink)">${Math.round(p[1])}${suf}</text><text x="${X(i)}" y="${h+10}" text-anchor="middle">${esc(p[0])}</text>`).join('')}</svg>`}
 const usoPab=()=>L('pabellones').sort(pabOrd).map(p=>{const disp=Math.max(1,hm(p.fin)-hm(p.ini));const u=L('cirugias').filter(c=>c.pabellon===p._id&&c.fecha===hoy()&&c.estado==='realizada').reduce((a,c)=>a+(+c.durReal||+c.durMin),0);return [p.nombre,u/disp*100,p.estado==='fuera_servicio'?'#ff3b30':u/disp>=.75?'#34c759':u/disp>=.5?'#ff9500':'#ff3b30',75]});
-const NAV=[['lastplanner','Last Planner y base de datos'],['perioperatorio','Camas y perioperatorio'],['indicadores','Indicadores Minsal'],['inicio','Inicio'],['ocupacion','Línea de tiempo'],['direccion','Tablero de Dirección'],['programacion','Programación'],['pabellones','Pabellones'],['tareas','Solicitudes y validaciones'],['incidencias','Incidencias'],['mensajes','Mensajería'],['notificaciones','Notificaciones'],['compromisos','Compromisos'],['informes','Informes'],['auditoria','Auditoría'],['config','Configuración'],['pruebas','Pruebas del sistema'],['guia','Guía de la demostración']];
+const NAV=[['manual','Manual de uso'],['lastplanner','Last Planner y base de datos'],['perioperatorio','Camas y perioperatorio'],['indicadores','Indicadores Minsal'],['inicio','Inicio'],['ocupacion','Línea de tiempo'],['direccion','Tablero de Dirección'],['programacion','Programación'],['pabellones','Pabellones'],['tareas','Solicitudes y validaciones'],['incidencias','Incidencias'],['mensajes','Mensajería'],['notificaciones','Notificaciones'],['compromisos','Compromisos'],['informes','Informes'],['auditoria','Auditoría'],['config','Configuración'],['pruebas','Pruebas del sistema'],['guia','Guía de la demostración']];
 function navOk(k){if(!S)return false;const r=S.rol;
   if(k==='direccion'||k==='indicadores')return ['director','subop','jefpab'].includes(r);
   if(k==='programacion'||k==='ocupacion'||k==='perioperatorio')return veClinico()&&r!=='concesion';
@@ -1286,6 +1289,7 @@ function bars(data,keys,colors,h=150){
 const datos=()=>({cirugias:L('cirugias'),pabellones:L('pabellones'),tareas:L('tareas'),incidencias:L('incidencias'),compromisos:L('compromisos'),produccion:L('produccion')});
 
 const VIEWS={
+manual(){return manualHTML()},
 mas(){const ct=counts();
   return head('Más','Todos los módulos y su sesión')+MODS.filter(m=>modVis(m).length).map(m=>`<div class="mgt">${esc(modLbl(m))}</div><div class="card mlist" style="padding:4px 0">${modVis(m).map(id=>`<a class="mrow" href="#${id}">${tileH(id,32)}<span class="t">${esc(SUBN[id])}</span>${ct[id]?`<span class="chip cr">${ct[id]}</span>`:''}<span class="chev">›</span></a>`).join('')}</div>`).join('')+
   `<div class="mgt">Sesión</div><div class="card" style="padding:14px 16px"><div class="row" style="flex-wrap:nowrap"><span class="av" style="background:${ROLC[S.rol]}">${ini(rolN(S.rol))}</span><div style="flex:1"><b>${esc(rolN(S.rol))}</b><div class="mu sm">${S.modo==='demo'?'Cargo de demostración':esc(me.name||'')}</div></div></div>
@@ -1658,7 +1662,7 @@ const diasPeriodo=(per,dia)=>{const d=new Date(dia+'T12:00');const out=[];const 
 function appMenuHTML(){if(!S)return '';const p=persona(S.rol);
   return `<div class="amh"><span class="av" style="background:${ROLC[S.rol]||'#8e8e93'}">${ini(rolN(S.rol))}</span><div><b>${esc(rolN(S.rol))}</b><span class="mu sm">${p?esc(p.n)+(p.s?' (subrogante)':''):S.modo==='demo'?'Cargo de demostración':esc(me.name||'')}</span></div></div>
   ${isAdmin()?`<button class="ami" data-a="cambiar"><svg viewBox="0 0 24 24"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg>Cambiar sesión<small>Entrar con otro cargo</small></button>`:''}
-  <button class="ami" data-a="acerca"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>Datos de la aplicación<small>Versión, origen de los datos y autoría</small></button>
+  <a class="ami" href="#manual"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6M9 11h6"/></svg>Manual de uso<small>Lo que hace su cargo, paso a paso</small></a><button class="ami" data-a="acerca"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>Datos de la aplicación<small>Versión, origen de los datos y autoría</small></button>
   ${isAdmin()?`<a class="ami" href="#config"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Administración<small>Configuración, auditoría, pruebas y guía</small></a>`:''}
   <button class="ami cr" data-a="salir"><svg viewBox="0 0 24 24"><path d="M14 4h5v16h-5M10 8l-4 4 4 4M6 12h10"/></svg>Cerrar sesión</button>`}
 function periodoSel(dia){const per=window._per||'dia';const P=[['dia','Día'],['3d','3 días'],['sem','Semana'],['mes','Mes']];
@@ -1790,6 +1794,81 @@ function canales(){const r=S.rol;const lc=lect().canales||{};const ms=L('mensaje
   return cs.map(c=>({...c,nl:ms.filter(m=>m.canal===c.id&&m.p!==ak()&&m.ts>(lc[ak()+'|'+c.id]||'')).length}))}
 function noLeidosMsg(){if(!S)return 0;try{return canales().reduce((a,c)=>a+c.nl,0)}catch(e){return 0}}
 function marcarCanal(){const c=window._canal;if(!c)return;const l=lect();const k=ak()+'|'+c;const last=L('mensajes').filter(m=>m.canal===c).map(m=>m.ts).sort().at(-1)||'';if(!last||(l.canales||{})[k]>=last)return;put('lecturas',me.id,{...clean(l),canales:{...(l.canales||{}),[k]:last}})}
+
+/* ===== Manual de uso por perfil ===== */
+const MANUAL={
+ comun:{resp:[
+  ['Responder una solicitud','Las solicitudes asignadas a su cargo aparecen en «Hoy › Mis pendientes» y en «Bandeja». Cada tarjeta indica qué se pide, el plazo y quién la tiene a cargo.',
+   ['Toque el botón verde (Confirmar, Resuelto, Aprobar o Aseo terminado) cuando la condición esté resuelta.','Toque «⚠ Hay un problema» si no puede cumplir: escriba en una línea qué pasa. Su jefatura queda informada.','En «Más ▾» están las acciones menos frecuentes: rechazar, pedir antecedentes, derivar a otra unidad o escalar.','Si no responde antes del plazo, la solicitud sube sola a la jefatura siguiente. Eso no se interpreta como incumplimiento.']],
+  ['Registrar una falla','Use «＋ Registrar falla» en Hoy o en Incidencias.',['Elija el pabellón y el tipo de falla.','Indique si la falla es de la concesionaria (infraestructura, climatización, gases, aseo) o del hospital (equipamiento clínico).','Marque si deja el pabellón fuera de servicio. Puede adjuntar una foto, sin datos de pacientes.','La solicitud llega de inmediato a quien debe resolverla.']],
+  ['Moverse por la aplicación','',['Menú lateral (o barra inferior en el celular): Hoy, Quirófanos, Bandeja y Gestión, según su cargo.','«‹ Atrás» vuelve a la pantalla anterior y «Menú principal» lleva a su inicio.','Al tocar el logo se abre su sesión: cargo, datos de la aplicación y cerrar sesión.','Al tocar un pabellón se abre su ficha; al cerrarla vuelve al mismo lugar.']]],
+  faq:[['¿Un mensaje de chat sirve como validación?','No. Solo cuentan los botones de cada solicitud: quedan con fecha, hora, cargo y versión.'],['¿Qué pasa si me equivoco?','Cada acción queda en la auditoría. Si aprobó por error, registre una observación en la misma solicitud o avise a su jefatura.'],['¿Puedo ingresar datos de pacientes?','No. Esta versión de prueba usa solo datos ficticios.']]},
+ director:{t:'Director',fin:'Ver en un minuto cómo se están usando los pabellones y decidir solo lo que se le deriva formalmente.',
+  ve:['Tablero de Dirección: uso de los pabellones hoy, decisiones pendientes, indicadores Minsal, riesgos 48 h e incidencias.','Línea de tiempo por día, 3 días, semana o mes.','Last Planner: confiabilidad de la programación (PPC) y causas de no cumplimiento.','Informes en PDF y Excel.'],
+  tareas:[['Decidir lo que llega a Dirección','En «Decisiones pendientes» solo aparecen materias críticas escaladas o derivadas.',['Lea los antecedentes de la tarjeta.','Toque «✓ Aprobar», «⚠ Hay un problema» (devolver con observación) o «Registrar alternativa» en «Más».','Las decisiones clínicas no se aprueban desde Dirección: quedan reservadas a los profesionales.']],
+   ['Revisar el uso de pabellones','',['En el Tablero, la sección 1 muestra horas usadas, perdidas y disponibles.','Toque «Línea de tiempo ›» para ver el detalle por pabellón.','En la vista Mes, cada casilla es un día: verde ≥ 85 %, amarillo ≥ 60 %, rojo < 60 %.']],
+   ['Generar el resumen de la jornada','',['En el Tablero toque «Generar resumen de jornada».','Descárguelo en PDF o Excel desde Informes.']]]},
+ subop:{t:'Subdirector de Operaciones',fin:'Resolver lo que se escala: recursos, camas, mantenciones y temas con la concesionaria.',
+  ve:['Hoy: pabellones ahora, pendientes y excepciones de la operación.','Camas y perioperatorio.','Incidencias con niveles de servicio de la concesionaria.','Compromisos y Last Planner.'],
+  tareas:[['Atender escalamientos','Cuando una unidad no responde a tiempo, la solicitud llega a usted.',['Revise la tarjeta en «Mis pendientes».','Resuelva, derive a quien corresponda o escale a Dirección si es crítico.']],
+   ['Gestionar con la concesionaria','',['En Incidencias revise «Niveles de servicio de la concesionaria».','Pida al Administrador de Contrato registrar los incumplimientos para la Inspección Fiscal.']],
+   ['Definir acciones correctivas','',['En Gestión › Last Planner revise el Pareto de causas.','Use «+ Acción correctiva»: queda como compromiso con responsable y plazo.']]]},
+ jefpab:{t:'Jefe de Pabellones',fin:'Supervisar los pabellones, aprobar cambios de programación y cerrar incidencias.',
+  ve:['Hoy: estado de cada pabellón, pendientes y excepciones.','Línea de tiempo y Programación.','Incidencias, liberación de pabellones y compromisos.'],
+  tareas:[['Aprobar un cambio de programación','',['Abra la solicitud en «Mis pendientes».','Revise pabellón, hora y motivo.','Toque «✓ Aprobar». Coordinación, enfermería, anestesia y camas reciben el aviso.']],
+   ['Cerrar una incidencia','El cierre exige verificación en terreno: un aviso por chat no cierra la incidencia.',['Cuando llegue «Confirmar resolución de incidencia», verifique en el pabellón.','Toque «✓ Confirmar» o «⚠ Hay un problema» si persiste.']],
+   ['Liberar un pabellón','',['En Pabellones inicie la liberación.','Cada paso (aseo terminal, equipos, condiciones clínicas) lo confirma su responsable.','Al completar los pasos, el pabellón vuelve a operativo.']]]},
+ coordq:{t:'Coordinador de Programación Quirúrgica',fin:'Programar las cirugías y asegurar que estén listas antes del día.',
+  ve:['Programación del día y de los próximos días.','Línea de tiempo por día, semana o mes, con espacios disponibles.','Last Planner: restricciones por liberar (lookahead).'],
+  tareas:[['Revisar que las cirugías estén listas','',['En Programación vea «Intervenciones en riesgo»: falta instrumental, insumos, cama, preparación o anestesia.','El sistema ya pidió cada confirmación a la unidad responsable; usted sigue el avance.']],
+   ['Reprogramar una cirugía suspendida','',['Abra la solicitud de reprogramación.','Proponga nueva fecha y confirme la cama con Gestión de Camas.']],
+   ['Llenar espacios disponibles','',['En la Línea de tiempo, vista Semana, busque tramos grises «disponible».','Programe ahí cirugías que ya tengan sus condiciones liberadas.']]]},
+ enfermeria:{t:'Enfermero Supervisor de Pabellón',fin:'Confirmar la preparación preoperatoria y registrar inicio y término de cada cirugía.',
+  ve:['Hoy: pabellones ahora y sus pendientes.','Programación y ficha de cada cirugía.','Camas y perioperatorio.'],
+  tareas:[['Validar la preparación preoperatoria','',['En «Mis pendientes» abra «Validar preparación preoperatoria».','Toque «✓ Confirmar» o «⚠ Hay un problema» con el motivo.']],
+   ['Registrar el término de una cirugía','Esto avisa a la concesionaria para el aseo de recambio.',['Abra la cirugía en curso desde la línea de tiempo o la ficha del pabellón.','Toque «Registrar término».','La concesionaria recibe «Aseo de recambio»; cuando lo termine, usted recibe «Pabellón listo».']]]},
+ anestesia:{t:'Anestesiólogo',fin:'Confirmar la evaluación anestésica de cada paciente programado.',
+  ve:['Hoy y Programación con las cirugías de los próximos días.'],
+  tareas:[['Confirmar la evaluación anestésica','',['Abra la solicitud en «Mis pendientes».','Toque «✓ Confirmar» o «⚠ Hay un problema» si el paciente no está apto.']]]},
+ esterilizacion:{t:'Jefe de Esterilización',fin:'Confirmar que el instrumental esté estéril y disponible a tiempo.',
+  ve:['Hoy y Programación de los próximos días.'],
+  tareas:[['Confirmar instrumental','',['Abra «Confirmar disponibilidad de instrumental».','Toque «✓ Confirmar» o «⚠ Hay un problema» (por ejemplo, caja en reproceso) e indique una alternativa si la hay.']]]},
+ camas:{t:'Gestor de Camas',fin:'Llevar el censo de camas y confirmar la cama postoperatoria de cada cirugía.',
+  ve:['Quirófanos › Camas y perioperatorio: saldo de camas por servicio, recuperación y preoperatorio.'],
+  tareas:[['Actualizar el censo','',['En Camas y perioperatorio complete ocupadas y altas previstas por servicio.','Guarde: el saldo para hoy y mañana se recalcula.']],
+   ['Confirmar cama postoperatoria','',['Abra «Confirmar disponibilidad de cama».','Toque «✓ Confirmar» o «⚠ Hay un problema» si no hay cama: la cirugía queda en riesgo y se avisa a coordinación.']],
+   ['Liberar recuperación','',['Revise «Pacientes retenidos en recuperación» (más de 60 min esperando cama).','Registre el traslado cuando el paciente salga.']]]},
+ mantenimiento:{t:'Jefe de Equipos Médicos',fin:'Atender fallas de equipamiento clínico (no concesionado).',
+  ve:['Hoy, Incidencias y Pabellones.'],
+  tareas:[['Atender una falla','',['Abra «Atender incidencia» en «Mis pendientes».','Al resolver toque «✓ Resuelto». Jefatura de Pabellones verificará en terreno.']],
+   ['Verificar equipos en una liberación','',['Abra «Verificar equipamiento» y confirme.']]]},
+ concesion:{t:'Administrador de Contrato de Concesión',fin:'Controlar el contrato: plazos y niveles de servicio de la concesionaria, y reportar incumplimientos a la Inspección Fiscal del MOP.',
+  ve:['Incidencias con «Niveles de servicio de la concesionaria».','Compromisos de la concesionaria.','No ve datos clínicos.'],
+  tareas:[['Revisar niveles de servicio','',['En Incidencias revise el porcentaje dentro de plazo y las fallas fuera de plazo.']],
+   ['Registrar un incumplimiento','',['En una falla fuera de plazo toque «Registrar incumplimiento».','Escriba los antecedentes para la Inspección Fiscal. Queda en la auditoría.']],
+   ['Atender escalamientos','',['Si la concesionaria no responde a tiempo, la solicitud llega a usted: gestiónela o escale a Operaciones.']]]},
+ concesionaria:{t:'Concesionaria',fin:'Atender lo que corresponde por contrato: aseo de pabellones y fallas de infraestructura, climatización, gases e iluminación general.',
+  ve:['Hoy con sus solicitudes, sin datos clínicos.','Incidencias y compromisos de la concesionaria.'],
+  tareas:[['Aseo de recambio','Cuando termina una cirugía, recibe «Aseo de recambio · Pabellón X». Meta: 25 minutos.',['Realice el aseo.','Toque «✓ Aseo terminado». Enfermería recibe «Pabellón listo» con los minutos que tomó.']],
+   ['Atender una falla','',['Abra «Atender incidencia».','Si necesita más tiempo, toque «⚠ Hay un problema» e indique el motivo (por ejemplo, repuesto en tránsito).','Al resolver toque «✓ Resuelto». El hospital verificará en terreno.']],
+   ['Aseo terminal en una liberación','',['Abra «Confirmar término de aseo terminal» y confirme al terminar.']]]},
+ cirujano:{t:'Cirujano',fin:'Confirmar antecedentes y condiciones clínicas de sus pacientes programados.',ve:['Hoy y Programación.'],tareas:[['Confirmar condiciones clínicas','',['Abra la solicitud y confirme o informe el problema.']]]},
+ farmacia:{t:'Químico Farmacéutico',fin:'Confirmar la disponibilidad de fármacos.',ve:['Hoy y sus solicitudes.'],tareas:[['Confirmar fármacos','',['Abra la solicitud y confirme o informe el problema.']]]},
+ abastecimiento:{t:'Jefe de Abastecimiento',fin:'Confirmar la disponibilidad de insumos.',ve:['Hoy y sus solicitudes.'],tareas:[['Confirmar insumos','',['Abra «Confirmar disponibilidad de insumos» y confirme o informe el quiebre de stock.']]]},
+ admin:{t:'Administrador',fin:'Mantener usuarios, cargos, configuración y datos de demostración. No otorga facultades de decisión clínica ni operacional.',
+  ve:['Todo lo anterior, más Administración (desde el menú del logo): Auditoría, Configuración, Pruebas y Guía.'],
+  tareas:[['Registrar titulares y subrogantes','',['Configuración › Cargos y subrogantes.','Complete titular, subrogante y anexo. Marque «Subrogancia activa» cuando corresponda.']],
+   ['Editar datos del establecimiento y pabellones','',['Configuración › Establecimiento: datos editables, tipo y jornada de cada pabellón.']],
+   ['Cargar datos de ejemplo','',['Configuración › Demostración › Cargar escenario: la simulación queda a la hora actual.']],
+   ['Cambiar de cargo para probar','',['Toque el logo › Cambiar sesión y elija otro cargo.']]]}
+};
+function manualHTML(){const sel=isAdmin()?(window._manR||S.rol):S.rol;const M=MANUAL[sel]||MANUAL.admin;const C=MANUAL.comun;
+  const blk=([t,intro,pasos],i)=>`<details class="mnb" ${i===0?'open':''}><summary><b>${esc(t)}</b><span class="chev">›</span></summary>${intro?`<p class="mu sm">${esc(intro)}</p>`:''}<ol>${pasos.map(p=>`<li>${esc(p)}</li>`).join('')}</ol></details>`;
+  return head('Manual de uso',`Qué hace su cargo en Qronos y cómo hacerlo en pocos toques.`,isAdmin()?`<label class="ddl"><span>Ver manual de</span><select class="dds" data-mansel="1">${ROLKEYS.map(r=>`<option value="${r}" ${r===sel?'selected':''}>${esc(rolN(r))}</option>`).join('')}</select></label>`:'')+
+  sec(`Su cargo: ${esc(rolN(sel))}`,esc(M.fin))+`<div class="card"><h3 style="margin-top:0">Qué ve en la aplicación</h3><ul class="mnl">${M.ve.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`+
+  sec('Lo que hace en el día','Paso a paso. Toque cada tema para abrirlo.')+`<div class="card">${M.tareas.map(blk).join('')}</div>`+
+  sec('Para todos los cargos','Cómo responder, registrar fallas y moverse por la aplicación')+`<div class="card">${C.resp.map((x,i)=>blk(x,i+1)).join('')}</div>`+
+  sec('Preguntas frecuentes')+`<div class="card">${C.faq.map(([q,a])=>`<details class="mnb"><summary><b>${esc(q)}</b><span class="chev">›</span></summary><p>${esc(a)}</p></details>`).join('')}</div>`}
 
 /* ===================== CONFIGURACIÓN, FORMULARIOS, ACCIONES Y DEMOSTRACIÓN ===================== */
 const ROLKEYS=Object.keys(E.ROLES);
@@ -1977,6 +2056,7 @@ document.addEventListener('click',async e=>{
 });
 document.addEventListener('toggle',e=>{const d=e.target;if(d.dataset?.ana)window._ana[d.dataset.ana]=d.open},true);
 document.addEventListener('change',async e=>{const t=e.target;
+  if(t.dataset&&t.dataset.mansel){window._manR=t.value;render();return}
   if(t.dataset&&t.dataset.dpick){if(t.value){window._dia=t.value;render()}return}
   if(t.id==='perSel'){const [m,x]=t.value.split(':');const r=m==='demo'?DEMO.find(y=>y.id===x)?.r:x;const el=$('#perDesc');if(el)el.textContent=(ROLQ[r]||'')+'.'+(persona(r)?` A cargo hoy: ${persona(r).n}${persona(r).s?' (subrogante)':''}.`:'');return}
   if(t.dataset.a==='flt'){window._F[t.dataset.k]=t.value;render();return}

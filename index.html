@@ -312,7 +312,7 @@ sup.tm{font-size:.5em;font-weight:600;margin-left:1px;vertical-align:super;opaci
 .ords.ftr i{font-style:normal}
 
 /* Sello de agua de toda la aplicación */
-.wm{position:fixed;inset:0;z-index:2147483000;pointer-events:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22420%22%20height%3D%22260%22%3E%3Ctext%20x%3D%22210%22%20y%3D%22140%22%20text-anchor%3D%22middle%22%20transform%3D%22rotate%28-28%20210%20130%29%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%231c1c1e%22%20fill-opacity%3D%220.07%22%20letter-spacing%3D%221%22%3EVERSI%C3%93N%20DE%20PRUEBA%200.1%20%C2%B7%20MAS%3C/text%3E%3C/svg%3E");background-repeat:repeat;background-size:420px 260px}
+.wm{position:fixed;inset:0;z-index:2147483000;pointer-events:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22420%22%20height%3D%22260%22%3E%3Ctext%20x%3D%22210%22%20y%3D%22140%22%20text-anchor%3D%22middle%22%20transform%3D%22rotate%28-28%20210%20130%29%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%231c1c1e%22%20fill-opacity%3D%220.042%22%20letter-spacing%3D%221%22%3EVERSI%C3%93N%20DE%20PRUEBA%200.1%20%C2%B7%20MAS%3C/text%3E%3C/svg%3E");background-repeat:repeat;background-size:420px 260px}
 @media print{.wm{display:block}}
 @media (prefers-color-scheme:dark){.wm{filter:invert(1)}}
 
@@ -359,6 +359,154 @@ html[data-os=android] .tabs a svg{width:56px;height:30px;padding:3px 16px;border
 html[data-os=android] .tabs a[aria-current=page]{color:var(--ink)}
 html[data-os=android] .tabs a[aria-current=page] svg{background:var(--ac2);color:var(--ac)}
 html[data-os=android] .nrep{border-radius:16px;background:var(--ac);font-weight:500}
+
+/* ===== Tema forzado ===== */
+html[data-tema=oscuro]{--bg:#000;--sf:#1c1c1e;--sk:#2c2c2e;--fill:rgba(118,118,128,.24);--ink:#f5f5f7;--mu:#98989d;--ln:rgba(84,84,88,.5);--ac:#0a84ff;--ac2:rgba(10,132,255,.22);
+--ok:#30d158;--oks:rgba(48,209,88,.18);--wa:#ff9f0a;--was:rgba(255,159,10,.18);--cr:#ff453a;--crs:rgba(255,69,58,.2);--in:#d1d1d6;--ins:rgba(118,118,128,.24);--sh:none;--glass:rgba(22,22,24,.8);color-scheme:dark}
+html[data-tema=oscuro][data-os=android]{--bg:#111318;--sf:#1d2026;--sk:#272a31;--fill:#2b2f36;--ink:#e3e2e6;--mu:#a8abb3;--ln:#3a3e45;--ac:#a8c7fa;--ac2:#0842a0;--glass:#1d2026;--sh:none}
+@media (prefers-color-scheme:dark){html[data-tema=claro]{--bg:#f2f2f7;--sf:#fff;--sk:#f2f2f7;--fill:rgba(118,118,128,.12);--ink:#1c1c1e;--mu:#6e6e73;--ln:rgba(60,60,67,.13);--ac:#007aff;--ac2:rgba(0,122,255,.11);
+--ok:#248a3d;--oks:rgba(52,199,89,.16);--wa:#c45100;--was:rgba(255,149,0,.16);--cr:#d70015;--crs:rgba(255,59,48,.12);--in:#3a3a3c;--ins:rgba(118,118,128,.12);
+--sh:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);--r:18px;--glass:rgba(249,249,251,.8);
+--fd:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;--f:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color-scheme:light}html[data-tema=claro][data-os=android]{--bg:#f6f8fc;--sf:#fff;--sk:#eef1f6;--fill:#e8ecf3;--ink:#1b1b1f;--mu:#5f6368;--ln:#dadce0;--ac:#0b57d0;--ac2:#d3e3fd;
+ --sh:0 1px 2px rgba(60,64,67,.18),0 1px 3px 1px rgba(60,64,67,.10);--r:12px;--glass:#f6f8fc;
+ --fd:Roboto,"Google Sans","Noto Sans",system-ui,sans-serif;--f:Roboto,"Noto Sans",system-ui,sans-serif}html[data-tema=claro] .wm{filter:none}}
+html[data-tema=oscuro] .wm{filter:invert(1)}
+/* ===== Tamaño de letra ===== */
+html[data-txt=g],html[data-txt=g] body{font-size:17px}
+html[data-txt=xg],html[data-txt=xg] body{font-size:19.5px}
+
+/* ===== Íconos ===== */
+.ico{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-4px}
+.ico.s{width:14px;height:14px}
+/* Checklist con íconos */
+.cki{display:inline-flex;gap:3px;margin-left:6px;vertical-align:middle}
+.cki i{display:grid;place-items:center;width:22px;height:22px;border-radius:7px;background:var(--fill);color:var(--mu)}
+.cki i .ico{width:14px;height:14px;vertical-align:0}
+.cki i.ok{background:var(--oks);color:var(--ok)}.cki i.cr{background:var(--crs);color:var(--cr);box-shadow:inset 0 0 0 1.5px var(--cr)}
+.orn .cki{display:flex;margin:4px 0 0}
+/* Chips de estado en tarjeta */
+.ochs{display:flex;flex-wrap:wrap;gap:4px;margin-top:2px}
+.och{display:inline-flex;align-items:center;gap:4px;font-size:.74rem;font-weight:650;padding:3px 8px;border-radius:999px;background:var(--fill)}
+.och .ico{width:14px;height:14px;vertical-align:0}
+.och.cr{background:var(--crs);color:var(--cr)}.och.wa{background:var(--was);color:var(--wa)}
+/* Anillo de cirugía en curso */
+.orring{display:grid;grid-template-columns:54px 1fr;grid-template-rows:auto auto;column-gap:10px;align-items:center;margin:2px 0}
+.orring .ring{grid-row:1/3}.orring>b{font:700 1.45rem/1 var(--fd);letter-spacing:-.02em}.orring>b small{font-size:.72rem;font-weight:600;margin-left:3px;color:var(--mu)}
+.orring .ors{margin:0}
+/* Botón de 1 toque */
+.oq1{margin-top:4px}
+.q1{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:46px;border:0;border-radius:12px;font:700 .95rem var(--f);cursor:pointer;color:#fff;background:var(--ac);box-shadow:0 2px 8px rgba(0,0,0,.12);touch-action:manipulation}
+.q1 .ico{width:20px;height:20px;stroke-width:2.2}
+.q1.ok{background:#248a3d}.q1.cr{background:#d70015}.q1.p{background:var(--ac)}
+.q1:active{transform:scale(.97)}.q1:disabled{opacity:.55}
+html[data-os=android] .q1{border-radius:20px;font-weight:500}
+/* Daltonismo: patrones además del color */
+[style*="background:#ff3b30"]{background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.5) 0 2px,transparent 2px 6px)!important}
+[style*="background:#ffcc00"]{background-image:radial-gradient(rgba(0,0,0,.28) 1px,transparent 1.3px)!important;background-size:5px 5px!important}
+[style*="background:#7a1f1f"]{background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.35) 0 2px,transparent 2px 6px),repeating-linear-gradient(135deg,rgba(255,255,255,.35) 0 2px,transparent 2px 6px)!important}
+.od.vc{background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.6) 0 1.5px,transparent 1.5px 4px)}
+/* Carril del paciente */
+.carril{display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr;gap:6px;align-items:stretch}
+.carril .fl{display:grid;place-items:center;font-style:normal;font-size:1.6rem;color:var(--mu)}
+.cr2{background:var(--sk);border-radius:12px;padding:8px;min-width:0;border-top:4px solid #aeb8c4}
+.cr2.op{border-top-color:#34c759}.cr2.ok{border-top-color:#007aff}.cr2.wa{border-top-color:#ff3b30}
+.crh{display:flex;align-items:center;gap:6px;font-size:.84rem;margin-bottom:6px}.crh .n{margin-left:auto;font:700 1.25rem var(--fd)}
+.crb{display:flex;flex-direction:column;gap:4px}
+.pc2{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;background:var(--sf);border-radius:8px;padding:5px 7px;font-size:.78rem;text-decoration:none;color:var(--ink);border:1px solid var(--ln)}
+.pc2 small{color:var(--mu);margin-left:auto}.pc2 .cki{margin-left:0;width:100%}.pc2 .cki i{width:18px;height:18px}.pc2 .cki .ico{width:12px;height:12px}
+.pc2.cr{border-color:var(--cr);background:var(--crs)}
+@media (max-width:760px){.carril{grid-template-columns:1fr 1fr}.carril .fl{display:none}}
+/* Modo pantalla completa: mural y puerta */
+body.fm .side,body.fm .top,body.fm .tabs,body.fm #banner{display:none!important}
+body.fm .app{display:block}body.fm .wrap{max-width:none;padding:14px}
+.mural{background:#0b0d12;color:#f5f5f7;border-radius:18px;padding:18px;min-height:calc(100vh - 28px);display:flex;flex-direction:column;gap:14px}
+.mural .mu{color:#9aa0aa}
+.mhd{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.mtt{font:700 1.4rem var(--fd)}
+.mks{display:flex;gap:10px;flex-wrap:wrap;margin-left:auto}.mks span{display:flex;align-items:center;gap:6px;background:#1c1f26;border-radius:12px;padding:8px 12px;font-size:.95rem}.mks b{font:700 1.5rem var(--fd)}.mks .cr{background:#4a1416;color:#ff8a80}
+.mclk{font:700 2.6rem/1 var(--fd);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;flex:1}
+.mtile{background:#171a21;border-radius:14px;padding:12px;border-top:6px solid #5b6270;display:flex;flex-direction:column;gap:6px;min-height:150px}
+.mtile.op{border-top-color:#34c759}.mtile.ov{border-top-color:#ff9500;box-shadow:inset 0 0 0 2px rgba(255,149,0,.5)}.mtile.rc{border-top-color:#ffcc00}.mtile.li{border-top-color:#bf5af2}.mtile.vc{border-top-color:#ff453a}.mtile.fs{border-top-color:#7a1f1f;background:repeating-linear-gradient(135deg,#171a21 0 12px,#21141a 12px 24px)}
+.mth{display:flex;justify-content:space-between;align-items:baseline}.mth b{font:800 1.9rem var(--fd)}.mth span{font-size:.9rem;color:#c7cbd3;font-weight:600}
+.mring{position:relative;width:92px;height:92px;align-self:center}.mring b{position:absolute;inset:0;display:grid;place-content:center;text-align:center;font:800 1.6rem/1 var(--fd)}.mring b small{display:block;font-size:.65rem;font-weight:600;color:#9aa0aa}
+.mring .ring circle:first-child{stroke:#2a2e37}
+.mbig{font:800 2.2rem/1 var(--fd);text-align:center;margin:8px 0}.mbig small{font-size:.8rem;font-weight:600;color:#9aa0aa}
+.mts{font-size:.85rem;color:#c7cbd3;text-align:center}.mtn{margin-top:auto;font-size:.9rem;color:#9aa0aa}.mtn b{color:#fff}
+.mft{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:.85rem;color:#c7cbd3}.mft span{display:flex;align-items:center;gap:6px}.mft .sp1{flex:1}
+.mural .t-cr{color:#ff6961}
+/* Puerta (QR) */
+.puerta{max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:14px;padding:8px 4px 40px}
+.pth{display:flex;align-items:center;justify-content:space-between;gap:10px}.pnm{font:800 3.4rem/1 var(--fd);letter-spacing:-.03em}
+.pst{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.05rem;background:var(--sf);border-radius:999px;padding:8px 14px;box-shadow:var(--sh)}
+.pinf{margin:0;color:var(--mu);font-size:1rem}
+.pq1 .q1{min-height:64px;font-size:1.15rem}
+.pbig{display:flex;align-items:center;justify-content:center;gap:10px;min-height:68px;border:0;border-radius:16px;font:700 1.2rem var(--f);color:#fff;background:#248a3d;cursor:pointer}.pbig .ico{width:26px;height:26px}.pbig:disabled{opacity:.45}
+.pqh{display:flex;align-items:center;gap:8px;margin:8px 0 0}
+.pgr{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ptile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;min-height:104px;border:1px solid var(--ln);background:var(--sf);border-radius:16px;font:650 .95rem var(--f);color:var(--ink);cursor:pointer;box-shadow:var(--sh)}
+.ptile .ico{width:34px;height:34px;color:var(--cr)}.ptile:active{transform:scale(.97);background:var(--crs)}
+/* QR */
+.qrg{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;margin-top:10px}
+.qrc{display:flex;flex-direction:column;align-items:center;gap:4px;border:1px dashed var(--ln);border-radius:12px;padding:12px;text-align:center;break-inside:avoid;background:#fff;color:#000}
+.qrc svg{width:140px;height:140px}.qrc b{font-size:1rem}.qrc span{font-size:.72rem;color:#555}
+@media print{body:has(.qrg) .app,body:has(.qrg) .wm,body:has(.qrg) .noprint{display:none!important}body:has(.qrg) .modal{position:static;background:none;backdrop-filter:none;display:block;padding:0}body:has(.qrg) .modal>.card{box-shadow:none;max-height:none;width:100%;overflow:visible}.qrg{grid-template-columns:repeat(3,1fr)}}
+/* Recorrido guiado */
+.tour{text-align:center;padding:10px 6px}.tour h2{margin:10px 0 6px;font-size:1.35rem}.tour p{color:var(--mu);font-size:1rem;max-width:420px;margin:0 auto 18px}
+.tic{width:84px;height:84px;border-radius:24px;margin:0 auto;display:grid;place-items:center;background:var(--ac2);color:var(--ac)}.tic .ico{width:44px;height:44px}.tic.ok{background:var(--oks);color:var(--ok)}
+.tdots{display:flex;justify-content:center;gap:6px;margin-top:14px}.tdots i{width:8px;height:8px;border-radius:50%;background:var(--fill)}.tdots i.on{background:var(--ac);width:22px;border-radius:4px}
+/* Encabezado compacto en celular */
+@media (max-width:700px){.hero{padding:10px 14px 12px!important;border-radius:16px;margin-bottom:12px}.hero .hrow p{display:none}.hero h1{font-size:1.3rem}.hero .hbrand{display:none}.hero .ey{font-size:.64rem}.hero .hnav{margin-bottom:6px}.hero .hnb{padding:4px 9px;font-size:.78rem}.hero .row.sp{margin-top:8px!important}.hero .pills{margin-top:6px}}
+
+.mlogo{display:block;width:56px;height:56px}.mlogo svg{width:100%!important;height:100%!important}
+.appmenu{max-height:calc(100vh - 16px);overflow:auto}
+@media (max-width:600px){.mgrid{grid-template-columns:1fr 1fr}.mtile{min-height:108px;padding:10px}.mth b{font-size:1.5rem}.mring{width:72px;height:72px}.mring svg{width:72px;height:72px}.mclk{font-size:1.9rem}.mks span{padding:6px 9px;font-size:.82rem}.mks b{font-size:1.15rem}}
+.grid>.card+.card{margin-top:0}
+.mural .btn{background:#2a2e37;color:#f5f5f7;border:1px solid #454b57;font-weight:650}.mural .btn:hover{background:#363b46;filter:none}
+
+.mback{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;border:1px solid #454b57;background:#2a2e37;color:#f5f5f7;border-radius:999px;padding:8px 16px 8px 10px;font:650 .95rem var(--f);cursor:pointer}
+.mback svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.mback:hover{background:#363b46}.mback.lt{background:var(--sf);color:var(--ink);border-color:var(--ln);box-shadow:var(--sh)}
+.mlogo{cursor:pointer}
+
+.mth span{display:inline-flex;align-items:center;gap:7px}
+.mlight{width:14px;height:14px;border-radius:50%;background:#ff3b30;box-shadow:0 0 10px 3px rgba(255,59,48,.75);animation:mlight 1s ease-in-out infinite}
+@keyframes mlight{0%,100%{opacity:1;box-shadow:0 0 12px 4px rgba(255,59,48,.85)}50%{opacity:.18;box-shadow:0 0 0 0 rgba(255,59,48,0)}}
+.mtile.op .mth span,.mtile.ov .mth span{color:#ff8a80;font-weight:700}
+/* ===== Mural en colores claros ===== */
+.mural{background:#eef2f7;color:#1c1c1e}
+.mural .mu{color:#5f6672}
+.mks span{background:#fff;color:#1c1c1e;box-shadow:0 1px 3px rgba(0,0,0,.08)}.mks .cr{background:#ffe5e3;color:#c2000f}
+.mtile{background:#fff;color:#1c1c1e;box-shadow:0 1px 3px rgba(0,0,0,.08),0 6px 18px rgba(0,0,0,.05);border-top-color:#c3cad5}
+.mtile.op{background:#eefbf1;border-top-color:#34c759}.mtile.ov{background:#fff4e5;border-top-color:#ff9500;box-shadow:inset 0 0 0 2px rgba(255,149,0,.55)}
+.mtile.rc{background:#fffbe6;border-top-color:#ffcc00}.mtile.li{background:#f7efff;border-top-color:#af52de}.mtile.vc{background:#fff0ef;border-top-color:#ff3b30}
+.mtile.fs{background:repeating-linear-gradient(135deg,#fbeeee 0 12px,#f4dede 12px 24px);border-top-color:#7a1f1f}
+.mth span{color:#3a3f48}.mtile.op .mth span,.mtile.ov .mth span{color:#d70015}
+.mring b small,.mbig small{color:#6e737c}.mring .ring circle:first-child{stroke:#dfe4ea}
+.mts{color:#3a3f48}.mtn{color:#5f6672}.mtn b{color:#1c1c1e}
+.mft{color:#3a3f48}.mural .t-cr{color:#d70015}
+.mural .btn{background:#fff;color:#1c1c1e;border:1px solid #cfd5de}.mural .btn:hover{background:#f5f7fa}
+
+/* Recorrido guiado sobre la pantalla */
+#coach{position:fixed;inset:0;z-index:2147483100}
+.chole{position:fixed;border-radius:16px;box-shadow:0 0 0 9999px rgba(10,20,40,.62);outline:3px solid #0a84ff;outline-offset:0;transition:all .25s ease;pointer-events:none;animation:cpulse 1.6s ease-in-out infinite}
+@keyframes cpulse{50%{outline-color:rgba(10,132,255,.35)}}
+.cbub{position:fixed;background:var(--sf);color:var(--ink);border-radius:18px;padding:16px 16px 14px;box-shadow:0 18px 50px rgba(0,0,0,.35);animation:cin .2s ease}
+@keyframes cin{from{opacity:0;transform:translateY(6px)}}
+.cbub h3{margin:4px 0 6px;font-size:1.12rem}.cbub p{margin:0;color:var(--mu);font-size:.93rem;line-height:1.45}.cbub p .ico{color:var(--ink)}
+.cstep{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ac)}
+.cbar{height:4px;border-radius:3px;background:var(--fill);margin-top:12px;overflow:hidden}.cbar i{display:block;height:100%;background:var(--ac);transition:width .25s}
+.c-op{color:#248a3d}.c-rc{color:#b38600}.c-li{color:#8e3cbf}.c-lb{color:#6e737c}.c-vc{color:#d70015}
+@media (max-width:1100px){.nrep{justify-content:center;padding:10px 0;width:52px;height:46px;border-radius:14px;margin:0 auto}.nrep .t{display:none}.nrep svg{width:22px;height:22px}}
+/* ===== Títulos de sección destacados ===== */
+.sec{margin:34px 0 14px;padding:14px 16px;border:0;border-radius:16px;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 16%,var(--sf)) 0%,color-mix(in srgb,var(--c) 5%,var(--sf)) 70%,var(--sf) 100%);box-shadow:inset 5px 0 0 var(--c),var(--sh)}
+.sec .sn{width:42px;height:42px;border-radius:12px;font-size:1.2rem;box-shadow:0 4px 12px color-mix(in srgb,var(--c) 45%,transparent)}
+.sec h2{font-size:1.55rem;font-weight:800;color:color-mix(in srgb,var(--c) 55%,var(--ink))}
+.sec p{color:var(--ink);opacity:.72;font-size:.9rem}
+@media (max-width:700px){.sec{margin-top:22px;padding:11px 12px;gap:10px}.sec h2{font-size:1.22rem}.sec .sn{width:34px;height:34px;font-size:1rem}.sec p{font-size:.8rem}}
+html[data-os=android] .sec{border-radius:12px}
+
+.hbrand{text-align:right}.hbrand .hslog{display:block;font-size:.95rem;font-weight:650;letter-spacing:.01em;margin-top:2px;opacity:1;text-shadow:none;line-height:1.2}
+@media (max-width:1100px){.hbrand .hslog{font-size:.72rem}}
 </style></head><body>
 <div class="app">
  <aside class="side"><div class="brand" data-a="appmenu" role="button" tabindex="0" aria-label="Menú de sesión y datos de la aplicación" title="Sesión y datos de la aplicación"><span class="logo"><svg class="mark" viewBox="5 8 54 48" aria-label="Qronos: el tiempo en salud es vida"><rect x="8" y="12" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="12" width="16" height="8" rx="4" fill="#34c759"/><rect x="25" y="12" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="28" y="12" width="10" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="10;10;0;0;10" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="39" y="12" width="13" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="39;39;28;28;39" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/><animate attributeName="width" values="13;13;28;28;13" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="8" y="28" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="28" width="8" height="8" rx="4" fill="#34c759"/><rect x="17" y="28" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="20" y="28" width="9" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="9;9;0;0;9" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="30" y="28" width="22" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="30;30;20;20;30" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/><animate attributeName="width" values="22;22;36;36;22" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="8" y="44" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="44" width="24" height="8" rx="4" fill="#34c759"/><rect x="33" y="44" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="36" y="44" width="7" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="7;7;0;0;7" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect><rect x="44" y="44" width="8" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="44;44;36;36;44" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/><animate attributeName="width" values="8;8;20;20;8" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect></svg></span><div><b>Qronos<sup class="tm">™</sup></b><small>Coordinación de pabellones HLF · ver. 0.1</small></div></div>
@@ -1059,12 +1207,12 @@ function ensureAudit(ids){[...new Set(ids)].slice(0,200).forEach(u=>{if(auditSub
 /* ---------- Auditoría encadenada (cada registro incluye el hash del anterior: un borrado deja una brecha visible) ---------- */
 let auditQ=Promise.resolve();
 async function sha(s){const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('').slice(0,24)}
-function log(acc,det,x={}){if(!S)return;const rol0=S.rol,modo0=S.modo;
+function log(acc,det,x={}){if(!S)return;const rol0=S.rol,modo0=S.modo;const ux0=typeof uxDe==='function'?uxDe():null;
   if(!DB||!me.id||!S)return;
   auditQ=auditQ.then(async()=>{
     const mine=(auditRaw[me.id]||[]).slice().sort((a,b)=>a.ts<b.ts?1:-1);const prev=mine[0]?.h||'0';
     const e={ts:new Date().toISOString(),tsDemo:new Date(nowMs()).toISOString(),u:me.id,p:ak(),rol:rol0,unidad:unidadN(rol0),atrib:x.atrib||'',acc,det:String(det||'').slice(0,500),
-      antes:x.antes??null,despues:x.despues??null,motivo:x.motivo||'',ref:x.ref||null,demo:modo0==='demo',prev};
+      antes:x.antes??null,despues:x.despues??null,motivo:x.motivo||'',ref:x.ref||null,demo:modo0==='demo',prev,...(ux0?{ux:ux0}:{})};
     e.h=await sha(prev+stable(e));const id=Date.now().toString(36)+Math.random().toString(36).slice(2,6);
     (auditRaw[me.id]=auditRaw[me.id]||[]).unshift({...e,_id:id});await DB.doc(`auditoria/${me.id}/e/${id}`).set(e).catch(()=>{});
   });
@@ -1091,7 +1239,7 @@ function marcarNotifs(){const l=lect();const n={...(l.notif||{}),[ak()]:new Date
 function pushNuevas(prev,cur){if(!S||!booted)return;const ids=new Set(prev.map(x=>x._id));
   cur.filter(n=>!ids.has(n._id)&&(n.dest||[]).includes(S.rol)&&n.por!==ak()).forEach(n=>{
     toast(`🔔 ${n.titulo}`);try{navigator.vibrate?.(n.nivel==='critica'?[200,100,200]:120)}catch(e){}
-    try{if(cfg.canales.push&&'Notification' in window&&Notification.permission==='granted')new Notification('HLF · '+n.titulo,{body:n.texto,tag:n._id})}catch(e){}})}
+    try{if(cfg.canales.push&&'Notification' in window&&Notification.permission==='granted'){const nn=new Notification('Qronos · '+n.titulo,{body:n.texto,tag:n._id});nn.onclick=()=>{try{focus()}catch(e){}if(n.ref?.tipo==='tarea'&&n.ref.id)location.hash='tarea/'+n.ref.id;nn.close()}}}catch(e){}})}
 
 /* ---------- Motor en tiempo real (idempotente: puede correr en varios dispositivos a la vez) ---------- */
 let motorBusy=false;
@@ -1173,7 +1321,7 @@ const veClinico=()=>S&&!['concesionaria'].includes(S.rol);
 
 /* ---------- Sesión, inactividad y dispositivos compartidos ---------- */
 const store={get(){try{return general.compartido?null:JSON.parse(sessionStorage.getItem('hlf_s')||'null')}catch(e){return null}},set(v){try{if(!general.compartido)sessionStorage.setItem('hlf_s',JSON.stringify(v))}catch(e){}},clr(){try{sessionStorage.removeItem('hlf_s')}catch(e){}}};
-function entrar(s){S=s;store.set(s);lastAct=Date.now();lockMsg='';log('Inicio de sesión',`${s.nombre} · ${rolN(s.rol)}${s.modo==='demo'?' · perfil ficticio de demostración':''}`);location.hash=s.rol==='director'?'direccion':'inicio';render();motor()}
+function entrar(s){S=s;store.set(s);lastAct=Date.now();lockMsg='';log('Inicio de sesión',`${s.nombre} · ${rolN(s.rol)}${s.modo==='demo'?' · perfil ficticio de demostración':''}`);if(!['puerta','mural'].includes(route()[0]))location.hash=s.rol==='director'?'direccion':'inicio';render();motor();if(!['puerta','mural'].includes(route()[0])&&typeof tourAuto==='function')tourAuto()}
 function salir(msg){if(S)log('Cierre de sesión',msg||'Manual');S=null;store.clr();lockMsg=msg||'';render()}
 ['pointerdown','keydown','touchstart'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
 setInterval(()=>{const lim=(general.compartido?5:(+general.inactividadMin||15))*6e4;if(S&&Date.now()-lastAct>lim)salir('Sesión cerrada por inactividad')},20000);
@@ -1223,8 +1371,8 @@ const SEC={lastplanner:['#0f9d58','#34c759','#007aff','#30d158','#0b7a43'],inici
  mensajes:['#00c7be','#64d2ff','#30b0c7','#00b5ad','#00968f'],notificaciones:['#ff2d55','#ff6482','#bf5af2','#ff375f','#d6204a'],compromisos:['#af52de','#da8fff','#5e5ce6','#bf5af2','#8e3ab8'],
  indicadores:['#5856d6','#7d7aff','#30b0c7','#5e5ce6','#3a37b8'],informes:['#30b0c7','#64d2ff','#007aff','#40c8e0','#1d8fa6'],auditoria:['#8e8e93','#aeaeb2','#636366','#8e8e93','#48484a'],config:['#636366','#8e8e93','#3a3a3c','#636366','#2c2c2e'],
  pruebas:['#64d2ff','#5ac8fa','#007aff','#0a84ff','#1a7fd0'],guia:['#007aff','#5ac8fa','#34c759','#0a84ff','#2f6fe8'],mas:['#007aff','#5ac8fa','#5e5ce6','#0a84ff','#2f6fe8']};
-const MODS=[['hoy','Hoy','inicio',['inicio']],['quirofanos','Quirófanos','ocupacion',['ocupacion','programacion','perioperatorio','pabellones','incidencias']],['bandeja','Bandeja','tareas',['tareas','mensajes','notificaciones']],['gestion','Gestión','direccion',['direccion','lastplanner','indicadores','compromisos','informes']],['sistema','Administración','config',['auditoria','config','pruebas','guia']]];
-const SUBN={inicio:'Hoy',ocupacion:'Línea de tiempo',perioperatorio:'Camas y perioperatorio',programacion:'Programación',pabellones:'Pabellones',incidencias:'Incidencias',tareas:'Solicitudes',mensajes:'Mensajes',notificaciones:'Alertas',direccion:'Tablero ejecutivo',manual:'Manual de uso',lastplanner:'Last Planner y base de datos',indicadores:'Indicadores Minsal',compromisos:'Compromisos',informes:'Informes',auditoria:'Auditoría',config:'Configuración',pruebas:'Pruebas',guia:'Guía'};
+const MODS=[['hoy','Hoy','inicio',['inicio']],['quirofanos','Quirófanos','ocupacion',['ocupacion','programacion','perioperatorio','pabellones','incidencias']],['bandeja','Bandeja','tareas',['tareas','mensajes','notificaciones']],['gestion','Gestión','direccion',['direccion','lastplanner','indicadores','compromisos','informes']],['sistema','Administración','config',['auditoria','medicion','config','pruebas','guia']]];
+const SUBN={inicio:'Hoy',ocupacion:'Línea de tiempo',perioperatorio:'Camas y perioperatorio',programacion:'Programación',pabellones:'Pabellones',incidencias:'Incidencias',tareas:'Solicitudes',mensajes:'Mensajes',notificaciones:'Alertas',direccion:'Tablero ejecutivo',manual:'Manual de uso',lastplanner:'Last Planner y base de datos',indicadores:'Indicadores Minsal',compromisos:'Compromisos',informes:'Informes',auditoria:'Auditoría',config:'Configuración',pruebas:'Pruebas',guia:'Guía',medicion:'Medición de uso',mural:'Pantalla mural',puerta:'Puerta de pabellón'};
 const modDe=k=>MODS.find(m=>m[3].includes(k))||MODS[0];
 const modVis=m=>m[3].filter(navOk);
 const modLbl=m=>m[0]==='sistema'&&S?.rol!=='admin'?(navOk('auditoria')?'Auditoría y ayuda':'Ayuda'):m[0]==='gestion'&&['director','subop'].includes(S?.rol)?'Dirección':m[1];
@@ -1248,13 +1396,15 @@ function linea(pts,col='#34c759',suf='%',h=130){if(pts.length<2)return '<p class
   const d=pts.map((p,i)=>`${i?'L':'M'}${X(i)},${Y(p[1])}`).join('');return `<svg class="svg" viewBox="0 0 ${W} ${h+16}" width="100%"><path d="${d} L${X(pts.length-1)},${h-10} L${X(0)},${h-10}Z" fill="${col}" opacity=".12"/><path d="${d}" fill="none" stroke="${col}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
   ${pts.map((p,i)=>`<circle cx="${X(i)}" cy="${Y(p[1])}" r="4" fill="#fff" stroke="${col}" stroke-width="2.5"/><text x="${X(i)}" y="${Y(p[1])-9}" text-anchor="middle" style="font-weight:700;fill:var(--ink)">${Math.round(p[1])}${suf}</text><text x="${X(i)}" y="${h+10}" text-anchor="middle">${esc(p[0])}</text>`).join('')}</svg>`}
 const usoPab=()=>L('pabellones').sort(pabOrd).map(p=>{const disp=Math.max(1,hm(p.fin)-hm(p.ini));const u=L('cirugias').filter(c=>c.pabellon===p._id&&c.fecha===hoy()&&c.estado==='realizada').reduce((a,c)=>a+(+c.durReal||+c.durMin),0);return [p.nombre,u/disp*100,p.estado==='fuera_servicio'?'#ff3b30':u/disp>=.75?'#34c759':u/disp>=.5?'#ff9500':'#ff3b30',75]});
-const NAV=[['manual','Manual de uso'],['lastplanner','Last Planner y base de datos'],['perioperatorio','Camas y perioperatorio'],['indicadores','Indicadores Minsal'],['inicio','Inicio'],['ocupacion','Línea de tiempo'],['direccion','Tablero de Dirección'],['programacion','Programación'],['pabellones','Pabellones'],['tareas','Solicitudes y validaciones'],['incidencias','Incidencias'],['mensajes','Mensajería'],['notificaciones','Notificaciones'],['compromisos','Compromisos'],['informes','Informes'],['auditoria','Auditoría'],['config','Configuración'],['pruebas','Pruebas del sistema'],['guia','Guía de la demostración']];
+const NAV=[['mural','Pantalla mural'],['puerta','Puerta de pabellón'],['medicion','Medición de uso'],['manual','Manual de uso'],['lastplanner','Last Planner y base de datos'],['perioperatorio','Camas y perioperatorio'],['indicadores','Indicadores Minsal'],['inicio','Inicio'],['ocupacion','Línea de tiempo'],['direccion','Tablero de Dirección'],['programacion','Programación'],['pabellones','Pabellones'],['tareas','Solicitudes y validaciones'],['incidencias','Incidencias'],['mensajes','Mensajería'],['notificaciones','Notificaciones'],['compromisos','Compromisos'],['informes','Informes'],['auditoria','Auditoría'],['config','Configuración'],['pruebas','Pruebas del sistema'],['guia','Guía de la demostración']];
 function navOk(k){if(!S)return false;const r=S.rol;
   if(k==='direccion'||k==='indicadores')return ['director','subop','jefpab'].includes(r);
   if(k==='programacion'||k==='ocupacion'||k==='perioperatorio')return veClinico()&&r!=='concesion';
   if(k==='informes')return P('informes')||r==='director';
-  if(['auditoria','config','pruebas','guia'].includes(k))return r==='admin';
-  if(k==='compromisos')return true;
+  if(['auditoria','config','pruebas','guia','medicion'].includes(k))return r==='admin';
+  if(k==='mural'||k==='puerta')return true;
+  if(k==='lastplanner')return ['director','subop','jefpab','coordq','admin'].includes(r);
+  if(k==='compromisos')return ['director','subop','jefpab','coordq','concesion','admin'].includes(r);
   return true}
 const route=()=>(location.hash||'#inicio').slice(1).split('/');
 addEventListener('hashchange',e=>{window._navN=(window._navN||0)+1;const r=route()[0];const prev=(e.oldURL.split('#')[1]||'').split('/')[0];if(['tarea','cx'].includes(r)){if(prev&&!['tarea','cx'].includes(prev)){window._base=prev;window._baseY=scrollY}render();scrollTo(0,window._baseY||0);return}if(window._restoreY!=null){render();scrollTo(0,window._restoreY);window._restoreY=null;return}render();scrollTo(0,0)});
@@ -1268,6 +1418,7 @@ function render(){
   gate.hidden=true;
   const [r]=route();const k=r==='mas'?'mas':NAV.some(n=>n[0]===r)&&navOk(r)?r:(['tarea','cx'].includes(r)&&window._base&&navOk(window._base)?window._base:r==='tarea'?'tareas':r==='cx'?'programacion':'inicio');
   const ct=counts();
+  document.body.classList.toggle('fm',k==='mural'||k==='puerta');
   window._sec=k;const mk=modDe(k)[0];const mct=m=>modVis(m).includes('tareas')?(ct.tareas||0):0;const mods=MODS.filter(m=>modVis(m).length);
   $('#nav').innerHTML=`<div class="ng">${mods.filter(m=>m[0]!=='sistema').map(m=>{const vis=modVis(m);const dest=vis.includes(m[2])?m[2]:vis[0];return `<a href="#${dest}" ${m[0]===mk?'aria-current="page"':''} title="${esc(modLbl(m))}">${tileH(dest)}<span class="t">${esc(modLbl(m))}</span>${mct(m)?`<span class="ct">${mct(m)}</span>`:''}</a>${m[0]===mk&&vis.length>1?`<div class="nsub">${vis.map(x=>`<a href="#${x}" class="${x===k?'on':''}"><span class="t">${esc(SUBN[x])}</span>${ct[x]?`<span class="ct">${ct[x]}</span>`:''}</a>`).join('')}</div>`:''}`}).join('')}</div><button class="nrep" data-a="informeAhora" title="Emitir informe de la situación actual"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5M9 9h3"/></svg><span class="t">Informe de situación actual</span></button>`;
   const tm=mods.filter(m=>m[0]!=='sistema').slice(0,4);
@@ -1312,7 +1463,7 @@ function solicitudHTML(){const s=byId('lecturas',me.id)?.solicitud;
 function sec(t,sub='',right=''){window._sn=(window._sn||0)+1;const c=(SEC[window._sec]||SEC.inicio)[0];return `<div class="sec" style="--c:${c}"><span class="sn">${window._sn}</span><div class="st"><h2>${t}</h2>${sub?`<p>${sub}</p>`:''}</div>${right?`<div class="sr">${right}</div>`:''}</div>`}
 function head(t,p,acts='',pills=[],ey){window._sn=0;if(window._sec!=='inicio')pills=[];const c=SEC[window._sec]||SEC.inicio;const nt=Object.fromEntries(NAV);const md=modDe(window._sec),vis=window._sec==='mas'?[]:modVis(md),ct=counts();
   const st=vis.length>1?`<nav class="stabs noprint">${vis.map(x=>`<a href="#${x}" ${x===window._sec?'aria-current="page"':''}>${esc(SUBN[x])}${ct[x]?`<span class="sc">${ct[x]}</span>`:''}</a>`).join('')}</nav>`:'';
-  const home=S?.rol==='director'?'direccion':'inicio';const nv=window._sec!=='mas'?`<div class="hnav noprint"><button class="hnb" data-a="atras" aria-label="Volver atrás"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Atrás</button><button class="hnb" data-a="irInicio" aria-label="Volver al menú principal"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h12V10"/></svg>Menú principal</button><span style="flex:1"></span><span class="hbrand">Qronos<sup>™</sup></span></div>`:'';
+  const home=S?.rol==='director'?'direccion':'inicio';const nv=window._sec!=='mas'?`<div class="hnav noprint"><button class="hnb" data-a="atras" aria-label="Volver atrás"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Atrás</button><button class="hnb" data-a="irInicio" aria-label="Volver al menú principal"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h12V10"/></svg>Menú principal</button><span style="flex:1"></span><span class="hbrand">Qronos<sup>™</sup><small class="hslog">El tiempo en salud es vida</small></span></div>`:'';
   return `<div class="hero" style="--h1:${c[1]};--h2:${c[2]};--h3:${c[3]};--h0:${c[0]}">${nv}<div class="hrow"><div><div class="ey">${esc(ey||modLbl(md)||'Qronos')} · ${fD(nowMs())} ${fH(nowMs())}</div>${S?`<div class="vperf"><span class="av" style="background:${ROLC[S.rol]||'#8e8e93'}">${ini(rolN(S.rol))}</span>Viendo como <b>${esc(rolN(S.rol))}</b>${persona(S.rol)?' · '+esc(persona(S.rol).n)+(persona(S.rol).s?' (S)':''):''}</div>`:''}<h1>${esc(t)}</h1>${p?`<p>${p}</p>`:''}</div>
   ${pills.length?`<div class="pills">${pills.map(([x,c2])=>`<span class="pill ${c2||''}">${x}</span>`).join('')}</div>`:''}</div>${acts||st?`<div class="row sp noprint" style="margin-top:14px;align-items:flex-end">${st||'<span></span>'}${acts?`<div class="acts">${acts}</div>`:''}</div>`:''}</div>`}
 const kpi=(l,v,s='',c='',rp,rc)=>`<div class="wid ${c}">${rp!=null?ring(rp,rc||'#007aff'):''}<div style="min-width:0"><div class="l">${esc(l)}</div><div class="v">${v}</div>${s?`<div class="s">${s}</div>`:''}</div></div>`;
@@ -1339,6 +1490,9 @@ const datos=()=>({cirugias:L('cirugias'),pabellones:L('pabellones'),tareas:L('ta
 
 const VIEWS={
 manual(){return manualHTML()},
+mural(){return muralHTML()},
+puerta(){return puertaHTML(route()[1])},
+medicion(){return head('Medición de uso','Cuántos segundos y toques toma cada registro. Sirve para validar la aplicación en terreno')+medicionHTML()},
 mas(){const ct=counts();
   return head('Más','Todos los módulos y su sesión')+MODS.filter(m=>modVis(m).length).map(m=>`<div class="mgt">${esc(modLbl(m))}</div><div class="card mlist" style="padding:4px 0">${modVis(m).map(id=>`<a class="mrow" href="#${id}">${tileH(id,32)}<span class="t">${esc(SUBN[id])}</span>${ct[id]?`<span class="chip cr">${ct[id]}</span>`:''}<span class="chev">›</span></a>`).join('')}</div>`).join('')+
   `<div class="mgt">Sesión</div><div class="card" style="padding:14px 16px"><div class="row" style="flex-wrap:nowrap"><span class="av" style="background:${ROLC[S.rol]}">${ini(rolN(S.rol))}</span><div style="flex:1"><b>${esc(rolN(S.rol))}</b><div class="mu sm">${S.modo==='demo'?'Cargo de demostración':esc(me.name||'')}</div></div></div>
@@ -1440,6 +1594,7 @@ inicio(){
   (vacio?`<div class="card" style="text-align:center;padding:34px"><h2>Aún no hay datos</h2><p class="mu">La aplicación está conectada, pero la base de datos está vacía.</p>${isAdmin()?'<button class="btn p l" data-a="seedGate">Cargar datos de ejemplo</button>':'<p class="sm">Pida al administrador que cargue los datos de ejemplo.</p>'}</div>`:
   sec('Pabellones ahora',`${k.pabOperativos} de ${L('pabellones').length} operativos · qué ocurre en cada pabellón en este momento`,`<span class="nowc"><i></i>Hora vigente ${fH(nowMs())}</span> <a href="#ocupacion" class="lnk">Línea de tiempo ›</a>`)+
   `<div class="orb">${orBoard()}</div><div class="orleg">${[['op','En cirugía'],['rc','Recambio / aseo'],['lb','Libre, espera paciente'],['vc','Libre sin programación'],['li','En liberación'],['fs','Fuera de servicio']].map(([c2,t])=>`<span><i class="od ${c2}"></i>${t}</span>`).join('')}<span>Barra del día:${Object.entries({uso:'usado',rec:'recambio',perd:'perdido',prog:'programado',queda:'disponible'}).map(([k,t])=>` <i class="sq" style="background:${({uso:'#34c759',rec:'#ffcc00',perd:'#ff3b30',prog:'#007aff',queda:'#aeb8c4'})[k]}"></i>${t}`).join('')}</span></div>`+
+  (verCx()||S.rol==='camas'?sec('Flujo del paciente hoy','De izquierda a derecha: por ingresar, en pabellón, en recuperación y con cama o alta · rojo = detenido')+`<div class="card">${carril()}</div>`:'')+
   sec(`Mis pendientes <span class="chip ${mt.length?'cr':'ok'}">${mt.length}</span>`,'Solicitudes asignadas a su perfil, de la más urgente a la menos urgente','<a href="#tareas" class="lnk">Bandeja completa ›</a>')+
   `<div class="card">${mt.slice(0,4).map(t=>tareaCard(t,true)).join('')||'<p class="empty">✓ Nada pendiente para su perfil.</p>'}${mt.length>4?`<a class="lnk" href="#tareas">Ver ${mt.length-4} más ›</a>`:''}</div>`+
   (sup?sec(`Excepciones de la operación <span class="chip ${exc.length?'wa':'ok'}">${exc.length}</span>`,'Solo lo que se desvía: solicitudes vencidas o escaladas, cirugías en riesgo dentro de 24 h e incidencias críticas')+`<div class="card"><div class="list">${exc.slice(0,8).map(row).join('')||'<p class="empty">✓ Sin desviaciones.</p>'}</div></div>`:''))},
@@ -1658,17 +1813,20 @@ function orBoard(){const O=calcOcup(hoy()),N=O.NOW,now=nowMs(),cfgH=cfg.horizont
     if(r.fs){ph=r.bq&&r.bq.tipo!=='falla'?'Bloqueado':'Fuera de servicio';cls='fs';body=`<div class="orx">${r.bq?esc(r.bq.motivo):'Sin actividad quirúrgica · ver incidencia'}</div>`}
     else if(lib){ph='En liberación';cls='li';body=`<div class="orx">Aseo terminal / verificación antes de reabrir</div>`}
     else if(cur){const el=Math.max(0,N-cur.s),pl=cur.d||1,ov=el>pl;ph=ov?'En cirugía · excede lo programado':'En cirugía';cls=ov?'ov':'op';
-      body=`<div class="orp">${verCx()?esc(cur.c.procedimiento):'Cirugía en curso'}</div><div class="ors">${verCx()?esc(cur.c.especialidad):'Pabellón ocupado'} · inicio ${hh(cur.s)}</div><div class="orbar"><i style="width:${Math.min(100,el/pl*100)}%"></i></div><div class="ors"><b>${Math.round(el)}</b> de ${pl} min${ov?` · <b class="t-cr">+${Math.round(el-pl)} min</b>`:` · faltan ${Math.round(pl-el)} min`}</div>`}
+      body=`<div class="orp">${verCx()?esc(cur.c.procedimiento):'Cirugía en curso'}</div><div class="ors">${verCx()?esc(cur.c.especialidad):'Pabellón ocupado'} · inicio ${hh(cur.s)}</div><div class="orring">${ring(Math.min(100,el/pl*100),ov?'#ff3b30':'#34c759',54)}<b class="${ov?'t-cr':''}">${ov?'+'+Math.round(el-pl):Math.round(pl-el)}<small>${ov?'min extra':'min'}</small></b><span class="ors">${Math.round(el)} de ${pl} min</span></div>`}
     else if(N<r.ini){ph='Antes de la jornada';cls='lb';body=`<div class="orx">Abre ${p.ini}</div>`}
     else if(N>=r.fin){ph='Jornada terminada';cls='lb';body=`<div class="orx">Cerró ${p.fin}</div>`}
     else if(prev&&nxt&&N-prev.e<=30&&nxt.s-N<=45){ph='Recambio / aseo';cls='rc';body=`<div class="orx">Terminó ${hh(prev.e)} · próximo ingreso ${hh(nxt.s)}</div>`}
     else if(nxt){ph='Libre · espera paciente';cls='lb';body=`<div class="orx">Pabellón sin uso hace ${Math.round(N-(prev?prev.e:r.ini))} min</div>`}
     else{ph='Libre sin programación';cls='vc';body=`<div class="orx">Quedan ${O.hrs(r.fin-N)} sin cirugías</div>`}
-    const nx=nxt&&!r.fs&&!lib?`<div class="orn"><span>Siguiente ${hh(nxt.s)}</span>${verCx()?esc(nxt.c.procedimiento):'cirugía programada'}</div>`:'';
+    const nx=nxt&&!r.fs&&!lib?`<div class="orn"><span>Siguiente ${hh(nxt.s)}</span>${verCx()?esc(nxt.c.procedimiento):'cirugía programada'}${verCx()?chkIcons(nxt.c,now):''}</div>`:'';
+    const aT=aseoAbierta(p);const aL=aT?Math.round((Date.parse(aT.plazo)-now)/6e4):null;
+    const chips=[aT?`<span class="och ${aL<0?'cr':'wa'}">${ico('aseo')}Aseo ${aT.aseoIni?'en curso':'pendiente'} · ${aL<0?'+'+(-aL)+' min':aL+' min'}</span>`:'',bloq?`<span class="och cr">${ico('cama')}Espera cama ${Math.round((now-Date.parse(bloq.urpaIn))/6e4)} min</span>`:'',rs?`<span class="och wa">${ico('warn')}Riesgo de suspensión</span>`:''].join('');
+    const a1=accion1({p,cur,nxt,bloq,N,fs:r.fs});
     const pct=Math.round(r.t.uso/Math.max(1,Math.min(N,r.fin)-r.ini)*100);
     const strip=`<div class="ords">${r.strip.map(s=>`<i style="left:${(s.a-r.ini)/r.jor*100}%;width:${(s.b-s.a)/r.jor*100}%;background:${O.CAT[s.k][1]}"></i>`).join('')}${cur&&!r.fs?`<b class="mlive" style="left:${(Math.max(cur.s,r.ini)-r.ini)/r.jor*100}%;width:${(Math.min(cur.e,r.fin)-Math.max(cur.s,r.ini))/r.jor*100}%"></b>`:''}${N>r.ini&&N<r.fin?`<u class="live" style="left:${(N-r.ini)/r.jor*100}%"></u>`:''}</div>`;
     return `<a class="orc ${cls}" data-a="verPab" data-id="${p._id}" role="button" tabindex="0"><div class="orh"><b>${esc(p.nombre.replace('Pabellón ','P'))}</b><span class="orst"><i class="od ${cls}"></i>${ph}</span></div>${body}${nx}
-      ${bloq?`<div class="orw">Paciente retenido en recuperación: espera cama</div>`:''}${rs?`<div class="orw wa">Cirugía de hoy con riesgo de suspensión</div>`:''}
+      ${chips?`<div class="ochs">${chips}</div>`:''}${a1?`<div class="oq1">${a1.h}</div>`:''}
       ${strip}<div class="orf"><span>${p.ini}</span><span>${r.fs?'—':isFinite(pct)&&N>r.ini?pct+'% de la jornada usado':''}</span><span>${p.fin}</span></div></a>`}).join('')}
 
 /* ===== LAST PLANNER SYSTEM: base analítica + PPC + causas + lookahead ===== */
@@ -1713,6 +1871,9 @@ function appMenuHTML(){if(!S)return '';const p=persona(S.rol);
   ${isAdmin()?`<button class="ami" data-a="cambiar"><svg viewBox="0 0 24 24"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg>Cambiar sesión<small>Entrar con otro cargo</small></button>`:''}
   <button class="ami" data-a="informeAhora"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg>Informe de situación actual<small>PDF con el estado de los pabellones ahora</small></button>
   <div class="apar"><span class="mu sm">Apariencia</span><div class="seg">${[['auto','Automática'],['ios','iOS'],['android','Android']].map(([k,t])=>`<button data-a="apar" data-v="${k}" class="${aparPref()===k?'on':''}" aria-pressed="${aparPref()===k}">${t}</button>`).join('')}</div>${aparPref()==='auto'?`<span class="mu sm">Detectada: ${aparSO()==='android'?'Android':'iOS'}</span>`:''}</div>
+  ${prefsHTML()}
+  <a class="ami" href="#mural"><svg viewBox="0 0 24 24">${UXI.tv}</svg>Pantalla mural<small>Vista para TV del pasillo, se actualiza sola</small></a>
+  ${['admin','jefpab','subop'].includes(S?.rol)?`<button class="ami" data-a="hojaQR"><svg viewBox="0 0 24 24">${UXI.qr}</svg>QR de puertas de pabellón<small>Hoja imprimible</small></button>`:''}
   <a class="ami" href="#manual"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6M9 11h6"/></svg>Manual de uso<small>Lo que hace su cargo, paso a paso</small></a><button class="ami" data-a="acerca"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>Datos de la aplicación<small>Versión, origen de los datos y autoría</small></button>
   ${isAdmin()?`<a class="ami" href="#config"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg>Administración<small>Configuración, auditoría, pruebas y guía</small></a>`:''}
   <button class="ami cr" data-a="salir"><svg viewBox="0 0 24 24"><path d="M14 4h5v16h-5M10 8l-4 4 4 4M6 12h10"/></svg>Cerrar sesión</button>`}
@@ -1921,6 +2082,178 @@ function manualHTML(){const sel=isAdmin()?(window._manR||S.rol):S.rol;const M=MA
   sec('Para todos los cargos','Cómo responder, registrar fallas y moverse por la aplicación')+`<div class="card">${C.resp.map((x,i)=>blk(x,i+1)).join('')}</div>`+
   sec('Preguntas frecuentes')+`<div class="card">${C.faq.map(([q,a])=>`<details class="mnb"><summary><b>${esc(q)}</b><span class="chev">›</span></summary><p>${esc(a)}</p></details>`).join('')}</div>`}
 
+/* ===================================================================
+   Qronos · Mejoras de uso rápido (v0.5 en revisión)
+   Acciones de 1 toque, pantalla mural, QR de puerta, checklist con íconos,
+   carril del paciente, recorrido guiado, medición de uso, preferencias.
+   =================================================================== */
+const WEB_URL='https://mauroalcainosa-rgb.github.io/qronos/';
+const UXI={
+  cama:'<path d="M3 18V8M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"/><circle cx="7" cy="11" r="1.6"/>',
+  warn:'<path d="M12 3l9.5 17h-19z"/><path d="M12 10v4M12 17.5v.1"/>',
+  reloj:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/>',
+  aseo:'<path d="M14 3l-4 9M6 13h10l1 8H5z"/><path d="M9 21v-4M13 21v-4"/>',
+  ok:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  instrumental:'<path d="M5 19l9-9M14 10l3-6 3 3-6 3"/><path d="M5 5l14 14"/>',
+  insumos:'<path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/>',
+  preop:'<path d="M8 4h8v3H8z"/><path d="M6 5H5v16h14V5h-1"/><path d="M9 12l2 2 4-4"/>',
+  anestesia:'<path d="M5 9h14v4a7 7 0 0 1-14 0z"/><path d="M5 10H3M19 10h2M12 3v6"/>',
+  pac:'<circle cx="12" cy="7" r="3.5"/><path d="M5 21a7 7 0 0 1 14 0"/>',
+  bisturi:'<path d="M3 21l8-8"/><path d="M11 13l8-8a2 2 0 0 1 2 2l-8 8z"/>',
+  camara:'<path d="M4 7h4l2-3h4l2 3h4v12H4z"/><circle cx="12" cy="13" r="3.5"/>',
+  qr:'<path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/>',
+  tv:'<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/>',
+  play:'<path d="M7 5l12 7-12 7z"/>',stop:'<rect x="6" y="6" width="12" height="12" rx="2"/>',
+  luz:'<path d="M12 3a6 6 0 0 0-3 11v3h6v-3a6 6 0 0 0-3-11zM10 21h4"/>',
+  clima:'<path d="M12 3v18M5 7l14 10M19 7L5 17"/>',gas:'<path d="M9 3h6v4l2 3v11H7V10l2-3z"/>',
+  equipo:'<rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M8 19h8M12 15v4M7 10h3l1.5-3 2 6 1.5-3H17"/>',
+  infra:'<path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/>'
+};
+const ico=(k,cls='')=>`<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true">${UXI[k]||''}</svg>`;
+
+/* ---------- Checklist con íconos ---------- */
+function chkIcons(c,now=nowMs()){if(!c||!c.checklist)return '';const rs=E.riesgosCirugia(c,now,cfg.horizonteH).map(r=>r.item);
+  return `<span class="cki" role="img" aria-label="Preparación">${Object.keys(E.CHECK).map(k=>{const st=c.checklist[k]?.estado;const cl=st==='ok'?'ok':rs.includes(k)?'cr':'pe';
+    return `<i class="${cl}" title="${esc(E.CHECK[k].n)}: ${cl==='ok'?'confirmado':cl==='cr'?'falta y está en riesgo':'pendiente'}">${ico(k)}</i>`}).join('')}</span>`}
+
+/* ---------- Contexto de un pabellón para la acción de 1 toque ---------- */
+function aseoAbierta(p){return L('tareas').find(t=>E.ABIERTA(t)&&(t.tipo==='aseo'||t.ref?.tipo==='liberacion'&&t.ref?.paso==='limpieza')&&t.rolActual==='concesionaria'&&new RegExp(p.nombre+'(\\D|$)').test(t.accion||''))}
+function accion1(ctx){const {p,cur,nxt,bloq,N,fs}=ctx;if(!S||fs)return null;const r=S.rol;
+  const B=(q,t,ic,cls,id,extra='')=>({h:`<button class="q1 ${cls}" data-a="q1" data-q="${q}" data-id="${id}" ${extra}>${ico(ic)}<span>${t}</span></button>`});
+  if(['enfermeria','jefpab'].includes(r)){
+    if(cur&&cur.c.estado==='en_curso')return B('fin','Terminar cirugía','stop','cr',cur.c._id);
+    const c=(cur&&!['realizada','suspendida'].includes(cur.c.estado))?cur.c:(nxt&&nxt.s-N<=60?nxt.c:null);
+    if(c){if(c.enSala||cur&&cur.c===c)return B('ini','Iniciar cirugía','play','ok',c._id);return B('sala','Paciente en sala','pac','p',c._id)}}
+  if(r==='concesionaria'){const t=aseoAbierta(p);if(t)return t.aseoIni?B('aseoFin','Aseo terminado','ok','ok',t._id):B('aseoIni','Iniciar aseo','aseo','p',t._id)}
+  if(r==='camas'&&bloq)return B('cama','Cama asignada','cama','ok',bloq._id);
+  const own=Object.entries(E.CHECK).find(([k,v])=>v.rol===r);
+  if(own){const tgt=[cur?.c,nxt?.c].find(c=>c&&!['realizada','suspendida','en_curso'].includes(c.estado)&&c.checklist?.[own[0]]?.estado!=='ok');
+    if(tgt)return B('chk',own[0]==='cama'?'Cama confirmada':own[1].n+' listo',own[0],'p',tgt._id,`data-k="${own[0]}"`)}
+  return null}
+
+/* ---------- Ejecución de la acción de 1 toque ---------- */
+async function q1Extra(b){const q=b.dataset.q,id=b.dataset.id,ts=new Date(nowMs()).toISOString();
+  if(q==='sala'){const f=await fresh('cirugias',id);const {_id,...x}=f;x.enSala=ts;x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts,acc:'Paciente en sala',u:ak(),rol:S.rol}];await put('cirugias',id,x);log('Registra paciente en sala',f.codigo);toast('✓ Paciente en sala · '+pabN(f.pabellon));return}
+  if(q==='aseoIni'){const t=await fresh('tareas',id);const {_id,...x}=t;x.aseoIni=ts;x.ver=(t.ver||1)+1;x.hist=[...(t.hist||[]),{ts,acc:'Aseo iniciado',u:ak(),rol:S.rol}];await put('tareas',id,x);log('Inicia aseo',t.accion,{atrib:'Registrar'});toast('✓ Aseo iniciado');return}
+  if(q==='aseoFin'){await decidir(id,'aprobar','Aseo terminado (registro de 1 toque)');toast('✓ Pabellón listo para el siguiente paciente');return}}
+
+/* ---------- Medición de uso: segundos y toques por registro ---------- */
+document.addEventListener('click',()=>{if(window._flow)window._flow.n++},true);
+function flowIni(tipo,n=0){window._flow={t0:performance.now(),n,tipo}}
+function uxDe(){const f=window._flow;if(!f)return null;if(performance.now()-f.t0>3e5){window._flow=null;return null}window._flow=null;return {seg:Math.round((performance.now()-f.t0)/100)/10,toques:Math.max(1,f.n),via:f.tipo}}
+function medicionHTML(){const rows=Object.values(auditRaw).flat().filter(a=>a.ux);const by={};rows.forEach(a=>{const o=by[a.acc]||(by[a.acc]={n:0,seg:[],t:[],v:{}});o.n++;o.seg.push(a.ux.seg);o.t.push(a.ux.toques);o.v[a.ux.via]=(o.v[a.ux.via]||0)+1});
+  const med=a=>{const s=[...a].sort((x,y)=>x-y);return s.length?s[Math.floor(s.length/2)]:0};
+  const list=Object.entries(by).sort((a,b)=>b[1].n-a[1].n);const tot=rows.length,rap=rows.filter(a=>a.ux.toques<=2).length;
+  return `<div class="kpis">${kpi('Registros medidos',tot)}${kpi('Hechos en 2 toques o menos',tot?Math.round(rap/tot*100)+' %':'—','meta: 80 %','',tot?rap/tot*100:0,'#34c759')}${kpi('Mediana de segundos',tot?med(rows.map(a=>a.ux.seg))+' s':'—','desde que abre hasta que guarda')}</div>
+  <div class="card" style="margin-top:14px"><h3>Por tipo de registro</h3>${list.length?`<table class="sm"><thead><tr><th>Registro</th><th>Veces</th><th>Segundos (mediana)</th><th>Toques (mediana)</th><th>Vía</th></tr></thead><tbody>${list.map(([k,o])=>`<tr><td>${esc(k)}</td><td>${o.n}</td><td>${med(o.seg)}</td><td><b class="${med(o.t)<=2?'t-ok':med(o.t)<=4?'':'t-cr'}">${med(o.t)}</b></td><td class="mu">${Object.entries(o.v).map(([v,n])=>`${({q1:'1 toque',form:'formulario',puerta:'QR de puerta'})[v]||v} ${n}`).join(' · ')}</td></tr>`).join('')}</tbody></table>`:'<p class="empty">Aún no hay registros medidos. Se miden automáticamente al usar la aplicación.</p>'}
+  <p class="mu sm">Para validar en terreno: acompañe un turno real y compare estos tiempos con la meta. Un registro que toma más de 4 toques se omite en un turno con carga.</p></div>`}
+
+/* ---------- Carril del paciente: preoperatorio → pabellón → recuperación → cama ---------- */
+function carril(){const h=hoy(),now=nowMs();const cx=L('cirugias').filter(c=>c.fecha===h&&c.estado!=='suspendida');const vc=verCx();const nd=new Date(now),N=nd.getHours()*60+nd.getMinutes();
+  const pre=cx.filter(c=>c.estado!=='realizada'&&c.estado!=='en_curso'&&hm(c.hIni)>=N-30).sort((a,b)=>hm(a.hIni)-hm(b.hIni));
+  const pab=cx.filter(c=>c.estado==='en_curso'||c.enSala&&c.estado!=='realizada');
+  const urpa=cx.filter(c=>c.urpaIn&&!c.urpaOut&&c.estado==='realizada');const fin=cx.filter(c=>c.urpaOut);
+  const chip=(c,extra='',cl='')=>`<a class="pc2 ${cl}" ${vc?`href="#cx/${c._id}"`:''} title="${esc(vc?c.procedimiento:'Cirugía')}"><b>${esc(pabN(c.pabellon).replace('Pabellón ','P'))}</b><span>${esc(c.codigo.slice(-4))}</span>${extra}</a>`;
+  const col=(t,ic,arr,f,tone)=>`<div class="cr2 ${tone}"><div class="crh">${ico(ic)}<b>${t}</b><span class="n">${arr.length}</span></div><div class="crb">${arr.slice(0,10).map(f).join('')||'<span class="mu sm">—</span>'}${arr.length>10?`<span class="mu sm">+${arr.length-10}</span>`:''}</div></div>`;
+  return `<div class="carril">${col('Por ingresar','preop',pre,c=>chip(c,`<small>${c.hIni}</small>${vc?chkIcons(c,now):''}`,E.riesgosCirugia(c,now,cfg.horizonteH).length?'cr':''),'')}
+    <i class="fl">›</i>${col('En pabellón','bisturi',pab,c=>chip(c,`<small>${c.inicioReal?Math.round((now-Date.parse(c.inicioReal))/6e4)+' min':'en sala'}</small>`),'op')}
+    <i class="fl">›</i>${col('Recuperación','reloj',urpa,c=>{const m=Math.round((now-Date.parse(c.urpaIn))/6e4);return chip(c,`<small>${m} min${m>60&&c.destino!=='ambulatorio'?' · '+ico('cama','s'):''}</small>`,m>60&&c.destino!=='ambulatorio'?'cr':'')},urpa.some(c=>now-Date.parse(c.urpaIn)>36e5&&c.destino!=='ambulatorio')?'wa':'')}
+    <i class="fl">›</i>${col('Cama o alta','cama',fin,c=>chip(c,`<small>${c.destino==='upc'?'UPC':c.destino==='ambulatorio'?'alta':'sala'}</small>`),'ok')}</div>`}
+
+/* ---------- Pantalla mural (TV) ---------- */
+function muralHTML(){const O=calcOcup(hoy()),N=O.NOW,now=nowMs();const k=E.kpis(datos(),hoy(),now);const vc=verCx();
+  const tiles=O.rows.map(r=>{const p=r.p,act=r.act,lib=p.estado!=='operativo'&&!r.fs;const cur=act.find(b=>b.s<=N&&N<b.e),nxt=act.find(b=>b.s>N&&b!==cur),prev=[...act].reverse().find(b=>b.e<=N);
+    let cls,ph,big='',sub='';const t=aseoAbierta(p);
+    if(r.fs){cls='fs';ph='Fuera de servicio';sub=r.bq?esc(r.bq.motivo):''}
+    else if(lib||t){cls='li';ph=t?'Aseo':'Liberación';const left=t?Math.round((Date.parse(t.plazo)-now)/6e4):null;big=left!=null?`<div class="mbig ${left<0?'t-cr':''}">${left<0?'+'+(-left):left}<small> min</small></div>`:'';sub=left!=null?(left<0?'plazo vencido':'para el plazo'):''}
+    else if(cur){const el=N-cur.s,pl=cur.d||1,ov=el>pl;cls=ov?'ov':'op';ph='En cirugía';big=`<div class="mring">${ring(Math.min(100,el/pl*100),ov?'#ff3b30':'#34c759',92)}<b>${ov?'+'+Math.round(el-pl):Math.round(pl-el)}<small>${ov?'min extra':'min'}</small></b></div>`;sub=vc?esc(cur.c.especialidad||''):''}
+    else if(N<r.ini){cls='lb';ph='Abre '+p.ini}
+    else if(N>=r.fin){cls='lb';ph='Cerrado'}
+    else if(prev&&nxt&&N-prev.e<=30&&nxt.s-N<=45){cls='rc';ph='Recambio'}
+    else if(nxt){cls='lb';ph='Libre';big=`<div class="mbig">${Math.round(N-(prev?prev.e:r.ini))}<small> min sin uso</small></div>`}
+    else{cls='vc';ph='Sin programación'}
+    return `<div class="mtile ${cls}"><div class="mth"><b>${esc(p.nombre.replace('Pabellón ','P'))}</b><span>${cls==='op'||cls==='ov'?'<i class="mlight" aria-hidden="true"></i>':''}${ph}</span></div>${big}${sub?`<div class="mts">${sub}</div>`:''}${nxt&&!r.fs?`<div class="mtn">Siguiente <b>${hhmm(nxt.s)}</b></div>`:''}</div>`}).join('');
+  const urpa=L('cirugias').filter(c=>c.fecha===hoy()&&c.urpaIn&&!c.urpaOut&&now-Date.parse(c.urpaIn)>36e5&&c.destino!=='ambulatorio').length;
+  return `<div class="mural"><div class="mhd"><div class="row" style="gap:14px"><span class="mlogo" data-go="inicio" role="button" title="Volver a la aplicación">${MARK()}</span><div><b class="mtt">Qronos™ · Pabellones ahora</b><div class="mu">Hospital Clínico Dra. Eloísa Díaz Insunza · se actualiza solo</div></div></div>
+    <div class="mks"><span>${ico('bisturi')}<b>${L('cirugias').filter(c=>c.fecha===hoy()&&c.estado==='en_curso').length}</b> en cirugía</span><span>${ico('ok')}<b>${k.realizadas}</b> realizadas</span><span class="${k.suspendidas?'cr':''}">${ico('warn')}<b>${k.suspendidas}</b> suspendidas</span><span class="${urpa?'cr':''}">${ico('cama')}<b>${urpa}</b> esperan cama</span></div>
+    <div class="mclk">${fH(now)}</div></div><div class="mgrid">${tiles}</div>
+    <div class="mft"><span><i class="od op"></i>En cirugía</span><span><i class="od ov"></i>Excede lo programado</span><span><i class="od rc"></i>Recambio</span><span><i class="od li"></i>Aseo o liberación</span><span><i class="od lb"></i>Libre</span><span><i class="od fs"></i>Fuera de servicio</span><span class="sp1"></span><button class="btn s" onclick="document.documentElement.requestFullscreen?.().catch(()=>{})">Pantalla completa</button><button class="btn s" data-go="inicio">Volver a la app</button></div></div>`}
+
+/* ---------- Vista de puerta (QR) ---------- */
+function puertaHTML(id){const p=byId('pabellones',id)||L('pabellones').find(x=>x.nombre.replace('Pabellón ','P')===id);if(!p)return `<div class="card"><h2>Pabellón no encontrado</h2><a class="btn" href="#inicio">Ir al inicio</a></div>`;
+  const O=calcOcup(hoy()),N=O.NOW,r=O.rows.find(x=>x.p._id===p._id);const cur=r&&r.act.find(b=>b.s<=N&&N<b.e),nxt=r&&r.act.find(b=>b.s>N&&b!==cur);const t=aseoAbierta(p);const vc=verCx();
+  const fsx=r&&r.fs;const est=fsx?['fs','Fuera de servicio']:t?['li','Aseo pendiente']:p.estado!=='operativo'?['li','En liberación']:cur?['op','En cirugía']:['lb','Disponible'];
+  const a1=r?accion1({p,cur,nxt,bloq:null,N,fs:fsx}):null;
+  const tipos=[['Climatización','clima'],['Iluminación quirúrgica','luz'],['Gases clínicos','gas'],['Equipamiento clínico','equipo'],['Aseo','aseo'],['Infraestructura','infra']];
+  return `<div class="puerta"><button class="mback lt" data-go="inicio"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Volver a la app</button><div class="pth"><span class="pnm">${esc(p.nombre.replace('Pabellón ','P'))}</span><span class="pst ${est[0]}"><i class="od ${est[0]}"></i>${est[1]}</span></div>
+    ${cur?`<p class="pinf">${vc?esc(cur.c.procedimiento)+' · ':''}desde ${hhmm(cur.s)}</p>`:nxt?`<p class="pinf">Siguiente cirugía ${hhmm(nxt.s)}</p>`:''}
+    ${a1?`<div class="pq1">${a1.h}</div>`:''}
+    ${t&&!a1?`<button class="pbig ok" data-a="q1" data-q="${t.aseoIni?'aseoFin':'aseoIni'}" data-id="${t._id}" ${S.rol==='concesionaria'?'':'disabled title="Lo confirma la concesionaria"'}>${ico(t.aseoIni?'ok':'aseo')}${t.aseoIni?'Pabellón listo':'Iniciar aseo'}</button>`:''}
+    <h3 class="pqh">${ico('warn')} Registrar falla · toque el tipo</h3>
+    <div class="pgr">${tipos.map(([n,ic])=>`<button class="ptile" data-a="fallaRapida" data-pab="${p._id}" data-tipo="${n}">${ico(ic)}<span>${n}</span></button>`).join('')}</div>
+    <p class="mu sm" style="text-align:center">Al tocar un tipo se registra la falla y se avisa al responsable según contrato. Puede agregar foto y comentario en el paso siguiente (opcional).</p>
+    <div class="row" style="justify-content:center"><a class="btn s" href="#inicio">Ir al inicio</a></div></div>`}
+const RESP_TIPO={'Climatización':'concesionaria','Iluminación quirúrgica':'concesionaria','Gases clínicos':'concesionaria','Aseo':'concesionaria','Infraestructura':'concesionaria','Equipamiento clínico':'hospital'};
+async function fallaRapida(pab,tipo,extra={}){const iid=uid();const y=new Date(nowMs()).getFullYear();const fol=`INC-${y}-${String(L('incidencias').length+1).padStart(3,'0')}`;const resp=RESP_TIPO[tipo]||'hospital';const ts=new Date(nowMs()).toISOString();
+  await put('incidencias',iid,{folio:fol,pabellon:pab,tipo,responsable:resp,prioridad:'alta',fueraServicio:false,desc:extra.desc||'Registrada desde la puerta del pabellón (QR)',fotos:extra.foto?[extra.foto]:[],estado:'abierta',ts,por:ak(),hist:[{ts,acc:'Registrada desde QR',u:ak(),rol:S.rol}]});
+  const rr=resp==='concesionaria'?'concesionaria':'mantenimiento';const tid=`inc-${iid}-atender`;
+  await put('tareas',tid,{folio:folio(),tipo:'incidencia',origen:'Incidencia '+fol,unidadSol:S.rol,rolResp:rr,rolActual:rr,accion:`Atender incidencia: ${tipo} · ${pabN(pab)}`,dominio:resp==='concesionaria'?'contractual':'operacional',prioridad:'alta',ts,plazo:new Date(nowMs()+cfg.plazoMin.alta*6e4).toISOString(),estado:'pendiente',nivel:0,ver:1,ref:{tipo:'incidencia',id:iid,etapa:'atender'},hist:[{ts,acc:'Creada',u:ak(),rol:S.rol}]});
+  notificar('alta',`Incidencia ${tipo} · ${pabN(pab)}`,'Registrada desde la puerta del pabellón',[rr,'jefpab'],{tipo:'tarea',id:tid},null,['hlf_incidencia',tipo.toLowerCase()]);
+  log('Registra incidencia',fol+' · '+tipo,{atrib:'Registrar',ref:{tipo:'incidencia',id:iid}});return {iid,fol}}
+
+/* ---------- Códigos QR ---------- */
+async function qrLib(){if(window.qrcode)return;await cargarJS('https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js')}
+function qrSVG(txt,cell=4){const q=qrcode(0,'M');q.addData(txt);q.make();return q.createSvgTag({cellSize:cell,margin:2,scalable:true})}
+const puertaURL=p=>(window.__QMARK?location.origin+location.pathname:WEB_URL)+'#puerta/'+p._id;
+async function hojaQR(){try{await qrLib()}catch(e){return toast('No se pudo cargar el generador de QR')}
+  const ps=L('pabellones').sort(pabOrd);
+  modal(`<div class="row sp noprint"><h2 style="margin:0">QR de las puertas de pabellón</h2><div class="row"><button class="btn p s" onclick="window.print()">Imprimir</button><button class="btn s" data-a="cerrar">Cerrar</button></div></div>
+  <p class="mu sm noprint">Imprima y pegue cada código junto a la puerta. Al escanearlo con el celular se abre la ficha de ese pabellón con los botones «Registrar falla» y «Pabellón listo». Funciona con la versión web de Qronos.</p>
+  <div class="qrg">${ps.map(p=>`<div class="qrc">${qrSVG(puertaURL(p))}<b>${esc(p.nombre)}</b><span>Escanee para registrar falla o confirmar aseo</span></div>`).join('')}</div>`);$('#modal .card')?.classList.add('wide')}
+
+/* ---------- Recorrido guiado: resalta en pantalla cada elemento real ---------- */
+const ACC1={enfermeria:'«Paciente en sala», «Iniciar cirugía» o «Terminar cirugía»',jefpab:'«Paciente en sala», «Iniciar cirugía» o «Terminar cirugía»',concesionaria:'«Iniciar aseo» y luego «Aseo terminado»',camas:'«Cama asignada»',esterilizacion:'«Instrumental listo»',abastecimiento:'«Insumos listo»',anestesia:'«Evaluación anestésica listo»'};
+function tourPasos(){const r=S?.rol,a=ACC1[r];
+  return [
+    {sel:['.orb'],t:'1. Así están los pabellones ahora',d:'Cada tarjeta es un pabellón. La franja de color de arriba dice qué pasa: <b class="c-op">verde</b> en cirugía, <b class="c-rc">amarillo</b> recambio, <b class="c-li">morado</b> aseo o liberación, <b class="c-lb">gris</b> libre o cerrado, <b class="c-vc">rojo</b> sin programación. Toque una tarjeta para ver el detalle.'},
+    {sel:['.orb .q1','.orb .orc'],t:'2. Su acción, en un solo toque',d:a?`Cuando le toque actuar, en la tarjeta del pabellón aparece un botón grande: ${a}. Tóquelo y queda registrado, sin formularios.`:'Los cargos operativos ven aquí un botón grande para registrar su acción en un toque. Su perfil consulta y aprueba desde la Bandeja.',demo:a?`<span class="q1 p" style="pointer-events:none;max-width:260px;margin:8px auto 0">${ico('ok')}<span>${a.replace(/[«»]/g,'').split(' o ')[0].split(' y ')[0]}</span></span>`:''},
+    {sel:['.orb .ochs','.orb .cki','.orb .ords'],t:'3. Alertas con íconos',d:`Las etiquetas avisan lo urgente sin leer: ${ico('aseo','s')} aseo y minutos del plazo, ${ico('cama','s')} paciente esperando cama, ${ico('warn','s')} riesgo de suspensión. Los íconos verdes o rojos muestran qué está listo para la próxima cirugía. La barra inferior es el día del pabellón: rayado = tiempo perdido.`},
+    {sel:['.carril'],t:'4. Flujo del paciente',d:'De izquierda a derecha: por ingresar, en pabellón, en recuperación y con cama o alta. Si un paciente queda en rojo, está detenido y hay que actuar.'},
+    {sel:['#nav a[href="#tareas"]','#tabs a[href="#tareas"]'],t:'5. Sus pendientes',d:'Aquí llegan las solicitudes para su cargo. El número rojo indica cuántas tiene. Se confirman con un toque desde la misma tarjeta.'},
+    {sel:['#nav .nrep','.top .brand','.side .brand'],t:'6. Informe y menú',d:'El botón azul genera al instante el informe de situación en PDF. Tocando el logo de Qronos encontrará la pantalla mural, el manual de uso y el tamaño de letra.'}
+  ]}
+const visible=el=>{if(!el)return false;const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&getComputedStyle(el).visibility!=='hidden'};
+function tourTarget(st){for(const s of st.sel){const el=[...document.querySelectorAll(s)].find(visible);if(el)return el}return null}
+function tourFin(){$('#coach')?.remove();document.body.classList.remove('coaching');try{localStorage.setItem('qronos_tour_'+S.rol,'1')}catch(e){}}
+function tour(i=0){if(route()[0]!=='inicio'){location.hash='inicio';setTimeout(()=>tour(i),350);return}
+  if(!$('#modal').hidden)cerrarModal();$('#appmenu').hidden=true;
+  const P2=tourPasos().filter(st=>tourTarget(st));if(i>=P2.length)return tourFin();i=Math.max(0,i);const st=P2[i],el=tourTarget(st);
+  el.scrollIntoView({block:'center',behavior:'instant'});
+  setTimeout(()=>{const r=el.getBoundingClientRect(),pad=8;let c=$('#coach');if(!c){c=document.createElement('div');c.id='coach';document.body.appendChild(c)}document.body.classList.add('coaching');
+    const hole={x:Math.max(4,r.left-pad),y:Math.max(4,r.top-pad),w:Math.min(innerWidth-8,r.width+pad*2),h:Math.min(innerHeight-8,r.height+pad*2)};
+    const bw=Math.min(360,innerWidth-24);const below=hole.y+hole.h+12+230<innerHeight;const right=hole.x+hole.w+bw+16<innerWidth&&hole.h>innerHeight*.45;
+    let bx,by;if(right){bx=hole.x+hole.w+14;by=Math.min(innerHeight-260,Math.max(12,hole.y))}else{bx=Math.min(innerWidth-bw-12,Math.max(12,hole.x+hole.w/2-bw/2));by=below?hole.y+hole.h+12:Math.max(12,hole.y-12-240)}
+    if(hole.h>innerHeight*.6&&!right){by=innerHeight-250;}
+    c.innerHTML=`<div class="chole" style="left:${hole.x}px;top:${hole.y}px;width:${hole.w}px;height:${hole.h}px"></div>
+    <div class="cbub" style="left:${bx}px;top:${by}px;width:${bw}px" role="dialog" aria-label="Recorrido guiado"><div class="cstep">Paso ${i+1} de ${P2.length}</div><h3>${st.t.replace(/^\d+\.\s*/,'')}</h3><p>${st.d}</p>${st.demo||''}
+    <div class="cbar"><i style="width:${(i+1)/P2.length*100}%"></i></div>
+    <div class="row" style="justify-content:space-between;margin-top:10px"><button class="btn s" data-a="tourFin">Salir</button><div class="row" style="gap:6px">${i?`<button class="btn s" data-a="tourSig" data-i="${i-1}">Anterior</button>`:''}<button class="btn p s" data-a="tourSig" data-i="${i+1}">${i===P2.length-1?'Terminar':'Siguiente ›'}</button></div></div></div>`},120)}
+function tourAuto(){if(!S||S.rol==='admin')return;try{if(localStorage.getItem('qronos_tour_'+S.rol))return}catch(e){return}setTimeout(()=>{if(S&&$('#modal').hidden&&route()[0]==='inicio')tour(0)},900)}
+addEventListener('resize',()=>{const c=$('#coach');if(c){const n=c.querySelector('.cstep')?.textContent.match(/\d+/);if(n)tour(+n[0]-1)}});
+
+/* ---------- Preferencias: tamaño de letra, tema y avisos ---------- */
+const PREF=k=>{try{return localStorage.getItem('qronos_'+k)}catch(e){return null}};
+const setPREF=(k,v)=>{try{localStorage.setItem('qronos_'+k,v)}catch(e){}};
+function aplicarPrefs(){const h=document.documentElement;h.dataset.txt=PREF('txt')||'n';h.dataset.tema=PREF('tema')||'auto'}
+aplicarPrefs();
+function prefsHTML(){const seg=(k,opts,def)=>`<div class="seg s${opts.length}">${opts.map(([v,t])=>`<button data-a="pref" data-k="${k}" data-v="${v}" class="${(PREF(k)||def)===v?'on':''}">${t}</button>`).join('')}</div>`;
+  const pn='Notification' in window?Notification.permission:'na';
+  return `<div class="apar"><span class="mu sm">Tamaño de letra</span>${seg('txt',[['n','Normal'],['g','Grande'],['xg','Muy grande']],'n')}
+  <span class="mu sm">Tema</span>${seg('tema',[['auto','Automático'],['claro','Claro'],['oscuro','Oscuro']],'auto')}
+  <span class="mu sm">Avisos en este dispositivo</span>${pn==='granted'?'<span class="sm t-ok">✓ Activados</span>':pn==='denied'?'<span class="sm mu">Bloqueados en el navegador</span>':pn==='na'?'<span class="sm mu">No disponibles en este navegador</span>':'<button class="btn s" data-a="push">Activar avisos</button>'}</div>`}
+
+setInterval(()=>{if(S&&route()[0]==='mural'&&$('#modal').hidden)render()},20000);
+
 /* ===================== CONFIGURACIÓN, FORMULARIOS, ACCIONES Y DEMOSTRACIÓN ===================== */
 const ROLKEYS=Object.keys(E.ROLES);
 const CFGV={
@@ -1998,7 +2331,7 @@ function abrirCx(id,fromRoute){const c=byId('cirugias',id);if(!c||!veClinico())r
    ${['enfermeria','jefpab'].includes(S.rol)&&c.estado==='en_curso'?`<button class="btn ok" data-a="finCx" data-id="${c._id}">Registrar término</button>`:''}</div>
   <h3 style="margin-top:14px">Historial</h3><div class="tl">${(c.hist||[]).slice(-12).reverse().map(h=>`<div><b>${esc(h.acc)}</b> · ${fDT(h.ts)} · ${esc(actorN(h.u))}${h.txt?`<div class="mu">${esc(h.txt)}</div>`:''}</div>`).join('')||'<div class="mu">Sin cambios</div>'}</div>`)}
 
-function pedir(titulo,campos,cb){
+function pedir(titulo,campos,cb){flowIni('form',1);
   modal(mHead(titulo)+`<form class="f" data-f="pedir">${campos.map(c=>`<div class="fl"><label>${c.l}${c.req?' *':''}</label>${c.t==='sel'?`<select class="in" name="${c.k}">${c.o.map(([v,t])=>`<option value="${esc(v)}" ${v===c.v?'selected':''}>${esc(t)}</option>`).join('')}</select>`:c.t==='area'?`<textarea class="in" name="${c.k}" ${c.req?'required':''} placeholder="${esc(c.ph||'')}">${esc(c.v||'')}</textarea>`:`<input class="in" type="${c.t||'text'}" name="${c.k}" value="${esc(c.v||'')}" ${c.req?'required':''} ${c.t==='file'?'accept="image/*" capture="environment"':''}>`}${c.h?`<div class="h">${c.h}</div>`:''}</div>`).join('')}<div class="row"><button class="btn p">Confirmar</button><button type="button" class="btn" data-a="cerrar">Cancelar</button></div></form>`);
   window._pedirCb=cb;
 }
@@ -2016,9 +2349,17 @@ document.addEventListener('click',async e=>{
   if(a==='seedGate'){if(!(me.isOwner||isAdmin()))return;b.disabled=true;b.textContent='Cargando…';await seed();return}
   if(!S&&!['cerrar'].includes(a))return;
   const A={
-    salir:()=>salir(),cambiar:()=>salir('Elija el perfil con que desea actuar.'),cerrar:cerrarModal,
+    salir:()=>salir(),cambiar:()=>salir('Elija el perfil con que desea actuar.'),cerrar:()=>{window._flow=null;cerrarModal()},
     appmenu:()=>{const m=$('#appmenu');if(!m.hidden){m.hidden=true;return}m.innerHTML=appMenuHTML();const r=b.getBoundingClientRect();m.style.left=Math.max(8,Math.min(r.left,innerWidth-292))+'px';m.style.top=(r.bottom+6)+'px';m.hidden=false},
     informeAhora:()=>informeAhora(),
+    q1:async()=>{e.preventDefault();e.stopPropagation();flowIni(route()[0]==='puerta'?'puerta':'q1',1);b.disabled=true;const m={ini:'iniCx',fin:'finCx',cama:'trasladoUrpa',chk:'confItem'}[b.dataset.q];if(m){await A[m]();toast('✓ '+(b.textContent||'Registrado').trim())}else await q1Extra(b)},
+    fallaRapida:async()=>{flowIni('puerta',1);const pab=b.dataset.pab,tipo=b.dataset.tipo;const {iid,fol}=await fallaRapida(pab,tipo);
+      modal(`<div class="tour"><div class="tic ok">${ico('ok')}</div><h2>Falla registrada</h2><p><b>${esc(fol)}</b> · ${esc(tipo)} · ${esc(pabN(pab))}<br>Ya se avisó a ${RESP_TIPO[tipo]==='concesionaria'?'la concesionaria':'Equipos Médicos'} y a Jefe de Pabellones.</p>
+      <form class="f" data-f="fallaExtra" data-id="${iid}"><div class="fl"><label>Comentario (opcional, sin datos de pacientes)</label><textarea class="in" name="desc"></textarea></div>${ASSETS?'<div class="fl"><label>Foto (opcional, sin personas)</label><input class="in" type="file" name="foto" accept="image/*" capture="environment"></div>':''}
+      <div class="row" style="justify-content:center"><button class="btn" type="button" data-a="cerrar">Listo</button><button class="btn p">Agregar</button></div></form></div>`)},
+    tourIni:()=>{$('#appmenu').hidden=true;tour(0)},tourSig:()=>tour(+b.dataset.i),tourFin:()=>tourFin(),
+    hojaQR:()=>hojaQR(),
+    pref:()=>{setPREF(b.dataset.k,b.dataset.v);aplicarPrefs();$('#appmenu').innerHTML=appMenuHTML()},
     apar:()=>{try{localStorage.setItem(APAR_K,b.dataset.v)}catch(e){}aplicarApariencia();$('#appmenu').innerHTML=appMenuHTML();toast('Apariencia: '+({auto:'automática',ios:'iOS',android:"Android"})[b.dataset.v])},
     acerca:()=>{$('#appmenu').hidden=true;modal(`<div class="row sp"><h2 style="margin:0">Qronos</h2><button class="btn s" data-a="cerrar">Cerrar</button></div><p class="mu">Coordinación de pabellones · Hospital Clínico Dra. Eloísa Díaz Insunza de La Florida</p>
       <table class="sm"><tbody>${[['Versión',VER+' de prueba'],['Datos','Ficticios, generados para demostración. No ingresar información de pacientes'],['Volumen simulado','≈ 1.200 cirugías al mes, en línea con las 14.595 cirugías de 2024 informadas en la Cuenta Pública HLF (≈ 1.216 al mes). La mezcla por tipo es supuesta'],['Pabellones','17 (dotación informada en la inauguración); tipos y jornadas por validar'],['Base de datos',typeof window.__qOnline!=='undefined'?'Servidor propio de la versión web, acceso con clave':'Base de datos de la plataforma Claude'],['Registro','Cada ingreso y acción queda en la auditoría con cargo, fecha y hora'],['Metodología','Indicadores Minsal (EAR) y Last Planner System adaptado a pabellón'],['Autor','© 2026 Mauro César Alcaíno Sánchez']].map(([k,x])=>`<tr><td style="width:34%"><b>${k}</b></td><td>${esc(x)}</td></tr>`).join('')}</tbody></table>`)},
@@ -2135,6 +2476,7 @@ document.addEventListener('submit',async e=>{const f=e.target;const k=f.dataset.
   if(k==='indext'){const num=x=>x===''||x==null?null:+x;const d={iemaT1:num(v.iemaT1),iemaT:num(v.iemaT),lePct:num(v.lePct),p75Pct:num(v.p75Pct),menorPct:num(v.menorPct),corte:v.corte||'',por:ak(),ts:new Date().toISOString()};const ant=byId('indicadores','externos');await put('indicadores','externos',d);log('Registra indicadores externos',v.corte||'',{atrib:'Registrar',antes:ant?clean(ant):null,despues:d});toast('Indicadores guardados');return}
   if(k==='censo'){for(const s of [...SVCQ,'urpa']){const c=byId('camas',s);if(!c)continue;const n={...clean(c)};if(s==='urpa'){if(v['dot_urpa']!=='')n.dot=+v['dot_urpa']}else{if(v['ocup_'+s]!=='')n.ocup=+v['ocup_'+s];if(v['altas_'+s]!=='')n.altas=+v['altas_'+s]}await put('camas',s,n)}
     await put('camas','censo',{corte:new Date(nowMs()).toISOString(),por:ak(),fuente:'Registro de '+rolN(S.rol)});log('Actualiza censo de camas','',{atrib:'Registrar'});toast('Censo guardado');return}
+  if(k==='fallaExtra'){const id=f.dataset.id;if(v.desc&&!pacienteOK(v.desc))return;const file=f.querySelector('[name=foto]')?.files?.[0];const foto=file?await subir(file):null;const i=await fresh('incidencias',id);if(i){const {_id,...x}=i;if(v.desc)x.desc=v.desc;if(foto)x.fotos=[...(x.fotos||[]),foto];x.ver=(i.ver||1)+1;await put('incidencias',id,x)}toast('✓ Información agregada');cerrarModal();return}
   if(k==='ficha'){const n=+v.n||0;const filas=[];for(let i=0;i<n;i++){const d=(v['a_'+i]||'').trim();if(d)filas.push([d,(v['b_'+i]||'').trim(),(v['c_'+i]||'').trim()])}
     await put('config','ficha',{filas,ts:new Date(nowMs()).toISOString(),por:S.rol});log('Edita datos del establecimiento',filas.length+' datos',{atrib:'Administrar configuraciones'});toast('Datos del establecimiento guardados');return}
   if(k==='cargos'){const fd=new FormData(f);const o={};ROLKEYS.filter(r=>r!=='admin').forEach(r=>{const t=(fd.get('t_'+r)||'').trim(),s=(fd.get('s_'+r)||'').trim(),x=(fd.get('x_'+r)||'').trim(),act=fd.get('a_'+r)==='on';if(t||s||x)o[r]={titular:t,subrogante:s,subActivo:act&&!!s,anexo:x}});
@@ -2206,6 +2548,20 @@ async function informeAhora(){$('#appmenu')&&($('#appmenu').hidden=true);toast('
   doc.setFillColor(11,92,173);doc.rect(0,0,W,6,'F');doc.setFontSize(16);doc.setTextColor(11,92,173);doc.text('Informe de situación actual de pabellones',40,y);doc.setTextColor(0);y+=16;doc.setFontSize(9);
   [`Hospital Clínico Dra. Eloísa Díaz Insunza de La Florida · Qronos™ · Coordinación de pabellones`,`Emitido: ${fDT(now)} · Corte de información: ${fH(now)} h`,`Emite: ${rolN(S.rol)}${p?' · '+p.n+(p.s?' (subrogante)':''):''}`].forEach(t=>{doc.text(t,40,y);y+=12});
   doc.setTextColor(200,0,0);doc.text('VERSIÓN DE PRUEBA 0.1 · DATOS FICTICIOS · NO USAR PARA DECISIONES CLÍNICAS',40,y);doc.setTextColor(0);y+=6;
+  /* Página 1 gráfica: semáforo, cifras grandes y línea de tiempo por pabellón */
+  {const est0=k.incCriticas||k.vencidas?[215,0,21,'REQUIERE ATENCIÓN']:k.riesgosManana||k.pabFuera?[196,81,0,'OPERACIÓN CON RIESGOS']:[36,138,61,'OPERACIÓN NORMAL'];y+=18;
+   doc.setFillColor(...est0.slice(0,3));doc.roundedRect(40,y,W-80,34,8,8,'F');doc.setTextColor(255);doc.setFontSize(15);doc.text(est0[3],W/2,y+22,{align:'center'});doc.setTextColor(0);y+=48;
+   const tiles=[['En cirugía ahora',L('cirugias').filter(c=>c.fecha===hoy()&&c.estado==='en_curso').length,[0,122,255]],['Realizadas',k.realizadas+' de '+k.programadas,[36,138,61]],['Suspendidas',k.suspendidas,k.suspendidas?[215,0,21]:[110,110,115]],['Tiempo perdido',Math.round(O.T.perd/O.JOR*100)+' %',O.T.perd/O.JOR>.15?[215,0,21]:[196,81,0]]];
+   const tw=(W-80-30)/4;tiles.forEach(([l,v,c],i)=>{const x=40+i*(tw+10);doc.setFillColor(244,245,248);doc.roundedRect(x,y,tw,62,8,8,'F');doc.setFillColor(...c);doc.rect(x,y+8,4,46,'F');doc.setFontSize(22);doc.setTextColor(...c);doc.text(String(v),x+14,y+32);doc.setFontSize(8.5);doc.setTextColor(90);doc.text(l,x+14,y+50)});doc.setTextColor(0);y+=80;
+   doc.setFontSize(11);doc.text('Jornada de cada pabellón (la línea roja es la hora actual)',40,y);y+=10;
+   const H0=O.rows.reduce((m,r)=>Math.min(m,r.ini),24*60),H1=O.rows.reduce((m,r)=>Math.max(m,r.fin),0),X0=78,XW=W-40-X0,sx=m=>X0+(m-H0)/(H1-H0)*XW;
+   doc.setFontSize(7);doc.setTextColor(120);for(let h=Math.ceil(H0/60);h<=Math.floor(H1/60);h++){doc.text(String(h).padStart(2,'0')+':00',sx(h*60),y+6,{align:'center'})}y+=10;
+   const rgb=hx=>[1,3,5].map(i=>parseInt(hx.slice(i,i+2),16));const rh=Math.min(18,(doc.internal.pageSize.getHeight()-y-120)/O.rows.length);
+   O.rows.forEach(r=>{doc.setFontSize(8);doc.setTextColor(40);doc.text(r.p.nombre.replace('Pabellón ','P'),40,y+rh*0.65);doc.setFillColor(235,236,240);doc.rect(sx(r.ini),y+2,sx(r.fin)-sx(r.ini),rh-5,'F');
+     if(r.fs){doc.setFillColor(122,31,31);doc.rect(sx(r.ini),y+2,sx(r.fin)-sx(r.ini),rh-5,'F')}else r.strip.forEach(s=>{doc.setFillColor(...rgb(O.CAT[s.k][1]));doc.rect(sx(s.a),y+2,Math.max(.5,sx(s.b)-sx(s.a)),rh-5,'F')});y+=rh});
+   if(N>H0&&N<H1){doc.setFillColor(215,0,21);doc.rect(sx(N)-1,y-rh*O.rows.length,2,rh*O.rows.length,'F')}
+   y+=10;doc.setFontSize(8);let lx=40;Object.entries(O.CAT).forEach(([kk,[t,c]])=>{doc.setFillColor(...rgb(c));doc.rect(lx,y-6,9,7,'F');doc.setTextColor(60);doc.text(t,lx+12,y);lx+=doc.getTextWidth(t)+26});doc.setTextColor(0);
+   doc.addPage();y=40}
   const tab=(t,head,body,o={})=>{if(!body.length)body=[[{content:o.vacio||'Sin registros',colSpan:head.length,styles:{textColor:120}}]];if(y>680){doc.addPage();y=40}doc.setFontSize(11);doc.text(t,40,y+16);doc.autoTable({startY:y+22,head:[head],body,styles:{fontSize:8,cellPadding:3},headStyles:{fillColor:[11,92,173]},margin:{left:40,right:40},...(o.cs?{columnStyles:o.cs}:{})});y=doc.lastAutoTable.finalY+8};
   const estado=k.incCriticas||k.vencidas?'Requiere atención':k.riesgosManana||k.pabFuera?'Operación con riesgos':'Operación normal';
   const pj=v=>Math.round(v/O.JOR*100)+' %';

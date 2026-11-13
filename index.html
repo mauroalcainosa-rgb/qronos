@@ -312,7 +312,7 @@ sup.tm{font-size:.5em;font-weight:600;margin-left:1px;vertical-align:super;opaci
 .ords.ftr i{font-style:normal}
 
 /* Sello de agua de toda la aplicación */
-.wm{position:fixed;inset:0;z-index:2147483000;pointer-events:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22420%22%20height%3D%22260%22%3E%3Ctext%20x%3D%22210%22%20y%3D%22140%22%20text-anchor%3D%22middle%22%20transform%3D%22rotate%28-28%20210%20130%29%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%231c1c1e%22%20fill-opacity%3D%220.042%22%20letter-spacing%3D%221%22%3EVERSI%C3%93N%20DE%20PRUEBA%200.1%20%C2%B7%20MAS%3C/text%3E%3C/svg%3E");background-repeat:repeat;background-size:420px 260px}
+.wm{position:fixed;inset:0;z-index:2147483000;pointer-events:none;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22420%22%20height%3D%22260%22%3E%3Ctext%20x%3D%22210%22%20y%3D%22140%22%20text-anchor%3D%22middle%22%20transform%3D%22rotate%28-28%20210%20130%29%22%20font-family%3D%22Inter%2CSegoe%20UI%2CArial%2Csans-serif%22%20font-size%3D%2222%22%20font-weight%3D%22800%22%20fill%3D%22%231c1c1e%22%20fill-opacity%3D%220.042%22%20letter-spacing%3D%221%22%3EVERSI%C3%93N%20DE%20PRUEBA%200.2%20%C2%B7%20MAS%3C/text%3E%3C/svg%3E");background-repeat:repeat;background-size:420px 260px}
 @media print{.wm{display:block}}
 @media (prefers-color-scheme:dark){.wm{filter:invert(1)}}
 
@@ -507,9 +507,124 @@ html[data-os=android] .sec{border-radius:12px}
 
 .hbrand{text-align:right}.hbrand .hslog{display:block;font-size:.95rem;font-weight:650;letter-spacing:.01em;margin-top:2px;opacity:1;text-shadow:none;line-height:1.2}
 @media (max-width:1100px){.hbrand .hslog{font-size:.72rem}}
+
+/* ===== Tiempos estándar ===== */
+.aseos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.aseo{background:var(--sf);border-radius:16px;padding:14px;box-shadow:var(--sh);border-top:6px solid var(--c);display:flex;flex-direction:column;gap:6px}
+.aseo .ah{display:flex;align-items:center;gap:8px}.aseo .ah i{width:12px;height:12px;border-radius:4px;background:var(--c);flex:none}.aseo .ah b{flex:1}
+.aseo .am{display:flex;align-items:baseline;gap:6px}.aseo .am b{font:800 2.2rem/1 var(--fd)}.aseo .am span{color:var(--mu);font-weight:600}
+.aseo p{margin:0;font-size:.82rem;color:var(--mu);line-height:1.4}
+.ain{width:100%;font-weight:700;padding:6px 8px;min-height:34px}.anum{width:84px;font-weight:800;font-size:1.05rem;padding:6px 8px;min-height:36px}
+.aseo .anum{font-size:1.6rem;width:110px}
+.stdt td{vertical-align:middle}.stdt select.in{min-height:36px;padding:6px 8px;font-size:.84rem;max-width:250px}
+.cyb{display:flex;height:12px;border-radius:6px;overflow:hidden;margin-top:5px;background:var(--fill)}.cyb i{display:block;background:#007aff}.cyb i+i{box-shadow:inset 2px 0 0 #fff}
+.cyb.big{height:26px;border-radius:8px;margin:4px 0 6px;width:100%}.cyb.big i{display:flex;align-items:center;justify-content:center;color:#fff;font-size:.74rem;font-weight:700;white-space:nowrap;overflow:hidden}.cyb.big i+i{color:#3a2a00}
+.cyl{display:inline-flex;align-items:center;gap:4px;margin-right:10px}.cyl i{width:10px;height:10px;border-radius:3px;display:inline-block}.cyl .op{background:#007aff}.cyl .as{background:linear-gradient(90deg,#34c759,#ffcc00,#ff9500,#ff3b30)}
+.cyinfo{background:var(--sk);border-radius:12px;padding:10px 12px;margin-top:6px;font-size:.85rem;color:var(--ink);display:flex;flex-direction:column;gap:6px}
+.cyrow{display:grid;grid-template-columns:52px 1fr auto auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--ln)}.cyrow:last-of-type{border-bottom:0}
+.cyx{display:flex;flex-wrap:wrap;gap:4px}
+.cyc{font-size:.74rem;padding:3px 8px;border-radius:8px;background:var(--fill);white-space:nowrap}.cyc em{font-style:normal;font-weight:700;margin-left:3px}
+.cyc.ok{background:var(--oks);color:var(--ok)}.cyc.muerto{background:var(--was);color:#a35200}.cyc.corto{background:var(--crs);color:var(--cr)}
+@media (max-width:700px){.cyrow{grid-template-columns:44px 1fr}.cyrow .mu,.cyrow .btn{grid-column:2}}
+.stdt td:nth-child(2){white-space:nowrap}
+
+/* Barra del día en tarjetas de pabellón, destacada */
+.ords.obig{height:20px;border-radius:7px;margin-top:8px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 1px 3px rgba(0,0,0,.08)}
+.ords.obig i{box-shadow:inset -1.5px 0 0 rgba(255,255,255,.85)}
+.ords.obig i:first-child{border-radius:7px 0 0 7px}.ords.obig i:last-of-type{border-radius:0 7px 7px 0}
+.ords.obig u.live{top:-4px;bottom:-4px;width:3px!important;border-radius:2px}
+.ordl{display:flex;align-items:center;gap:8px;margin-top:4px;font-size:.72rem;color:var(--mu);font-variant-numeric:tabular-nums}
+.ordl span:last-child{margin-left:auto}.ordl b{font-size:.76rem}.ordl em{font-style:normal;color:#d70015;font-weight:600}
+.ordl b,.ordl em{white-space:nowrap}.ordl{gap:6px}.ordl span:first-child{margin-right:auto}.ordl span:last-child{margin-left:auto}
+.orhr{display:flex;justify-content:space-between;font-size:.68rem;color:var(--mu);margin-top:2px;font-variant-numeric:tabular-nums}.ordl{justify-content:space-between;margin-top:2px;flex-wrap:wrap}.ordl span{display:none}
+
+.glname{display:flex;flex-direction:column;line-height:1.05}
+.glname small{font-size:.62rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--ac)}
+.glname b{font:900 1.65rem/1 var(--fd)!important;letter-spacing:-.02em;color:var(--ink)}
+.glname .sm{margin-top:2px}
+.hpab{background:linear-gradient(transparent 58%,color-mix(in srgb,var(--c,#007aff) 30%,transparent) 58%);padding:0 3px;border-radius:3px}
+.glname .sm{white-space:nowrap;font-size:.7rem}
+
+/* ===== Tarjetas de pabellón destacadas ===== */
+.orb{gap:12px}
+.orc{border:0;border-top:6px solid var(--oc,#aeb8c4);border-radius:16px;padding:12px 13px 11px;gap:6px;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--oc,#aeb8c4) 13%,var(--sf)) 0%,var(--sf) 46%);box-shadow:0 1px 2px rgba(0,0,0,.05),0 6px 18px rgba(0,0,0,.07)}
+.orc.fs{background:repeating-linear-gradient(135deg,var(--sf) 0 10px,rgba(122,31,31,.06) 10px 20px)}
+.orc:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.12)}
+.orh,.orb .orh{flex-direction:row!important;align-items:center!important;justify-content:space-between;gap:8px}
+.ornm{display:flex;flex-direction:column;line-height:1}
+.ornm small{font-size:.6rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:color-mix(in srgb,var(--oc,#8e9aa8) 70%,var(--ink))}
+.ornm b{font:900 2.05rem/1 var(--fd);letter-spacing:-.03em;color:var(--ink)}
+.orrg{position:relative;width:44px;height:44px;flex:none}.orrg svg{width:44px;height:44px}
+.orrg span{position:absolute;inset:0;display:grid;place-content:center;font:800 .82rem/1 var(--fd)}.orrg span i{font-style:normal;font-size:.6em;font-weight:700}
+.orc .orst{align-self:flex-start;font-size:.74rem;font-weight:700;padding:4px 10px;border-radius:999px;background:color-mix(in srgb,var(--oc,#aeb8c4) 18%,var(--sf));color:color-mix(in srgb,var(--oc,#6e737c) 60%,var(--ink))}
+.orc.op .orst,.orc.ov .orst{color:#137a34;background:rgba(52,199,89,.18)}
+.orc.ov .orst{color:#a35200;background:rgba(255,149,0,.18)}
+@media (max-width:700px){.ornm b{font-size:1.6rem}.orrg,.orrg svg{width:38px;height:38px}.orrg span{font-size:.72rem}}
+/* Estado del día: aviso, no botón */
+.pill.alerta{display:inline-flex;align-items:center;flex-wrap:wrap;gap:4px 10px;border-radius:10px;padding:7px 12px 7px 36px;position:relative;white-space:normal;cursor:default;
+  background:rgba(0,0,0,.22);border:0;color:#fff;box-shadow:inset 4px 0 0 #ff3b30;backdrop-filter:none;-webkit-backdrop-filter:none}
+.pill.alerta::before{content:"";position:absolute;left:11px;top:50%;width:16px;height:16px;margin-top:-8px;
+  background:#fff;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L1 21h22L12 2zm0 6l1 7h-2l1-7zm0 9.5a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2L1 21h22L12 2zm0 6l1 7h-2l1-7zm0 9.5a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z'/%3E%3C/svg%3E") center/contain no-repeat}
+.pill.alerta.w{box-shadow:inset 4px 0 0 #ff3b30;animation:alertpulse 2s ease-in-out infinite}
+.pill.alerta.riesgo{box-shadow:inset 4px 0 0 #ffcc00;animation:none}
+.pill.alerta.g{box-shadow:inset 4px 0 0 #34c759}
+.pill.alerta.g::before{-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center/contain no-repeat}
+.pill.alerta b{font-weight:800;font-size:.9rem}.pill.alerta span{font-size:.8rem;font-weight:550;opacity:.92}
+@keyframes alertpulse{50%{background:rgba(215,0,21,.38)}}
+
+/* Tabla de camas: se adapta al ancho */
+.camw{overflow-x:auto}
+.camt th{white-space:nowrap}
+@media (max-width:1180px){
+ .camt thead{display:none}.camt,.camt tbody{display:block;width:100%}
+ .camt tr{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px 12px;padding:12px 0;border-bottom:1px solid var(--ln)}
+ .camt td{display:block;border:0!important;padding:0!important;font-size:.9rem}
+ .camt td[data-l]::before{content:attr(data-l);display:block;font-size:.68rem;font-weight:700;color:var(--mu);text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+ .camt td.cn{grid-column:1/-2;font-size:1.05rem}.camt td.cs{grid-column:-2/-1;grid-row:1;text-align:right}.camt td.cs::before{display:none}
+ .camt td.cb{grid-column:1/-1}.camt td.hide-m{display:none}
+}
+@media (max-width:560px){.camt tr{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ===== Dotación de personal ===== */
+.rhg{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.rhc{background:var(--sf);border-radius:14px;padding:12px;box-shadow:var(--sh);border-left:5px solid var(--c);display:flex;flex-direction:column;gap:6px}
+.rhc.cr{background:linear-gradient(180deg,var(--crs),var(--sf) 60%)}
+.rhh{display:flex;align-items:center;gap:8px;font-size:.9rem}.rhh i{width:10px;height:10px;border-radius:3px;background:var(--c)}
+.rhn{display:flex;justify-content:space-between;font-size:.8rem;color:var(--mu)}.rhn b{font:800 1.4rem var(--fd);color:var(--ink)}
+.rhbar{position:relative;height:10px;border-radius:5px;background:var(--fill);overflow:visible}.rhbar i{display:block;height:100%;border-radius:5px;background:var(--c)}
+.rhc.cr .rhbar i{background:#ff3b30}.rhbar u{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink)}
+.rhs{font-size:.78rem}
+.rhm{min-width:640px}.rhmh,.rhmr{display:grid;grid-template-columns:110px repeat(56,minmax(6px,1fr));gap:2px;align-items:center}
+.rhmh em{font-style:normal;font-size:.62rem;color:var(--mu);white-space:nowrap}
+.rhmr{margin-top:3px}.rhmr span{font-size:.74rem;font-weight:650;display:flex;align-items:center;gap:5px;white-space:nowrap;overflow:hidden}.rhmr span i{width:8px;height:8px;border-radius:2px;flex:none}
+.rhmr b{height:20px;border-radius:3px}.rhmr b.z{background:var(--fill)}.rhmr b.g{background:#34c759}.rhmr b.y{background:#ffcc00}
+.rhmr b.r{background:#ff3b30;background-image:repeating-linear-gradient(135deg,rgba(255,255,255,.45) 0 2px,transparent 2px 5px)}
+.dott td{vertical-align:middle}.rhdot{display:inline-block;width:9px;height:9px;border-radius:3px;margin-right:7px}
+.eqc{display:inline-flex;flex-wrap:wrap;gap:3px}.eqc i{font-style:normal;font-size:.68rem;font-weight:700;padding:1px 6px;border-radius:6px;background:color-mix(in srgb,var(--c) 16%,var(--sf));color:color-mix(in srgb,var(--c) 70%,var(--ink));white-space:nowrap}
+
+/* ===== Tabla quirúrgica, bloques ===== */
+.tbn{background:var(--sf);border-radius:16px;box-shadow:var(--sh);border-left:6px solid var(--c);padding:12px 14px;display:flex;flex-direction:column;gap:8px;margin:12px 0}
+.tbs{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+.tbe{display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:1rem;color:color-mix(in srgb,var(--c) 70%,var(--ink))}.tbe i{width:11px;height:11px;border-radius:50%;background:var(--c)}
+.tbk{display:flex;flex-wrap:wrap;gap:6px}.tbk span{background:var(--fill);border-radius:8px;padding:4px 9px;font-size:.78rem}.tbk b{font-size:.92rem;margin-right:2px}
+.blqt td,.blqt th{text-align:center;vertical-align:middle}.blqt td:first-child{text-align:left}
+.blc select.in{min-height:32px;padding:4px 6px;font-size:.78rem;min-width:120px}
+.blu{height:6px;border-radius:3px;background:var(--fill);margin:5px 0 2px;overflow:hidden}.blu i{display:block;height:100%;width:var(--u);background:var(--k)}
+.hbars{display:flex;flex-direction:column;gap:6px}.hbr{display:grid;grid-template-columns:170px 1fr 54px;gap:10px;align-items:center;font-size:.84rem}.hbr div{height:12px;background:var(--fill);border-radius:6px;overflow:hidden}.hbr i{display:block;height:100%;background:var(--ac);border-radius:6px}.hbr b{text-align:right}
+
+.solb{display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;text-align:left}.solb .chip{margin:0}
+.perbar{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}.perbar::-webkit-scrollbar{display:none}
+.perbar .seg{display:inline-flex;flex-wrap:nowrap;flex:none;grid-template-columns:none}.perbar .seg button{white-space:nowrap;padding:7px 14px}
+.perbar .pnav{flex-wrap:nowrap;flex:none}.perbar .pnav b{white-space:nowrap;min-width:0}
+@media(max-width:700px){.perbar .seg button{padding:6px 10px}.perbar .pnav b{font-size:.85rem}}
+@media(max-width:700px){.perbar{flex-wrap:wrap;overflow:visible}.perbar .seg{width:100%;display:grid;grid-template-columns:repeat(4,1fr)}.perbar .pnav{width:100%;justify-content:space-between}.perbar .dpk .in{max-width:130px}}
+
+.pselg{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:12px}.psel{justify-content:center;padding:18px;font-size:1.05rem;font-weight:700}
+@media(max-width:700px){.card>table:not(.camt){display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}}
 </style></head><body>
 <div class="app">
- <aside class="side"><div class="brand" data-a="appmenu" role="button" tabindex="0" aria-label="Menú de sesión y datos de la aplicación" title="Sesión y datos de la aplicación"><span class="logo"><svg class="mark" viewBox="5 8 54 48" aria-label="Qronos: el tiempo en salud es vida"><rect x="8" y="12" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="12" width="16" height="8" rx="4" fill="#34c759"/><rect x="25" y="12" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="28" y="12" width="10" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="10;10;0;0;10" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="39" y="12" width="13" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="39;39;28;28;39" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/><animate attributeName="width" values="13;13;28;28;13" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="8" y="28" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="28" width="8" height="8" rx="4" fill="#34c759"/><rect x="17" y="28" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="20" y="28" width="9" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="9;9;0;0;9" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="30" y="28" width="22" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="30;30;20;20;30" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/><animate attributeName="width" values="22;22;36;36;22" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="8" y="44" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="44" width="24" height="8" rx="4" fill="#34c759"/><rect x="33" y="44" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="36" y="44" width="7" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="7;7;0;0;7" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect><rect x="44" y="44" width="8" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="44;44;36;36;44" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/><animate attributeName="width" values="8;8;20;20;8" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect></svg></span><div><b>Qronos<sup class="tm">™</sup></b><small>Coordinación de pabellones HLF · ver. 0.1</small></div></div>
+ <aside class="side"><div class="brand" data-a="appmenu" role="button" tabindex="0" aria-label="Menú de sesión y datos de la aplicación" title="Sesión y datos de la aplicación"><span class="logo"><svg class="mark" viewBox="5 8 54 48" aria-label="Qronos: el tiempo en salud es vida"><rect x="8" y="12" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="12" width="16" height="8" rx="4" fill="#34c759"/><rect x="25" y="12" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="28" y="12" width="10" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="10;10;0;0;10" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="39" y="12" width="13" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="39;39;28;28;39" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/><animate attributeName="width" values="13;13;28;28;13" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="8" y="28" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="28" width="8" height="8" rx="4" fill="#34c759"/><rect x="17" y="28" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="20" y="28" width="9" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="9;9;0;0;9" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="30" y="28" width="22" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="30;30;20;20;30" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/><animate attributeName="width" values="22;22;36;36;22" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="8" y="44" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="44" width="24" height="8" rx="4" fill="#34c759"/><rect x="33" y="44" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="36" y="44" width="7" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="7;7;0;0;7" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect><rect x="44" y="44" width="8" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="44;44;36;36;44" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/><animate attributeName="width" values="8;8;20;20;8" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect></svg></span><div><b>Qronos<sup class="tm">™</sup></b><small>Coordinación de pabellones HLF · ver. 0.2</small></div></div>
   <nav class="nav" id="nav"></nav><div class="who" id="who"></div></aside>
  <div class="main"><div class="top"><div class="brand" data-a="appmenu" role="button" tabindex="0" aria-label="Menú de sesión y datos de la aplicación"><span class="logo"><svg class="mark" viewBox="5 8 54 48" aria-label="Qronos: el tiempo en salud es vida"><rect x="8" y="12" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="12" width="16" height="8" rx="4" fill="#34c759"/><rect x="25" y="12" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="28" y="12" width="10" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="10;10;0;0;10" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="39" y="12" width="13" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="39;39;28;28;39" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/><animate attributeName="width" values="13;13;28;28;13" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0s"/></rect><rect x="8" y="28" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="28" width="8" height="8" rx="4" fill="#34c759"/><rect x="17" y="28" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="20" y="28" width="9" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="9;9;0;0;9" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="30" y="28" width="22" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="30;30;20;20;30" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/><animate attributeName="width" values="22;22;36;36;22" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.4s"/></rect><rect x="8" y="44" width="48" height="8" rx="4" fill="#aeb8c4" fill-opacity=".45"/><rect x="8" y="44" width="24" height="8" rx="4" fill="#34c759"/><rect x="33" y="44" width="2" height="8" rx="1" fill="#ffcc00"/><rect x="36" y="44" width="7" height="8" rx="2" fill="#ff3b30"><animate attributeName="width" values="7;7;0;0;7" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect><rect x="44" y="44" width="8" height="8" rx="4" fill="#007aff"><animate attributeName="x" values="44;44;36;36;44" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/><animate attributeName="width" values="8;8;20;20;8" keyTimes="0;.25;.5;.85;1" dur="5s" repeatCount="indefinite" begin="0.8s"/></rect></svg></span><b>Qronos<sup class="tm">™</sup></b></div><div id="topWho"></div></div>
   <div id="banner"></div><div class="wrap" id="view"></div></div>
@@ -524,19 +639,21 @@ const rpc=async(fn,body)=>{const r=await fetch(`${SB}/rest/v1/rpc/${fn}`,{method
   const t=await r.text();if(!r.ok){let m=t;try{m=JSON.parse(t).message||t}catch(e){}throw new Error(m)}return t?JSON.parse(t):null};
 const did=()=>{let d=localStorage.getItem(LD);if(!d||d.length<20){d='dev-'+(crypto.randomUUID?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join(''));localStorage.setItem(LD,d)}return d};
 const kd=k=>k+'|'+did();
-let clave=null,rol=null;const cache={};let since='1970-01-01T00:00:00Z';const subs=[];
+let clave=null,rol=null;const cache={};const LO='qronos_local';let ov={};try{ov=JSON.parse(localStorage.getItem(LO)||'{}')}catch(e){ov={}}
+const local=p=>rol==='rev'&&!p.startsWith('auditoria/');const guardarOv=()=>{try{localStorage.setItem(LO,JSON.stringify(ov))}catch(e){}};
+const aplicarOv=()=>{Object.entries(ov).forEach(([p,v])=>{if(v===null)delete cache[p];else cache[p]=v})};let since='1970-01-01T00:00:00Z';const subs=[];
 const parent=p=>p.split('/').slice(0,-1).join('/');
 function fire(colls){subs.forEach(s=>{if(colls&&!colls.has(s.c))return;s.cb({docs:Object.entries(cache).filter(([p])=>parent(p)===s.c).map(([p,v])=>({id:p.split('/').pop(),data:()=>JSON.parse(JSON.stringify(v))}))})})}
-function aplicar(rows){const ch=new Set();rows.forEach(r=>{if(r.deleted)delete cache[r.path];else cache[r.path]=r.data;ch.add(parent(r.path));if(r.updated_at>since)since=r.updated_at});return ch}
+function aplicar(rows){const ch=new Set();rows.forEach(r=>{if(r.updated_at>since)since=r.updated_at;if(rol==='rev'&&r.path in ov)return;if(r.deleted)delete cache[r.path];else cache[r.path]=r.data;ch.add(parent(r.path));if(r.updated_at>since)since=r.updated_at});return ch}
 let polling=false;async function poll(){if(polling||!clave)return;polling=true;try{let more=true;while(more){const rows=await rpc('q_since',{k:clave,since});const ch=aplicar(rows||[]);if(ch.size)fire(ch);more=(rows||[]).length>=5000}setEstado(true)}catch(e){setEstado(false);if(/clave inválida/i.test(e.message||'')){localStorage.removeItem(LK);location.reload()}}polling=false}
 function setEstado(ok){window.__qOnline=ok}
 const db={collection:c=>({doc:()=>({id:Math.random().toString(36).slice(2,12)}),orderBy(){return this},limit(){return this},
     onSnapshot(cb){const s={c,cb};subs.push(s);setTimeout(()=>fire(new Set([c])),0);return()=>subs.splice(subs.indexOf(s),1)}}),
   doc:p=>({get:async()=>{try{const rows=await rpc('q_get',{k:clave,p});/* lectura fresca de un documento */
-      const r=(rows||[])[0];if(r){if(r.deleted)delete cache[p];else cache[p]=r.data}else delete cache[p]}catch(e){}
+      const r=(rows||[])[0];if(rol==='rev'&&p in ov){}else if(r){if(r.deleted)delete cache[p];else cache[p]=r.data}else delete cache[p]}catch(e){}
       const v=cache[p];return {exists:v!==undefined,data:()=>v===undefined?undefined:JSON.parse(JSON.stringify(v))}},
-    set:async v=>{const d=JSON.parse(JSON.stringify(v));cache[p]=d;fire(new Set([parent(p)]));await rpc('q_put',{k:clave,p,d});poll()},
-    delete:async()=>{delete cache[p];fire(new Set([parent(p)]));await rpc('q_del',{k:clave,p});poll()}})};
+    set:async v=>{const d=JSON.parse(JSON.stringify(v));cache[p]=d;fire(new Set([parent(p)]));if(local(p)){ov[p]=d;guardarOv();return}await rpc('q_put',{k:clave,p,d});poll()},
+    delete:async()=>{delete cache[p];fire(new Set([parent(p)]));if(local(p)){ov[p]=null;guardarOv();return}await rpc('q_del',{k:clave,p});poll()}})};
 
 const user={me:async()=>({id:rol==='admin'?'u-admin':did(),name:rol==='admin'?'Administrador':'Revisor',isOwner:rol==='admin'}),
   profiles:async ids=>Object.fromEntries(ids.map(i=>[i,{name:i==='u-admin'?'Administrador':i.startsWith('dev-')?'Revisor':i}])),search:async()=>[]};
@@ -554,7 +671,9 @@ function pedirClave(msg){const w=document.createElement('div');w.id='qkey';w.inn
 <small>La clave es personal: queda vinculada a este dispositivo y tiene fecha de vencimiento. No la comparta. No ingrese datos de pacientes.</small></div>`;
   document.body.appendChild(w);const f=w.querySelector('form'),i=w.querySelector('input'),e=w.querySelector('.e');i.focus();
   f.onsubmit=async ev=>{ev.preventDefault();e.textContent='Verificando…';const k=i.value.trim().toUpperCase();try{const r=await rpc('q_auth',{k:kd(k)});if(!r||String(r).startsWith('x:')){e.textContent=r?String(r).slice(2):'Clave incorrecta.';return}localStorage.setItem(LK,k);w.remove();iniciar(kd(k),r)}catch(err){e.textContent='Sin conexión con la base de datos. Intente de nuevo.'}}}
-async function iniciar(k,r){clave=k;rol=r;await poll();listo();setInterval(poll,2500);addEventListener('focus',poll);document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll()})}
+async function iniciar(k,r){clave=k;rol=r;if(r!=='rev'){ov={};localStorage.removeItem(LO)}await poll();if(r==='rev'){aplicarOv();bandaRev()}listo();setInterval(poll,2500);addEventListener('focus',poll);document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll()})}
+function bandaRev(){const b=document.createElement('div');b.id='qrev';b.innerHTML=`<style>#qrev{position:fixed;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);z-index:9000;background:rgba(11,27,51,.88);color:#fff;font:600 .74rem -apple-system,BlinkMacSystemFont,'Inter',sans-serif;padding:7px 8px 7px 14px;border-radius:999px;display:flex;gap:10px;align-items:center;box-shadow:0 6px 20px rgba(0,0,0,.2);max-width:calc(100vw - 20px)}#qrev button{border:0;border-radius:999px;background:#fff;color:#0b1b33;font:700 .72rem inherit;padding:5px 10px;cursor:pointer;white-space:nowrap}@media print{#qrev{display:none}}</style><span>Modo revisión: sus cambios quedan solo en este equipo</span><button type="button">Restablecer</button>`;
+  b.querySelector('button').onclick=()=>{if(confirm('¿Descartar los cambios de prueba hechos en este equipo y volver a los datos originales?')){localStorage.removeItem(LO);location.reload()}};document.body.appendChild(b)}
 window.__qSalirClave=()=>{localStorage.removeItem(LK);location.reload()};
 addEventListener('DOMContentLoaded',async()=>{const k=localStorage.getItem(LK);if(k){try{const r=await rpc('q_auth',{k:kd(k)});if(r&&!String(r).startsWith('x:'))return iniciar(kd(k),r);localStorage.removeItem(LK);return pedirClave(r?String(r).slice(2):'')}catch(e){return pedirClave('Sin conexión con la base de datos. Intente de nuevo.')}}pedirClave()});
 })();
@@ -699,8 +818,10 @@ const CHECK={
   instrumental:{n:'Instrumental',rol:'esterilizacion',acc:'Confirmar disponibilidad de instrumental'},
   insumos:{n:'Insumos',rol:'abastecimiento',acc:'Confirmar disponibilidad de insumos'},
   cama:{n:'Cama post-operatoria',rol:'camas',acc:'Confirmar disponibilidad de cama'},
-  preop:{n:'Preparación preoperatoria',rol:'enfermeria',acc:'Validar preparación preoperatoria'},
-  anestesia:{n:'Evaluación anestésica',rol:'anestesia',acc:'Confirmar evaluación anestésica'}
+  preop:{n:'Preoperatorio (exámenes y ayuno)',rol:'enfermeria',acc:'Validar preparación preoperatoria'},
+  anestesia:{n:'Evaluación anestésica',rol:'anestesia',acc:'Confirmar evaluación anestésica'},
+  confirmado:{n:'Paciente confirmado',rol:'coordq',acc:'Confirmar asistencia del paciente (contactabilidad 48-72 h antes)',nuevo:true},
+  consentimiento:{n:'Consentimiento informado',rol:'cirujano',acc:'Verificar consentimiento informado firmado',nuevo:true}
 };
 const CFG_BASE={
   horizonteH:36,
@@ -724,7 +845,7 @@ function riesgosCirugia(c,now,horizonteH=36){
   if(!c||['realizada','suspendida','en_curso'].includes(c.estado))return [];
   const h=(inicioCx(c)-now)/HORA;
   if(h<0||h>horizonteH)return [];
-  return Object.keys(CHECK).filter(k=>{const s=c.checklist?.[k]?.estado||'pendiente';return s==='pendiente'||s==='dificultad'})
+  return Object.keys(CHECK).filter(k=>!CHECK[k].nuevo||(c.checklist&&k in c.checklist)).filter(k=>{const s=c.checklist?.[k]?.estado||'pendiente';return s==='pendiente'||s==='dificultad'})
     .map(k=>({cx:c._id,item:k,estado:c.checklist?.[k]?.estado||'pendiente',horas:h,prioridad:prioridadPorHoras(h)}));
 }
 const idTareaRiesgo=(cx,item)=>`cx-${cx}-${item}`;
@@ -782,7 +903,7 @@ function puede(rol,t,acc,matriz=MATRIZ_BASE){
 }
 
 /* Aplica una decisión con control de versión (la versión vista debe coincidir con la vigente en el servidor) */
-function decidir(t,acc,{rol,u,fund,verVista,destino,now}){
+function decidir(t,acc,{rol,u,fund,verVista,destino,now,cfg=CFG_BASE}){
   if(verVista!=null&&verVista!==(t.ver||1))return {error:'conflicto',m:'Otro usuario modificó esta solicitud. Revise la versión vigente antes de decidir.'};
   if(REQ_FUND.includes(acc)&&!String(fund||'').trim())return {error:'fundamento',m:'Esta decisión exige fundamento.'};
   if(acc==='derivar'&&!destino)return {error:'destino',m:'Indique la unidad de destino.'};
@@ -790,7 +911,7 @@ function decidir(t,acc,{rol,u,fund,verVista,destino,now}){
   const est={aprobar:'aprobada',observar:'observada',rechazar:'rechazada',antecedentes:'antecedentes',derivar:'derivada',escalar:'escalada',alternativa:'aprobada'}[acc];
   const n={...t,estado:est,ver:(t.ver||1)+1,hist:[...(t.hist||[]),{ts,acc:{aprobar:'Aprobada',observar:'Observada',rechazar:'Rechazada',antecedentes:'Solicita antecedentes',derivar:'Derivada',escalar:'Escalada',alternativa:'Alternativa registrada'}[acc],txt:fund||'',u,rol,ver:t.ver||1}]};
   if(acc==='derivar'){n.rolActual=destino;n.rolResp=destino}
-  if(acc==='escalar'){const cad=CFG_BASE.escala[t.dominio]||CFG_BASE.escala.operacional;const nx=cad[t.nivel||0];if(!nx)return {error:'tope',m:'No hay un nivel superior configurado'};n.nivel=(t.nivel||0)+1;n.rolActual=nx;n.requiereDireccion=nx==='director'}
+  if(acc==='escalar'){const cad=cfg.escala?.[t.dominio]||cfg.escala?.operacional||CFG_BASE.escala.operacional;const nx=cad[t.nivel||0];if(!nx)return {error:'tope',m:'No hay un nivel superior configurado'};n.nivel=(t.nivel||0)+1;n.rolActual=nx;n.requiereDireccion=nx==='director'}
   if(acc==='alternativa')n.alternativa={txt:fund,u,rol,ts};
   if(['aprobada','rechazada'].includes(est)){n.cierre=ts;n.decision={acc,u,rol,ts,fund:fund||''}}
   return {t:n};
@@ -800,7 +921,7 @@ function efectoCirugia(c,t){
   if(!c||t.ref?.tipo!=='cirugia'||!t.ref.item)return null;
   const cl={...(c.checklist||{})};const it={...(cl[t.ref.item]||{})};
   if(t.estado==='aprobada'){it.estado=t.alternativa?'alternativa':'ok';it.por=t.decision?.rol;it.ts=t.cierre;if(t.alternativa)it.nota=t.alternativa.txt}
-  else if(t.estado==='observada'){it.estado='dificultad';it.nota=t.hist?.at(-1)?.txt||''}
+  else if(t.estado==='observada'||t.estado==='rechazada'){it.estado='dificultad';it.nota=t.hist?.at(-1)?.txt||''}
   else return null;
   cl[t.ref.item]=it;return {...c,checklist:cl,ver:(c.ver||1)+1};
 }
@@ -863,7 +984,8 @@ function kpis({cirugias,pabellones,tareas,incidencias,compromisos,produccion},di
   const riesgos=cirugias.flatMap(c=>riesgosCirugia(c,now,48));
   return {
     pabOperativos:op.length,pabFuera:pabellones.length-op.length,programadas:prog,realizadas:real.length,suspendidas:susp.length,
-    cumplimiento:(()=>{const ex=prog-susp.length*0-cx.filter(c=>['programada','confirmada','en_curso'].includes(c.estado)&&inicioCx(c)>now).length;return ex>0?real.length/ex*100:null})(),
+    /* realizadas sobre las que ya debían haberse resuelto (no cuenta las en curso ni las aún por iniciar) */
+    cumplimiento:(()=>{const ex=cx.filter(c=>c.estado==='realizada'||c.estado==='suspendida'||(['programada','confirmada'].includes(c.estado)&&inicioCx(c)<=now)).length;return ex>0?real.length/ex*100:null})(),
     utilizacion:minDisp?minUsados/minDisp*100:null,improductivoMin:Math.max(0,minDisp-minUsados),minDisp,minUsados,causas,
     incCriticas:incidencias.filter(i=>i.estado!=='cerrada'&&i.prioridad==='critica').length,
     incConcesion:incidencias.filter(i=>i.estado!=='cerrada'&&i.responsable==='concesionaria').length,
@@ -934,7 +1056,7 @@ function generarSimulacion(simNow){
   const iso=t=>new Date(t).toISOString();const H=36e5,D=864e5,MIN=6e4;
   const hoy=dS(simNow),man=dS(simNow+D),pas=dS(simNow+2*D),ayer=dS(simNow-D);
   const at=(dia,hm)=>Date.parse(dia+'T'+hm+':00');const hhmm=m=>p2(Math.floor(m/60))+':'+p2(m%60);
-  const okCL=()=>({instrumental:{estado:'ok'},insumos:{estado:'ok'},cama:{estado:'ok'},preop:{estado:'ok'},anestesia:{estado:'ok'}});
+  const okCL=()=>({instrumental:{estado:'ok'},insumos:{estado:'ok'},cama:{estado:'ok'},preop:{estado:'ok'},anestesia:{estado:'ok'},confirmado:{estado:'ok'},consentimiento:{estado:'ok'}});
   /* 17 pabellones (dotación informada en la inauguración). Tipo y jornada por validar con la Unidad de Pabellones */
   for(let i=1;i<=17;i++){const id='p'+i;out.pabellones[id]={nombre:'Pabellón '+i,ini:'07:30',fin:i>=16?'20:00':'17:00',estado:id==='p5'?'en_liberacion':id==='p6'?'fuera_servicio':'operativo',ver:2,
     tipo:i===17?'Urgencia (simulado, por validar)':'Electivo / indiferenciado (por validar)',nota:i>=16?'Jornada extendida según bases ID 812261-57-LR25 (por validar)':'Jornada por validar'}}
@@ -943,6 +1065,9 @@ function generarSimulacion(simNow){
    ['Artroplastía total de rodilla','Traumatología',150,'sala'],['Artroplastía total de cadera','Traumatología',150,'sala'],['Osteosíntesis de fémur','Traumatología',120,'sala'],['Artroscopía de rodilla','Traumatología',75,'ambulatorio'],
    ['Histerectomía laparoscópica','Ginecología',120,'sala'],['Cesárea programada','Obstetricia',60,'sala'],['Nefrectomía laparoscópica','Urología',150,'sala'],['RTU de próstata','Urología',75,'sala'],['Ureteroscopía','Urología',60,'ambulatorio'],
    ['Tiroidectomía total','Cabeza y cuello',120,'sala'],['Resección colónica','Coloproctología',210,'upc'],['Safenectomía','Cirugía vascular',90,'ambulatorio']];
+  /* Bloques: cada pabellón y día hábil tiene una especialidad asignada; ~85 % de sus casos son de ella */
+  const ESPS=[...new Set(PR.map(x=>x[1]))];const espBloque=(p,dia)=>ESPS[(parseInt(p.slice(1))*3+new Date(dia+'T12:00').getDay())%ESPS.length];
+  const pickB=(p,dia)=>{const a=PR.filter(x=>x[1]===espBloque(p,dia));return rnd()<.85&&a.length?pick(a):pick(PR)};
   const SVC=e=>e==='Traumatología'?'tra':['Ginecología','Obstetricia'].includes(e)?'gin':'cir';
   const tipoDe=pr=>pr[3]==='ambulatorio'?(pr[2]<=30?'Cirugía menor':'Cirugía mayor ambulatoria'):'Electiva con hospitalización';
   let n=0;const cx=(dia,pab,hIni,est,pr,extra={})=>{n++;const id='s'+p2(n);const dest=pr[3];
@@ -953,11 +1078,16 @@ function generarSimulacion(simNow){
     if(est==='realizada'){c.durReal=Math.round(pr[2]*(0.85+rnd()*0.35));c.inicioReal=iso(at(dia,hIni)+Math.round(rnd()*25)*MIN);const fin=Date.parse(c.inicioReal)+c.durReal*MIN;c.urpaIn=iso(fin+5*MIN);
       if(fin+100*MIN<simNow)c.urpaOut=iso(fin+(50+Math.round(rnd()*40))*MIN)}
     if(est==='en_curso')c.inicioReal=iso(at(dia,hIni)+10*MIN);
+    /* Campos normativos: origen en lista de espera, lista de chequeo de cirugía segura, confirmación del paciente */
+    if(!c.origen){const u=rnd();c.origen=/urgencia/i.test(c.tipo||'')?'urgencia':u<.25?'ges':u<.45?'antiguedad':'noges'}
+    if(est==='realizada')c.lvcs=rnd()<.95;
+    const dd=(Date.parse(dia)-Date.parse(isoD(simNow)))/D;if(est==='programada'&&dd>=1&&dd<=3&&rnd()<(dd===1?.18:.45))c.checklist.confirmado={estado:'pendiente'};
+    if(est==='programada'&&dd>=1&&dd<=2&&rnd()<.05)c.cond='condicional';
     out.cirugias[id]=c;return id};
   const nowM=new Date(simNow).getHours()*60+new Date(simNow).getMinutes();
   /* llena la jornada de cada pabellón con casos sucesivos y recambios de 20-35 min */
   const llenar=(dia,pabs,hoyDia)=>{const ids={};pabs.forEach(p=>{const P=out.pabellones[p];let t=hm2(P.ini)+30+Math.floor(rnd()*3)*5;const fin=hm2(P.fin);let i=0;
-    while(true){const pr=pick(PR);if(t+pr[2]>fin+20)break;const h=hhmm(t);let est='programada';if(hoyDia){est=t+pr[2]+10<=nowM?'realizada':t<=nowM?'en_curso':'programada'}
+    while(true){const pr=pickB(p,dia);if(t+pr[2]>fin+20)break;const h=hhmm(t);let est='programada';if(hoyDia){est=t+pr[2]+10<=nowM?'realizada':t<=nowM?'en_curso':'programada'}
       ids[p+i]=cx(dia,p,h,est,pr);t+=pr[2]+20+Math.floor(rnd()*4)*5;i++;if(rnd()<.18)t+=45}});return ids};
   const hm2=s=>{const [a,b]=s.split(':').map(Number);return a*60+b};
   const opsHoy=Object.keys(out.pabellones).filter(p=>!['p5','p6'].includes(p));
@@ -995,7 +1125,7 @@ function generarSimulacion(simNow){
     Object.keys(out.pabellones).forEach(p=>{if(bloq(p,dia))return;const P=out.pabellones[p];const ini=hm2(P.ini),fin=hm2(P.fin);
       if(p==='p17'){/* pabellón de urgencia: casos no programados */const nU=pasado?3+Math.floor(rnd()*3):0;let t=ini+20;for(let j=0;j<nU;j++){const pr=pick(PRU);if(t+pr[2]>fin+60)break;cx(dia,p,hhmm(t),'realizada',pr,{tipo:'Urgencia'});t+=pr[2]+25+Math.floor(rnd()*90)}return}
       const lim=ini+(fin-ini)*fill;let t=ini+30+Math.floor(rnd()*3)*5;const subprog=rnd()<(pasado?.18:.1);const tope=subprog?fin-60-Math.floor(rnd()*90):fin;
-      while(true){const cap=Math.min(tope,lim)+20-t;let pr=rnd()<.12?pick(PRM):pick(PR);if(pr[2]>cap){const fit=[...PR,...PRM].filter(q=>q[2]<=cap);if(!fit.length)break;pr=pick(fit)}const h=hhmm(t);
+      while(true){const cap=Math.min(tope,lim)+20-t;let pr=rnd()<.08?pick(PRM):pickB(p,dia);if(pr[2]>cap){const all=[...PR,...PRM].filter(q=>q[2]<=cap);const own=all.filter(q=>q[1]===espBloque(p,dia));const fit=own.length?own:all;if(!fit.length)break;pr=pick(fit)}const h=hhmm(t);
         if(pasado){const sus=rnd()<.06;if(sus){const id=cx(dia,p,h,'suspendida',pr);const c=out.cirugias[id];c.causaSusp=causa();delete c.durReal;delete c.inicioReal;delete c.urpaIn;delete c.urpaOut;c.hist.push({ts:iso(at(dia,h)-40*MIN),acc:'Suspendida: '+c.causaSusp,u:'d-coord',rol:'coordq'});t+=Math.round(pr[2]*.6)+20;continue}
           const id=cx(dia,p,h,'realizada',pr);const c=out.cirugias[id];const atraso=Math.round(Math.max(0,-Math.log(1-rnd())*11-4));c.inicioReal=iso(at(dia,h)+atraso*MIN);const fR=Date.parse(c.inicioReal)+c.durReal*MIN;c.urpaIn=iso(fR+5*MIN);c.urpaOut=iso(fR+(45+Math.round(rnd()*50))*MIN);
           t+=atraso+c.durReal+20+Math.floor(rnd()*4)*5+(rnd()<.12?40:0)}
@@ -1127,7 +1257,7 @@ function generarSimulacion(simNow){
 if(typeof module!=='undefined')module.exports=generarSimulacion;
 
 /* ===================== NÚCLEO: datos, sesión, permisos, auditoría, motor en tiempo real ===================== */
-const APP='Qronos HLF',VER='0.1';
+const APP='Qronos HLF',VER='0.2';
 const E=ENGINE;
 /* Apariencia: automática (según el dispositivo), iOS o Android */
 const APAR_K='qronos_apariencia';
@@ -1159,7 +1289,7 @@ const DEMO=['director','subop','jefpab','coordq','enfermeria','anestesia','ester
 
 /* ---------- Estado ---------- */
 let DB=null,USER=null,ASSETS=null,me={id:null,name:'',isOwner:false},booted=false,bootErr='';
-const COLLS=['config','miembros','pabellones','cirugias','tareas','incidencias','liberaciones','mensajes','notifs','compromisos','informes','salidas','produccion','lecturas','indicadores','camas','registro','bloqueos'];
+const COLLS=['config','miembros','pabellones','cirugias','tareas','incidencias','liberaciones','mensajes','notifs','compromisos','informes','salidas','produccion','lecturas','indicadores','camas','registro','bloqueos','estandares','dotacion','tablas','bloques','actas'];
 const raw={},loaded=new Set(),names={},auditRaw={},auditSubs={};
 const L=c=>raw[c]||[];const byId=(c,id)=>L(c).find(x=>x._id===id);
 let cfg=JSON.parse(JSON.stringify(E.CFG_BASE)),matriz=E.MATRIZ_BASE,general={};
@@ -1252,10 +1382,11 @@ async function motor(){
       if(await fresh('tareas',t._id))continue;
       const {_id,...b}=t;b.folio=folio();await put('tareas',_id,b);
       const c=byId('cirugias',t.ref.id);
-      notificar(t.prioridad,`Riesgo de suspensión · ${c?.codigo}`,`${E.CHECK[t.ref.item].n} sin confirmar. ${t.accion}.`,[t.rolResp,'coordq'],{tipo:'tarea',id:_id},'n-'+_id,['hlf_validacion',byId('pabellones',c?.pabellon)?.nombre||'Pabellón']);
-      msgSis('general',`⚠️ Riesgo detectado: ${c?.codigo} (${byId('pabellones',c?.pabellon)?.nombre}, ${c?.fecha} ${c?.hIni}) — ${E.CHECK[t.ref.item].n.toLowerCase()} sin confirmar. Tarea ${b.folio} asignada a ${unidadN(t.rolResp)}.`,{tipo:'tarea',id:_id});
+      notificar(t.prioridad,`Riesgo de suspensión · ${c?.codigo}`,`${E.CHECK[t.ref.item].n} sin confirmar. ${t.accion}.`,t.prioridad==='critica'?[t.rolResp,'coordq']:[t.rolResp],{tipo:'tarea',id:_id},'n-'+_id,['hlf_validacion',byId('pabellones',c?.pabellon)?.nombre||'Pabellón']);
+      if(t.prioridad==='critica')msgSis('general',`⚠️ Riesgo crítico: ${c?.codigo} (${byId('pabellones',c?.pabellon)?.nombre}, ${c?.fecha} ${c?.hIni}) — ${E.CHECK[t.ref.item].n.toLowerCase()} sin confirmar. Tarea ${b.folio} asignada a ${unidadN(t.rolResp)}.`,{tipo:'tarea',id:_id});
     }
     for(const t of L('tareas')){
+      if(E.ABIERTA(t)&&t.ref?.tipo==='cirugia'){const c=byId('cirugias',t.ref.id);if(!c||['suspendida','realizada'].includes(c.estado)){const f=await fresh('tareas',t._id);if(f&&E.ABIERTA(f)&&f.ver===t.ver){const {_id,...b}=f;const ts=new Date(now).toISOString();b.estado='cerrada';b.cierre=ts;b.ver=(f.ver||1)+1;b.hist=[...(f.hist||[]),{ts,acc:'Cerrada automáticamente',txt:c?`La cirugía ${c.codigo} quedó ${c.estado}; la solicitud ya no aplica.`:'La cirugía ya no existe.',u:'sistema'}];await put('tareas',_id,b)}continue}}
       const e=E.escalarSiVence(t,now,cfg);if(!e)continue;
       const f=await fresh('tareas',t._id);if(!f||f.ver!==t.ver)continue;
       const {_id,...b}=e;await put('tareas',_id,b);
@@ -1275,6 +1406,9 @@ async function motor(){
     for(const c of L('compromisos')){if(c.estado!=='cerrado'&&Date.parse(c.plazo)<now)notificar('preventiva','Compromiso vencido',c.titulo,[c.rol,'subop'],{tipo:'compromisos'},'cv-'+c._id)}
   }catch(e){console.warn(e)}finally{motorBusy=false}
 }
+/* Choque de horario en un pabellón considerando el aseo estándar posterior a cada cirugía */
+function choqueCx(n,exceptId){const aN=typeof stdDe==='function'?(+stdDe(n.procedimiento).aseo.min||0):0;const s=hm(n.hIni),e=s+(+n.durMin);
+  return L('cirugias').find(x=>x._id!==exceptId&&x.pabellon===n.pabellon&&x.fecha===n.fecha&&x.estado!=='suspendida'&&(()=>{const xs=hm(x.hIni),xe=xs+(+x.durMin);const aX=typeof stdDe==='function'?(+stdDe(x.procedimiento).aseo.min||0):0;return s<xe+aX&&xs<e+aN})())}
 function folio(){const y=new Date(nowMs()).getFullYear();const n=L('tareas').map(t=>+(String(t.folio||'').match(/-(\d+)$/)||[])[1]||0);return `SOL-${y}-${String(Math.max(0,...n)+1).padStart(4,'0')}`}
 function msgSis(canal,texto,ref){put('mensajes',uid(),{canal,texto,ts:new Date(nowMs()).toISOString(),sis:true,ref:ref||null})}
 
@@ -1284,7 +1418,7 @@ async function decidir(id,acc,fund,destino){
   const vista=byId('tareas',id);const cur=await fresh('tareas',id);
   if(!cur){toast('La solicitud ya no existe.');return false}
   const pr=E.puede(S.rol,cur,acc,matriz);if(!pr.ok){toast(pr.m);return false}
-  const r=E.decidir(cur,acc,{rol:S.rol,u:ak(),fund,verVista:vista?.ver,destino,now:nowMs()});
+  const r=E.decidir(cur,acc,{rol:S.rol,u:ak(),fund,verVista:vista?.ver,destino,now:nowMs(),cfg});
   if(r.error){toast(r.m);raw.tareas=L('tareas').map(x=>x._id===id?cur:x);sched();return false}
   const {_id,...b}=r.t;await put('tareas',id,b);
   log(`Decisión: ${b.hist.at(-1).acc}`,`${cur.folio} · ${cur.accion}`,{atrib:E.PERMS.find(p=>p[0]===({aprobar:'validar',observar:'observar',rechazar:'observar',antecedentes:'solicitar',derivar:'asignar',escalar:'escalar',alternativa:'autorizar'})[acc])?.[1],antes:{estado:cur.estado,ver:cur.ver,rol:cur.rolActual},despues:{estado:b.estado,ver:b.ver,rol:b.rolActual},motivo:fund,ref:{tipo:'tarea',id}});
@@ -1299,7 +1433,7 @@ async function efectos(t,antes){
   const ref=t.ref||{};
   if(t.tipo==='aseo'&&t.estado==='aprobada'){const min=Math.round((nowMs()-Date.parse(t.ts))/6e4);notificar('informativa','Pabellón listo para el siguiente paciente',`${pabN(ref.id)} · recambio de ${min} min${min>25?' (sobre la meta de 25 min)':''}`,['enfermeria','jefpab','coordq'],{tipo:'pabellones'})}
   if(ref.tipo==='cirugia'){const c=await fresh('cirugias',ref.id);const n=E.efectoCirugia(c,t);if(n){const {_id,...b}=n;b.hist=[...(c.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:`Checklist · ${E.CHECK[ref.item].n}: ${n.checklist[ref.item].estado}`,u:ak(),rol:S.rol}];await put('cirugias',ref.id,b)}}
-  if(ref.tipo==='cambio'&&t.estado==='aprobada'){const c=await fresh('cirugias',ref.id);if(c){const {_id,...b}=c;Object.assign(b,ref.cambio);b.ver=(c.ver||1)+1;b.hist=[...(c.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:'Reprogramación aprobada',txt:ref.motivo,u:ak(),rol:S.rol}];await put('cirugias',ref.id,b);
+  if(ref.tipo==='cambio'&&t.estado==='aprobada'){const c=await fresh('cirugias',ref.id);const nc={...c,...ref.cambio};const choque=c&&choqueCx(nc,c._id);if(choque){notificar('alta','Reprogramación no aplicada',`${c.codigo}: el nuevo horario choca con ${choque.codigo}. Proponga otro horario.`,['coordq','jefpab',t.unidadSol],{tipo:'tarea',id:t._id});toast(`No se aplicó: choca con ${choque.codigo}`);return}if(c&&['suspendida','realizada','en_curso'].includes(c.estado)){toast('La cirugía ya no se puede reprogramar ('+c.estado+')');return}if(c){const {_id,...b}=c;Object.assign(b,ref.cambio);b.ver=(c.ver||1)+1;b.hist=[...(c.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:'Reprogramación aprobada',txt:ref.motivo,u:ak(),rol:S.rol}];await put('cirugias',ref.id,b);
     notificar('informativa','Programación modificada',`${c.codigo}: ${ref.cambio.fecha||c.fecha} ${ref.cambio.hIni||c.hIni} · ${byId('pabellones',ref.cambio.pabellon||c.pabellon)?.nombre}`,['coordq','enfermeria','anestesia','cirujano','camas','esterilizacion'],{tipo:'programacion'},null,['hlf_programacion'])}}
   if(ref.tipo==='liberacion'){const l=await fresh('liberaciones',ref.id);if(l){const pasos=l.pasos.map(p=>p.id===ref.paso?{...p,estado:t.estado==='aprobada'?'aprobada':t.estado==='rechazada'?'rechazada':t.estado==='observada'?'observada':p.estado,por:ak()}:p);
     const est=E.avanceLiberacion({...l,pasos});const {_id,...b}=l;await put('liberaciones',ref.id,{...b,pasos,estado:est});
@@ -1321,8 +1455,8 @@ const veClinico=()=>S&&!['concesionaria'].includes(S.rol);
 
 /* ---------- Sesión, inactividad y dispositivos compartidos ---------- */
 const store={get(){try{return general.compartido?null:JSON.parse(sessionStorage.getItem('hlf_s')||'null')}catch(e){return null}},set(v){try{if(!general.compartido)sessionStorage.setItem('hlf_s',JSON.stringify(v))}catch(e){}},clr(){try{sessionStorage.removeItem('hlf_s')}catch(e){}}};
-function entrar(s){S=s;store.set(s);lastAct=Date.now();lockMsg='';log('Inicio de sesión',`${s.nombre} · ${rolN(s.rol)}${s.modo==='demo'?' · perfil ficticio de demostración':''}`);if(!['puerta','mural'].includes(route()[0]))location.hash=s.rol==='director'?'direccion':'inicio';render();motor();if(!['puerta','mural'].includes(route()[0])&&typeof tourAuto==='function')tourAuto()}
-function salir(msg){if(S)log('Cierre de sesión',msg||'Manual');S=null;store.clr();lockMsg=msg||'';render()}
+function entrar(s){if(!valida(s)){toast('Este perfil no está autorizado para su cuenta. Solicite el acceso a la administración.');log('Intento de ingreso no autorizado',rolN(s.rol));return}S=s;store.set(s);lastAct=Date.now();lockMsg='';log('Inicio de sesión',`${s.nombre} · ${rolN(s.rol)}${s.modo==='demo'?' · perfil ficticio de demostración':''}`);if(!['puerta','mural'].includes(route()[0]))location.hash=s.rol==='director'?'direccion':'inicio';render();motor();if(!['puerta','mural'].includes(route()[0])&&typeof tourAuto==='function')tourAuto()}
+function salir(msg){document.getElementById('coach')?.remove();document.body.classList.remove('coaching');if(S)log('Cierre de sesión',msg||'Manual');S=null;store.clr();lockMsg=msg||'';render()}
 ['pointerdown','keydown','touchstart'].forEach(ev=>addEventListener(ev,()=>{lastAct=Date.now()},{passive:true}));
 setInterval(()=>{const lim=(general.compartido?5:(+general.inactividadMin||15))*6e4;if(S&&Date.now()-lastAct>lim)salir('Sesión cerrada por inactividad')},20000);
 setInterval(()=>motor(),20000);
@@ -1371,8 +1505,8 @@ const SEC={lastplanner:['#0f9d58','#34c759','#007aff','#30d158','#0b7a43'],inici
  mensajes:['#00c7be','#64d2ff','#30b0c7','#00b5ad','#00968f'],notificaciones:['#ff2d55','#ff6482','#bf5af2','#ff375f','#d6204a'],compromisos:['#af52de','#da8fff','#5e5ce6','#bf5af2','#8e3ab8'],
  indicadores:['#5856d6','#7d7aff','#30b0c7','#5e5ce6','#3a37b8'],informes:['#30b0c7','#64d2ff','#007aff','#40c8e0','#1d8fa6'],auditoria:['#8e8e93','#aeaeb2','#636366','#8e8e93','#48484a'],config:['#636366','#8e8e93','#3a3a3c','#636366','#2c2c2e'],
  pruebas:['#64d2ff','#5ac8fa','#007aff','#0a84ff','#1a7fd0'],guia:['#007aff','#5ac8fa','#34c759','#0a84ff','#2f6fe8'],mas:['#007aff','#5ac8fa','#5e5ce6','#0a84ff','#2f6fe8']};
-const MODS=[['hoy','Hoy','inicio',['inicio']],['quirofanos','Quirófanos','ocupacion',['ocupacion','programacion','perioperatorio','pabellones','incidencias']],['bandeja','Bandeja','tareas',['tareas','mensajes','notificaciones']],['gestion','Gestión','direccion',['direccion','lastplanner','indicadores','compromisos','informes']],['sistema','Administración','config',['auditoria','medicion','config','pruebas','guia']]];
-const SUBN={inicio:'Hoy',ocupacion:'Línea de tiempo',perioperatorio:'Camas y perioperatorio',programacion:'Programación',pabellones:'Pabellones',incidencias:'Incidencias',tareas:'Solicitudes',mensajes:'Mensajes',notificaciones:'Alertas',direccion:'Tablero ejecutivo',manual:'Manual de uso',lastplanner:'Last Planner y base de datos',indicadores:'Indicadores Minsal',compromisos:'Compromisos',informes:'Informes',auditoria:'Auditoría',config:'Configuración',pruebas:'Pruebas',guia:'Guía',medicion:'Medición de uso',mural:'Pantalla mural',puerta:'Puerta de pabellón'};
+const MODS=[['hoy','Hoy','inicio',['inicio']],['quirofanos','Quirófanos','ocupacion',['ocupacion','programacion','reunion','bloques','estandares','dotacion','perioperatorio','pabellones','incidencias']],['bandeja','Bandeja','tareas',['tareas','mensajes','notificaciones']],['gestion','Gestión','direccion',['direccion','lastplanner','indicadores','compromisos','informes']],['sistema','Administración','config',['auditoria','medicion','config','pruebas','guia']]];
+const SUBN={inicio:'Hoy',ocupacion:'Línea de tiempo',perioperatorio:'Camas y perioperatorio',programacion:'Programación',pabellones:'Estado de pabellones',incidencias:'Incidencias',tareas:'Solicitudes',mensajes:'Mensajes',notificaciones:'Alertas',direccion:'Tablero ejecutivo',manual:'Manual de uso',lastplanner:'Last Planner y base de datos',indicadores:'Indicadores Minsal',compromisos:'Compromisos',informes:'Informes',auditoria:'Auditoría',config:'Configuración',pruebas:'Pruebas',guia:'Guía',medicion:'Medición de uso',estandares:'Tiempos estándar',dotacion:'Dotación de personal',reunion:'Reunión de tabla',bloques:'Bloques',mural:'Pantalla mural',puerta:'Puerta de pabellón'};
 const modDe=k=>MODS.find(m=>m[3].includes(k))||MODS[0];
 const modVis=m=>m[3].filter(navOk);
 const modLbl=m=>m[0]==='sistema'&&S?.rol!=='admin'?(navOk('auditoria')?'Auditoría y ayuda':'Ayuda'):m[0]==='gestion'&&['director','subop'].includes(S?.rol)?'Dirección':m[1];
@@ -1396,13 +1530,15 @@ function linea(pts,col='#34c759',suf='%',h=130){if(pts.length<2)return '<p class
   const d=pts.map((p,i)=>`${i?'L':'M'}${X(i)},${Y(p[1])}`).join('');return `<svg class="svg" viewBox="0 0 ${W} ${h+16}" width="100%"><path d="${d} L${X(pts.length-1)},${h-10} L${X(0)},${h-10}Z" fill="${col}" opacity=".12"/><path d="${d}" fill="none" stroke="${col}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
   ${pts.map((p,i)=>`<circle cx="${X(i)}" cy="${Y(p[1])}" r="4" fill="#fff" stroke="${col}" stroke-width="2.5"/><text x="${X(i)}" y="${Y(p[1])-9}" text-anchor="middle" style="font-weight:700;fill:var(--ink)">${Math.round(p[1])}${suf}</text><text x="${X(i)}" y="${h+10}" text-anchor="middle">${esc(p[0])}</text>`).join('')}</svg>`}
 const usoPab=()=>L('pabellones').sort(pabOrd).map(p=>{const disp=Math.max(1,hm(p.fin)-hm(p.ini));const u=L('cirugias').filter(c=>c.pabellon===p._id&&c.fecha===hoy()&&c.estado==='realizada').reduce((a,c)=>a+(+c.durReal||+c.durMin),0);return [p.nombre,u/disp*100,p.estado==='fuera_servicio'?'#ff3b30':u/disp>=.75?'#34c759':u/disp>=.5?'#ff9500':'#ff3b30',75]});
-const NAV=[['mural','Pantalla mural'],['puerta','Puerta de pabellón'],['medicion','Medición de uso'],['manual','Manual de uso'],['lastplanner','Last Planner y base de datos'],['perioperatorio','Camas y perioperatorio'],['indicadores','Indicadores Minsal'],['inicio','Inicio'],['ocupacion','Línea de tiempo'],['direccion','Tablero de Dirección'],['programacion','Programación'],['pabellones','Pabellones'],['tareas','Solicitudes y validaciones'],['incidencias','Incidencias'],['mensajes','Mensajería'],['notificaciones','Notificaciones'],['compromisos','Compromisos'],['informes','Informes'],['auditoria','Auditoría'],['config','Configuración'],['pruebas','Pruebas del sistema'],['guia','Guía de la demostración']];
+const NAV=[['reunion','Reunión de tabla'],['bloques','Bloques quirúrgicos'],['dotacion','Dotación de personal'],['estandares','Tiempos estándar'],['mural','Pantalla mural'],['puerta','Puerta de pabellón'],['medicion','Medición de uso'],['manual','Manual de uso'],['lastplanner','Last Planner y base de datos'],['perioperatorio','Camas y perioperatorio'],['indicadores','Indicadores Minsal'],['inicio','Inicio'],['ocupacion','Línea de tiempo'],['direccion','Tablero de Dirección'],['programacion','Programación'],['pabellones','Estado de pabellones'],['tareas','Solicitudes y validaciones'],['incidencias','Incidencias'],['mensajes','Mensajería'],['notificaciones','Notificaciones'],['compromisos','Compromisos'],['informes','Informes'],['auditoria','Auditoría'],['config','Configuración'],['pruebas','Pruebas del sistema'],['guia','Guía de la demostración']];
 function navOk(k){if(!S)return false;const r=S.rol;
   if(k==='direccion'||k==='indicadores')return ['director','subop','jefpab'].includes(r);
   if(k==='programacion'||k==='ocupacion'||k==='perioperatorio')return veClinico()&&r!=='concesion';
   if(k==='informes')return P('informes')||r==='director';
   if(['auditoria','config','pruebas','guia','medicion'].includes(k))return r==='admin';
-  if(k==='mural'||k==='puerta')return true;
+  if(k==='mural'||k==='puerta'||k==='estandares')return true;
+  if(k==='dotacion'||k==='bloques')return !['concesionaria','concesion'].includes(r);
+  if(k==='reunion')return ['coordq','jefpab','subop','director','admin','enfermeria','anestesia'].includes(r);
   if(k==='lastplanner')return ['director','subop','jefpab','coordq','admin'].includes(r);
   if(k==='compromisos')return ['director','subop','jefpab','coordq','concesion','admin'].includes(r);
   return true}
@@ -1420,7 +1556,7 @@ function render(){
   const ct=counts();
   document.body.classList.toggle('fm',k==='mural'||k==='puerta');
   window._sec=k;const mk=modDe(k)[0];const mct=m=>modVis(m).includes('tareas')?(ct.tareas||0):0;const mods=MODS.filter(m=>modVis(m).length);
-  $('#nav').innerHTML=`<div class="ng">${mods.filter(m=>m[0]!=='sistema').map(m=>{const vis=modVis(m);const dest=vis.includes(m[2])?m[2]:vis[0];return `<a href="#${dest}" ${m[0]===mk?'aria-current="page"':''} title="${esc(modLbl(m))}">${tileH(dest)}<span class="t">${esc(modLbl(m))}</span>${mct(m)?`<span class="ct">${mct(m)}</span>`:''}</a>${m[0]===mk&&vis.length>1?`<div class="nsub">${vis.map(x=>`<a href="#${x}" class="${x===k?'on':''}"><span class="t">${esc(SUBN[x])}</span>${ct[x]?`<span class="ct">${ct[x]}</span>`:''}</a>`).join('')}</div>`:''}`}).join('')}</div><button class="nrep" data-a="informeAhora" title="Emitir informe de la situación actual"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5M9 9h3"/></svg><span class="t">Informe de situación actual</span></button>`;
+  $('#nav').innerHTML=`<div class="ng">${mods.filter(m=>m[0]!=='sistema').map(m=>{const vis=modVis(m);const dest=vis.includes(m[2])?m[2]:vis[0];return `<a href="#${dest}" ${m[0]===mk?'aria-current="page"':''} title="${esc(modLbl(m))}">${tileH(dest)}<span class="t">${esc(modLbl(m))}</span>${mct(m)?`<span class="ct">${mct(m)}</span>`:''}</a>${m[0]===mk&&vis.length>1?`<div class="nsub">${vis.map(x=>`<a href="#${x}" class="${x===k?'on':''}"><span class="t">${esc(SUBN[x])}</span>${ct[x]?`<span class="ct">${ct[x]}</span>`:''}</a>`).join('')}</div>`:''}`}).join('')}</div>`;
   const tm=mods.filter(m=>m[0]!=='sistema').slice(0,4);
   $('#tabs').innerHTML=tm.map(m=>{const vis=modVis(m);const dest=vis.includes(m[2])?m[2]:vis[0];return `<a href="#${dest}" ${m[0]===mk?'aria-current="page"':''}>${svg(dest)}${esc(modLbl(m))}${mct(m)?`<span class="ct">${mct(m)}</span>`:''}</a>`}).join('')+`<a href="#mas" ${k==='mas'||mk==='sistema'?'aria-current="page"':''}>${svg('mas')}Más</a>`;
   $('#who').innerHTML=`<div class="row" style="flex-wrap:nowrap"><span class="av" style="background:${ROLC[S.rol]}">${ini(rolN(S.rol))}</span><div><b>${esc(rolN(S.rol))}</b><span class="mu">${persona(S.rol)?esc(persona(S.rol).n)+(persona(S.rol).s?' (S)':''):S.modo==='demo'?'Cargo de demostración':esc(me.name||'')}</span></div></div><div class="row" style="margin-top:6px"><button class="btn s" data-a="cambiar">Cambiar perfil</button><button class="btn s" data-a="salir">Salir</button></div>
@@ -1465,7 +1601,7 @@ function head(t,p,acts='',pills=[],ey){window._sn=0;if(window._sec!=='inicio')pi
   const st=vis.length>1?`<nav class="stabs noprint">${vis.map(x=>`<a href="#${x}" ${x===window._sec?'aria-current="page"':''}>${esc(SUBN[x])}${ct[x]?`<span class="sc">${ct[x]}</span>`:''}</a>`).join('')}</nav>`:'';
   const home=S?.rol==='director'?'direccion':'inicio';const nv=window._sec!=='mas'?`<div class="hnav noprint"><button class="hnb" data-a="atras" aria-label="Volver atrás"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>Atrás</button><button class="hnb" data-a="irInicio" aria-label="Volver al menú principal"><svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6 10v10h12V10"/></svg>Menú principal</button><span style="flex:1"></span><span class="hbrand">Qronos<sup>™</sup><small class="hslog">El tiempo en salud es vida</small></span></div>`:'';
   return `<div class="hero" style="--h1:${c[1]};--h2:${c[2]};--h3:${c[3]};--h0:${c[0]}">${nv}<div class="hrow"><div><div class="ey">${esc(ey||modLbl(md)||'Qronos')} · ${fD(nowMs())} ${fH(nowMs())}</div>${S?`<div class="vperf"><span class="av" style="background:${ROLC[S.rol]||'#8e8e93'}">${ini(rolN(S.rol))}</span>Viendo como <b>${esc(rolN(S.rol))}</b>${persona(S.rol)?' · '+esc(persona(S.rol).n)+(persona(S.rol).s?' (S)':''):''}</div>`:''}<h1>${esc(t)}</h1>${p?`<p>${p}</p>`:''}</div>
-  ${pills.length?`<div class="pills">${pills.map(([x,c2])=>`<span class="pill ${c2||''}">${x}</span>`).join('')}</div>`:''}</div>${acts||st?`<div class="row sp noprint" style="margin-top:14px;align-items:flex-end">${st||'<span></span>'}${acts?`<div class="acts">${acts}</div>`:''}</div>`:''}</div>`}
+  ${pills.length?`<div class="pills">${pills.map(([x,c2])=>`<span class="pill ${c2||''}" ${/alerta/.test(c2||'')?'role="status"':''}>${x}</span>`).join('')}</div>`:''}</div>${acts||st?`<div class="row sp noprint" style="margin-top:14px;align-items:flex-end">${st||'<span></span>'}${acts?`<div class="acts">${acts}</div>`:''}</div>`:''}</div>`}
 const kpi=(l,v,s='',c='',rp,rc)=>`<div class="wid ${c}">${rp!=null?ring(rp,rc||'#007aff'):''}<div style="min-width:0"><div class="l">${esc(l)}</div><div class="v">${v}</div>${s?`<div class="s">${s}</div>`:''}</div></div>`;
 const misTareas=()=>L('tareas').filter(t=>t.rolActual===S?.rol||(S?.rol==='director'&&t.requiereDireccion&&E.ABIERTA(t)));
 const verCx=()=>veClinico()&&!['concesion','concesionaria'].includes(S?.rol);
@@ -1491,6 +1627,10 @@ const datos=()=>({cirugias:L('cirugias'),pabellones:L('pabellones'),tareas:L('ta
 const VIEWS={
 manual(){return manualHTML()},
 mural(){return muralHTML()},
+estandares(){return estandaresHTML()},
+dotacion(){return dotacionHTML()},
+reunion(){return reunionHTML()},
+bloques(){return bloquesHTML()},
 puerta(){return puertaHTML(route()[1])},
 medicion(){return head('Medición de uso','Cuántos segundos y toques toma cada registro. Sirve para validar la aplicación en terreno')+medicionHTML()},
 mas(){const ct=counts();
@@ -1507,9 +1647,9 @@ ocupacion(){
     const prog=dia===hoy()&&b.s<=NOW&&NOW<b.e?Math.min(100,Math.max(0,(NOW-b.s)/b.d*100)):null;
     return `<a class="tb ${cl}" href="#cx/${c._id}" style="left:${x(b.s)};width:${w(b.s,b.e)}" title="${esc(c.codigo)} · ${esc(c.procedimiento)} · ${hhmm(b.s)}–${hhmm(b.e)} · ${st}">${prog!=null?`<i style="width:${prog}%"></i>`:''}${live?'<em class="lv" aria-label="En curso"></em>':''}<span>${live?'<strong class="lvt">EN CURSO</strong> ':''}<b>${hhmm(b.s)}</b> ${esc(c.procedimiento)}</span></a>`};
   return head('Línea de tiempo de ocupación',`Cuánto de la jornada quedó bien programado, cuánto se perdió y cuánto queda por usar · ${dia===hoy()?'hoy':fD(dia)} ${momento}.`,'',[[`${ok} de ${op} pabellones bien programados`,ok===op&&op?'g':'w'],[`${hc(T.perd)} perdidas`,T.perd?'w':'g'],[`${hc(T.queda)} disponibles`]])+
-    periodoSel(dia)+sec('Programación por pabellón','Arriba las cirugías; abajo el balance minuto a minuto · lo sombreado ya ocurrió',`<div class="zctl" role="group" aria-label="Zoom de la línea de tiempo"><button class="btn s" data-a="zoom" data-z="-1" aria-label="Alejar">−</button><span>${Math.round((window._zoom||1)*100)}%</span><button class="btn s" data-a="zoom" data-z="1" aria-label="Acercar">＋</button>${dia===hoy()?'<button class="btn s" data-a="zoomNow">Ir a ahora</button>':''}</div>`)+`<div class="card ts tlc" id="tlbox" style="--z:${window._zoom||1}"><div class="tlg">
+    periodoSel(dia)+sec('Programación por <span class="hpab">pabellón</span>','Arriba las cirugías; abajo el balance minuto a minuto · lo sombreado ya ocurrió',`<div class="zctl" role="group" aria-label="Zoom de la línea de tiempo"><button class="btn s" data-a="zoom" data-z="-1" aria-label="Alejar">−</button><span>${Math.round((window._zoom||1)*100)}%</span><button class="btn s" data-a="zoom" data-z="1" aria-label="Acercar">＋</button>${dia===hoy()?'<button class="btn s" data-a="zoomNow">Ir a ahora</button>':''}</div>`)+`<div class="card ts tlc" id="tlbox" style="--z:${window._zoom||1}"><div class="tlg">
    <div class="tlh"><span></span><div class="hs">${Array.from({length:H1-H0+1},(_,i)=>`<span style="left:${x((H0+i)*60)}">${H0+i}:00</span>`).join('')}${dia===hoy()&&NOW>H0*60&&NOW<H1*60?`<span class="nowb" style="left:${x(NOW)}"><i></i>AHORA ${fH(now)}</span>`:''}</div><span class="tlr">Balance de la jornada</span></div>
-   ${rows.map(r=>`<div class="tlrow"><div class="gl" data-a="verPab" data-id="${r.p._id}" style="cursor:pointer" title="Ver todo el pabellón"><div class="glr">${r.fs?'<span class="glx">⛔</span>':ring(r.pctB,r.pctB>=META?'#34c759':r.pctB>=60?'#ffcc00':'#ff3b30',42)}<span class="glp">${r.fs?'':Math.round(r.pctB)+'%'}</span></div><div><b>${esc(r.p.nombre.replace('Pabellón ','P'))}</b><div class="mu sm">${r.p.ini}–${r.p.fin}</div></div></div>
+   ${rows.map(r=>`<div class="tlrow"><div class="gl" data-a="verPab" data-id="${r.p._id}" style="cursor:pointer" title="Ver todo el pabellón"><div class="glr">${r.fs?'<span class="glx">⛔</span>':ring(r.pctB,r.pctB>=META?'#34c759':r.pctB>=60?'#ffcc00':'#ff3b30',42)}<span class="glp">${r.fs?'':Math.round(r.pctB)+'%'}</span></div><div class="glname"><small>Pabellón</small><b>${esc(r.p.nombre.replace('Pabellón ',''))}</b><div class="mu sm">${r.p.ini}–${r.p.fin}</div></div></div>
     <div class="tlt2">${Array.from({length:H1-H0+1},(_,i)=>`<em style="left:${x((H0+i)*60)}"></em>`).join('')}
      ${NOW>H0*60&&NOW<H1*60?`<div class="past" style="width:${x(NOW)}"></div>`:NOW>=H1*60?'<div class="past" style="width:100%"></div>':''}
      <div class="lane">${r.fs?`<div class="fsb" style="left:${x(r.ini)};width:${w(r.ini,r.fin)}">⛔ ${r.bq?esc(r.bq.motivo)+(r.bq.responsable==='concesionaria'?' · concesionaria':' · hospital'):'Fuera de servicio · sin capacidad'}</div>`:r.act.map(blk).join('')}
@@ -1534,9 +1674,9 @@ perioperatorio(){
   const hrsm=m=>m>=60?Math.floor(m/60)+' h '+(m%60)+' min':m+' min';const pctv=(a,b)=>b?Math.round(a/b*100):0;
   return head('Camas y flujo perioperatorio','Una cirugía necesita una cama antes y después del pabellón: sin cama se suspende y sin traslado desde recuperación el pabellón no se libera.')+
   sec('Camas para las cirugías',`Censo ${R.censo?fDT(R.censo.corte):'sin registrar'} · camas libres + altas previstas frente a las cirugías que requieren cama`)+
-  `<div class="card"><table class="camt"><thead><tr><th>Servicio</th><th class="hide-m">Dotación</th><th>Ocupadas</th><th>Altas previstas hoy</th><th>Cirugías hoy</th><th>Cirugías mañana</th><th style="min-width:220px">Balance</th><th>Saldo mañana</th></tr></thead><tbody>
-   ${R.sv.map(s=>`<tr><td><b>${esc(s.n)}</b></td><td class="hide-m">${s.dot}</td><td>${s.ocup} <span class="mu sm">(${pctv(s.ocup,s.dot)}%)</span></td><td>${s.altas}</td><td>${s.reqH}</td><td>${s.reqM}</td><td>${bar(s)}</td>
-    <td><span class="chip ${s.saldoM<0?'cr':s.saldoM<3?'wa':'ok'}" style="font-size:.85rem">${s.saldoM<0?'Faltan '+(-s.saldoM):s.saldoM+' libres'}</span></td></tr>`).join('')}</tbody></table>
+  `<div class="card camw"><table class="camt"><thead><tr><th>Servicio</th><th class="hide-m">Dotación</th><th>Ocupadas</th><th>Altas previstas hoy</th><th>Cirugías hoy</th><th>Cirugías mañana</th><th style="min-width:220px">Balance</th><th>Saldo mañana</th></tr></thead><tbody>
+   ${R.sv.map(s=>`<tr><td class="cn"><b>${esc(s.n)}</b></td><td class="hide-m" data-l="Dotación">${s.dot}</td><td data-l="Ocupadas">${s.ocup} <span class="mu sm">(${pctv(s.ocup,s.dot)}%)</span></td><td data-l="Altas hoy">${s.altas}</td><td data-l="Cirugías hoy">${s.reqH}</td><td data-l="Cirugías mañana">${s.reqM}</td><td class="cb">${bar(s)}</td>
+    <td class="cs" data-l="Saldo mañana"><span class="chip ${s.saldoM<0?'cr':s.saldoM<3?'wa':'ok'}" style="font-size:.85rem">${s.saldoM<0?'Faltan '+(-s.saldoM):s.saldoM+' libres'}</span></td></tr>`).join('')}</tbody></table>
    <div class="lgd" style="margin-top:10px"><span><i style="background:#8e9aa8"></i>Ocupadas</span><span><i style="background:#007aff"></i>Reservadas para cirugías de hoy</span><span><i style="background:#5856d6"></i>Reservadas para mañana</span><span><i style="background:#34c759"></i>Libres después de reservar</span><span><i style="background:#ff3b30"></i>Déficit</span></div>
    <p class="mu sm" style="margin:8px 0 0">Las cirugías ambulatorias no requieren cama. La dotación total (391) y las 60 camas críticas provienen de fuentes públicas; la distribución por servicio es simulada.</p></div>`+
   sec('Recuperación y postoperatorio',`${R.enUrpa.length} de ${R.ur.dot||'—'} puestos de recuperación ocupados · ${R.bloq.length} paciente${R.bloq.length===1?'':'s'} esperando cama más de 60 min`)+
@@ -1563,7 +1703,7 @@ indicadores(){
    ${tarj('B.3_2.1 · CG-SRA 69','Ocupación de quirófanos',f1(I.occ.v)+' %','≥ 85 %',I.occ.p,'horas de quirófano usadas en horario hábil ÷ (días hábiles × 8 horas × quirófanos en dotación) × 100','REM (numerador) · nivel central (denominador) · mensual','',I.occ.v)}
    ${tarj('B.3_2 · CG-SRA 68','Rendimiento de quirófanos',f1(I.rend.v),'≥ 4,1 cirugías por quirófano y día',I.rend.p,'cirugías mayores electivas realizadas ÷ (días hábiles × quirófanos electivos e indiferenciados en dotación)','REM · nivel central · mensual','La ficha oficial multiplica además por 100, lo que no calza con la meta de 4,1: conviene confirmarlo con el Depto. de Control de Gestión.',I.rend.v!=null?I.rend.v/4.1*100:null)}
    ${tarj('B.4_1.4 · CG-SRA 30','Suspensiones de cirugías mayores electivas',f1(I.susp.v)+' %','≤ 6,5 %',I.susp.p,'cirugías mayores electivas suspendidas ÷ programadas en horario hábil × 100','REM · mensual','',I.susp.v!=null?Math.min(100,I.susp.v/6.5*100):null)}</div>
-`+sec('Provienen de otros sistemas','GRD-ALCOR y SIGTE: se registran aquí para tenerlos a la vista')+`<div class="inds">
+`+comgesHTML()+sec('Provienen de otros sistemas','GRD-ALCOR y SIGTE: se registran aquí para tenerlos a la vista')+`<div class="inds">
    ${tarj('B.3_1.7 · CG-SRA 80','IEMA en GRD médico-quirúrgicos',I.iema.v==null?'—':f1(I.iema.v)+' %','reducir ≥ 10 % si el IEMA es mayor que 1 (≥ 3 % si es menor)',I.iema.p,'(IEMA del período − IEMA del período anterior) ÷ IEMA del período anterior × 100. IEMA = estancia media observada ÷ estancia media esperada según la norma GRD','GRD-ALCOR · anual · excluye especialidades con menos de 50 casos',`${ext.iemaT1?`IEMA anterior ${ext.iemaT1} → actual ${ext.iemaT??'—'}. `:''}El pabellón influye por los días de espera preoperatoria y por las suspensiones que alargan la estada.`,null)}
    ${tarj('B.3_1.9 · CG-SRA 67','Producción quirúrgica para resolver lista de espera',ext.lePct==null?'—':f1(ext.lePct)+' %','según línea base (de +10 a 0 puntos porcentuales)',null,'egresos de cirugía mayor electiva registrados en SIGTE (causal 1) ÷ cirugías mayores electivas en REM × 100','SIGTE · REM · mensual','',null)}
    ${tarj('C.4_1.7 · CG-SRA 83','Lista de espera quirúrgica sobre el percentil 75',ext.p75Pct==null?'—':f1(ext.p75Pct)+' %','≥ 95 % de casos resueltos',I.p75.p,'casos resueltos con antigüedad sobre el percentil 75 ÷ casos del universo × 100 (línea base 31-12-2025)','SIGTE · mensual','La fórmula de la ficha menciona solo incontinencia urinaria femenina, aunque el título abarca todas las cirugías: verificar.',null)}
@@ -1576,7 +1716,7 @@ indicadores(){
 `+sec('Indicadores operacionales del día','Complementarios: no forman parte del instrumento EAR')+`
   <div class="kpis">${kpi('Retraso de la primera cirugía',O.retraso==null?'—':Math.round(O.retraso)+' min','promedio por pabellón desde el inicio de la jornada',O.retraso>15?'wa':'ok')}${kpi('Recambio entre cirugías',O.recambio==null?'—':Math.round(O.recambio)+' min','promedio entre el término y el inicio siguiente',O.recambio>25?'wa':'ok')}
    ${kpi('Subprogramación',O.subprog==null?'—':Math.round(O.subprog)+' min','jornada sin cirugía programada, por pabellón',O.subprog>60?'wa':'ok')}${kpi('Quirófanos en dotación',I.QX,'base del denominador EAR')}</div>
-  <p class="mu sm">Referencia: el Hospital El Carmen de Maipú, también concesionado, informa en su Cuenta Pública 2025 metas de 15 min de retraso de primera hora, 15 min de recambio, 60 min de subprogramación diaria y 8 % de suspensiones. Son referencias, no metas oficiales del Hospital de La Florida.</p>`},
+  <p class="mu sm">Referencia: el Hospital El Carmen de Maipú, también concesionado, informa en su Cuenta Pública 2025 metas de 15 min de retraso de primera hora, 15 min de recambio, 60 min de subprogramación diaria y 8 % de suspensiones. Son referencias, no metas oficiales del Hospital de La Florida; la meta COMGES 2026 de suspensión es 6,5 %.</p>`},
 inicio(){
   const now=nowMs(),mt=misTareas().filter(E.ABIERTA).sort((a,b)=>(a.plazo<b.plazo?-1:1));const k=E.kpis(datos(),hoy(),now);const vacio=!L('pabellones').length;
   const sup=['coordq','jefpab','subop','director'].includes(S.rol);const exc=[];
@@ -1588,7 +1728,8 @@ inicio(){
     L('incidencias').filter(i=>i.estado!=='cerrada'&&(i.fueraServicio||i.prioridad==='critica')).forEach(i=>exc.push({p:1,c:'cr',t:`${i.tipo} · ${pabN(i.pabellon)}`,s:`${i.fueraServicio?'Pabellón fuera de servicio':'Incidencia crítica'} · ${i.responsable==='concesionaria'?'Concesionaria':'Hospital'}`,h:'#incidencias'}));
   }
   exc.sort((a,b)=>a.p-b.p);
-  const estado=k.incCriticas||k.vencidas?['Requiere atención','w']:k.riesgosManana||k.pabFuera?['Operación con riesgos','w']:['Operación normal','g'];
+  const rz=[k.vencidas?`${k.vencidas} solicitud${k.vencidas>1?'es':''} vencida${k.vencidas>1?'s':''}`:'',k.incCriticas?`${k.incCriticas} incidencia${k.incCriticas>1?'s':''} crítica${k.incCriticas>1?'s':''}`:'',k.riesgosManana?`${k.riesgosManana} riesgo${k.riesgosManana>1?'s':''} para mañana`:'',k.pabFuera?`${k.pabFuera} pabellón fuera de servicio`:''].filter(Boolean).join(' · ');
+  const estado=k.incCriticas||k.vencidas?[`<b>Requiere atención</b>${rz?'<span>'+rz+'</span>':''}`,'w alerta']:k.riesgosManana||k.pabFuera?[`<b>Operación con riesgos</b>${rz?'<span>'+rz+'</span>':''}`,'w alerta riesgo']:['<b>Operación normal</b><span>sin alertas</span>','g alerta'];
   const row=x=>`<a class="it" href="${x.h}" style="text-decoration:none;color:inherit"><span class="dot ${x.c}"></span><div class="b"><b>${esc(x.t)}</b><div class="mu sm">${esc(x.s)}</div></div><span class="chev">›</span></a>`;
   const hh=new Date(now).getHours();const nom=(persona(S.rol)?.n)||(S.modo!=='demo'&&me.name&&!/^(Revisor|Administrador)$/.test(me.name)?me.name:'');return head(`${hh<12?'Buenos días':hh<20?'Buenas tardes':'Buenas noches'}${nom?', '+nom.split(' ')[0]:''}`,`${esc(rolN(S.rol))}. ${esc(ROLQ[S.rol]||'')}.`,P('registrar')?`<button class="btn p" data-a="nuevaInc">＋ Registrar falla</button>`:'',[[estado[0],estado[1]]],'Hoy')+
   (vacio?`<div class="card" style="text-align:center;padding:34px"><h2>Aún no hay datos</h2><p class="mu">La aplicación está conectada, pero la base de datos está vacía.</p>${isAdmin()?'<button class="btn p l" data-a="seedGate">Cargar datos de ejemplo</button>':'<p class="sm">Pida al administrador que cargue los datos de ejemplo.</p>'}</div>`:
@@ -1634,8 +1775,12 @@ programacion(){
   const now=nowMs(),dia=window._dia||manana();const cxAll=L('cirugias').filter(c=>c.fecha===dia).sort((a,b)=>a.hIni<b.hIni?-1:1);const cx=cxAll.filter(c=>(!F('pp')||c.pabellon===F('pp'))&&(!F('esp')||c.especialidad===F('esp')));
   const pabs=L('pabellones').sort(pabOrd);const dias=[-1,0,1,2].map(n=>isoD(now+n*864e5));
   const risk=cxAll.map(c=>({c,r:E.riesgosCirugia(c,now,cfg.horizonteH)})).filter(x=>x.r.length);
+  window._cicloSec=()=>sec('Ciclos operación + aseo','Cada recambio comparado con el aseo estándar de la operación anterior','<a class="lnk" href="#estandares">Tiempos estándar ›</a>')+cicloResumenHTML(dia);
   return head('Programación quirúrgica','Intervenciones del día y las condiciones que cada una necesita para no suspenderse',`${P('registrar')&&['coordq','jefpab'].includes(S.rol)?'<button class="btn p" data-a="nuevaCx">＋ Nueva cirugía</button>':''}`)+
   `<div class="row" style="margin-top:4px;gap:10px;align-items:center"><div class="seg">${dias.map(d=>`<button data-a="dia" data-d="${d}" aria-pressed="${d===dia}">${d===hoy()?'Hoy':d===manana()?'Mañana':fD(d)}</button>`).join('')}</div><label class="dpk"><span>Otro día</span><input type="date" class="in" data-dpick="1" value="${dia}"></label></div>`+
+  (verCx()?tablaBanner(dia):'')+
+  (verCx()?window._cicloSec():'')+
+  (verCx()?(()=>{const Dm=demanda(dia),df=deficitTramos(Dm);const hh2=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');return sec(`Dotación de personal <span class="chip ${df.length?'cr':'ok'}">${df.length?df.length+' déficit':'cubierta'}</span>`,'Personas que requiere la programación frente al personal disponible','<a class="lnk" href="#dotacion">Ver mapa de cobertura ›</a>')+`<div class="card">${df.length?df.slice(0,4).map(x=>`<div class="it"><span class="dot cr"></span><div class="b"><b>${hh2(x.a)}–${hh2(x.b)} · faltan ${x.falta} ${esc(x.r.n.toLowerCase())}</b></div></div>`).join('')+(df.length>4?`<p class="mu sm">y ${df.length-4} tramo(s) más</p>`:''):'<p class="t-ok" style="margin:0">✓ La dotación programada cubre todos los equipos requeridos en el día.</p>'}</div>`})():'')+
   sec(`Intervenciones en riesgo <span class="chip ${risk.length?'wa':'ok'}">${risk.length}</span>`,`Condiciones sin confirmar dentro de las próximas ${cfg.horizonteH} h`)+
   `<div class="card"><div class="list">${risk.map(({c,r})=>`<a class="it" href="#cx/${c._id}" style="text-decoration:none;color:inherit"><span class="dot ${r[0].prioridad==='critica'?'cr':'wa'}"></span><div class="b"><b>${c.hIni} · ${esc(c.codigo)}</b> · ${esc(c.procedimiento)}<div class="mu sm">${esc(pabN(c.pabellon))} · falta: ${r.map(x=>E.CHECK[x.item].n.toLowerCase()+(x.estado==='dificultad'?' (dificultad)':'')).join(', ')}</div></div>${prioChip(r[0].prioridad)}</a>`).join('')||'<p class="empty">✓ Todas las intervenciones del día tienen sus condiciones confirmadas.</p>'}</div></div>`+
   sec(`Programación del día <span class="chip">${cxAll.length}</span>`,'Toque una intervención para ver su detalle, confirmar condiciones o proponer cambios','<a href="#ocupacion" class="lnk">Ver en línea de tiempo ›</a>')+
@@ -1646,7 +1791,7 @@ programacion(){
 
 pabellones(){
   const libs=L('liberaciones').filter(l=>l.estado!=='liberado');
-  return head('Pabellones','Estado de cada pabellón, sus fallas y los flujos de liberación',P('registrar')?'<button class="btn p" data-a="nuevaInc">＋ Registrar incidencia</button>':'')+
+  return head('Estado de pabellones','Estado de cada pabellón, sus fallas y los flujos de liberación',P('registrar')?'<button class="btn p" data-a="nuevaInc">＋ Registrar incidencia</button>':'')+
   sec('Estado de cada pabellón','Próxima intervención, incidencias abiertas y acciones disponibles','<a href="#ocupacion" class="lnk">Uso de la jornada ›</a>')+`<div class="card">${pabsHTML(false)}</div>`+
   sec(`Liberaciones en curso <span class="chip ${libs.length?'wa':'ok'}">${libs.length}</span>`,`Validaciones obligatorias antes de volver a operar (modo ${cfg.flujoLiberacion.modo})`)+
   `<div class="card">${libs.map(l=>`<div class="it"><div class="b"><b>${esc(l.pabN)}</b> ${chip(l.estado.replace('_',' '),l.estado==='detenida'?'cr':'wa')}
@@ -1824,10 +1969,10 @@ function orBoard(){const O=calcOcup(hoy()),N=O.NOW,now=nowMs(),cfgH=cfg.horizont
     const chips=[aT?`<span class="och ${aL<0?'cr':'wa'}">${ico('aseo')}Aseo ${aT.aseoIni?'en curso':'pendiente'} · ${aL<0?'+'+(-aL)+' min':aL+' min'}</span>`:'',bloq?`<span class="och cr">${ico('cama')}Espera cama ${Math.round((now-Date.parse(bloq.urpaIn))/6e4)} min</span>`:'',rs?`<span class="och wa">${ico('warn')}Riesgo de suspensión</span>`:''].join('');
     const a1=accion1({p,cur,nxt,bloq,N,fs:r.fs});
     const pct=Math.round(r.t.uso/Math.max(1,Math.min(N,r.fin)-r.ini)*100);
-    const strip=`<div class="ords">${r.strip.map(s=>`<i style="left:${(s.a-r.ini)/r.jor*100}%;width:${(s.b-s.a)/r.jor*100}%;background:${O.CAT[s.k][1]}"></i>`).join('')}${cur&&!r.fs?`<b class="mlive" style="left:${(Math.max(cur.s,r.ini)-r.ini)/r.jor*100}%;width:${(Math.min(cur.e,r.fin)-Math.max(cur.s,r.ini))/r.jor*100}%"></b>`:''}${N>r.ini&&N<r.fin?`<u class="live" style="left:${(N-r.ini)/r.jor*100}%"></u>`:''}</div>`;
-    return `<a class="orc ${cls}" data-a="verPab" data-id="${p._id}" role="button" tabindex="0"><div class="orh"><b>${esc(p.nombre.replace('Pabellón ','P'))}</b><span class="orst"><i class="od ${cls}"></i>${ph}</span></div>${body}${nx}
+    const strip=`<div class="ords obig">${r.strip.map(s=>`<i style="left:${(s.a-r.ini)/r.jor*100}%;width:${(s.b-s.a)/r.jor*100}%;background:${O.CAT[s.k][1]}" title="${O.CAT[s.k][0]}: ${Math.round(s.b-s.a)} min"></i>`).join('')}${cur&&!r.fs?`<b class="mlive" style="left:${(Math.max(cur.s,r.ini)-r.ini)/r.jor*100}%;width:${(Math.min(cur.e,r.fin)-Math.max(cur.s,r.ini))/r.jor*100}%"></b>`:''}${N>r.ini&&N<r.fin?`<u class="live" style="left:${(N-r.ini)/r.jor*100}%"></u>`:''}</div>`;
+    return `<a class="orc ${cls}" data-a="verPab" data-id="${p._id}" role="button" tabindex="0"><div class="orh"><div class="ornm"><small>Pabellón</small><b>${esc(p.nombre.replace('Pabellón ',''))}</b></div>${r.fs?'':`<div class="orrg" title="${Math.round(r.pctB)} % de la jornada bien usado">${ring(Math.min(100,r.pctB),r.pctB>=85?'#34c759':r.pctB>=60?'#ffcc00':'#ff3b30',44)}<span>${Math.round(r.pctB)}<i>%</i></span></div>`}</div><span class="orst"><i class="od ${cls}"></i>${ph}</span>${body}${nx}
       ${chips?`<div class="ochs">${chips}</div>`:''}${a1?`<div class="oq1">${a1.h}</div>`:''}
-      ${strip}<div class="orf"><span>${p.ini}</span><span>${r.fs?'—':isFinite(pct)&&N>r.ini?pct+'% de la jornada usado':''}</span><span>${p.fin}</span></div></a>`}).join('')}
+      ${strip}<div class="orhr"><span>${p.ini}</span><span>${p.fin}</span></div><div class="ordl">${r.fs?'<b>Sin uso</b>':`<b class="${r.pctB>=85?'t-ok':r.pctB>=60?'':'t-cr'}">${Math.round(r.pctB)} % bien usado</b>${r.t.perd>=10?`<em>${Math.round(r.t.perd)} min perdidos</em>`:''}`}</div></a>`}).join('')}
 
 /* ===== LAST PLANNER SYSTEM: base analítica + PPC + causas + lookahead ===== */
 const LPS_CAT={'Falta de cama':'Gestión de camas','Paciente no se presenta':'Paciente','Condición clínica del paciente':'Clínica','Prolongación de tabla':'Programación','Falta de instrumental':'Esterilización','Falla de equipamiento':'Equipamiento clínico','Falta de insumos':'Abastecimiento','Pabellón no disponible':'Infraestructura (concesión)','Inicio tardío: cirugía previa prolongada':'Programación','Inicio tardío: paciente no preparado':'Enfermería / preoperatorio','Inicio tardío: equipo incompleto':'Equipo clínico','Inicio tardío: recambio prolongado':'Aseo (concesión)'};
@@ -1892,7 +2037,7 @@ function ocupacionPeriodo(){const per=window._per,dia=window._dia||hoy();const d
   const dl=d=>{const x=new Date(d+'T12:00');return `<span class="${d===hoy()?'hoyc':''}">${x.toLocaleDateString('es-CL',{weekday:'short'}).replace('.','')} ${x.getDate()}</span>`};
   const bq=L('bloqueos').filter(b=>b.hasta>=ds[0]&&b.desde<=ds[ds.length-1]);
   return head('Línea de tiempo de ocupación',`Programación de los ${pabs.length} pabellones en el período: qué está bien programado, qué se perdió y qué queda libre. Toque un día para ver el detalle.`,'',[])+
-  periodoSel(dia)+sec('Programación por pabellón',mes?'Cada casilla es un día: porcentaje de la jornada bien programado (verde ≥ 85 %, amarillo ≥ 60 %, rojo < 60 %)':'Cada franja es la jornada de un pabellón: usado, programado, recambio, perdido y disponible')+
+  periodoSel(dia)+sec('Programación por <span class="hpab">pabellón</span>',mes?'Cada casilla es un día: porcentaje de la jornada bien programado (verde ≥ 85 %, amarillo ≥ 60 %, rojo < 60 %)':'Cada franja es la jornada de un pabellón: usado, programado, recambio, perdido y disponible')+
   `<div class="card ts"><div class="pgrid ${mes?'mes':''}" style="--n:${ds.length}"><div class="pgh"></div>${ds.map(d=>`<a class="pgh" data-a="verDia" data-d="${d}">${dl(d)}</a>`).join('')}
    ${pabs.map((p,i)=>`<div class="pgl" data-a="verPab" data-id="${p._id}" style="cursor:pointer"><b>${esc(p.nombre.replace('Pabellón ','P'))}</b></div>${R.map(({d,o})=>cell(o.rows[i],d)).join('')}`).join('')}</div>
    <div class="lgd" style="margin-top:10px">${['uso','prog','rec','perd','queda','bloq'].map(k=>`<span><i style="background:${CAT[k][1]}"></i>${CAT[k][0]}</span>`).join('')}</div></div>`+
@@ -1918,6 +2063,7 @@ function fichaPab(id){const p=byId('pabellones',id);if(!p)return '';const dia=wi
   <div class="grid g3" style="gap:8px">${kpi('Usado y programado',O.hrs(r.bien),Math.round(r.pctB)+' % de la jornada')}${kpi('Tiempo perdido',O.hrs(r.t.perd),'atrasos, recambios largos y huecos',r.t.perd?'cr':'')}${kpi('Disponible',O.hrs(r.t.queda),dia<hoy()?'jornada cerrada':'aún se puede programar')}</div>
   ${ret.length?`<div class="orw" style="margin-top:10px">Paciente retenido en recuperación esperando cama: ${ret.map(c=>Math.round((now-Date.parse(c.urpaIn))/6e4)+' min').join(', ')}</div>`:''}
   ${lib?`<div class="orw wa" style="margin-top:8px">Liberación en curso: ${lib.pasos.filter(x=>x.estado==='aprobada').length} de ${lib.pasos.length} pasos aprobados</div>`:''}
+  ${vc?(()=>{const cy=ciclosPab(id,dia);if(!cy.length)return '';const m=cy.filter(x=>x.est==='muerto').reduce((a,x)=>a+x.dif,0),c=cy.filter(x=>x.est==='corto');return `<h3 style="margin:16px 0 6px">Ciclos operación + aseo</h3><div class="cyx">${cy.map(x=>`<span class="cyc ${x.est}" title="${esc(x.aseo.n)} ${x.aseo.min} min">${x.a.hIni.slice(0,5)} → ${x.b.hIni.slice(0,5)} · ${esc(x.aseo.n.split(' ')[0])} ${x.aseo.min}' <em>${x.est==='ok'?'✓ calza':x.est==='muerto'?'+'+x.dif+' min muertos':-x.dif+' min de aseo faltan'}</em></span>`).join('')}</div>${(m||c.length)&&puedeStd()&&dia>=hoy()?`<button class="btn s" style="margin-top:6px" data-a="ajCiclo" data-id="${id}" data-d="${dia}">Ajustar al ciclo estándar</button>`:''}`})():''}
   <h3 style="margin:16px 0 6px">Programación del día</h3><div class="ts"><table class="sm"><thead><tr><th>Hora</th><th>Intervención</th><th>Estado</th></tr></thead><tbody>${cs.map(fila).join('')||'<tr><td colspan="3" class="empty">Sin cirugías este día</td></tr>'}</tbody></table></div>
   ${inc.length?`<h3 style="margin:16px 0 6px">Incidencias abiertas</h3>${inc.map(i=>`<div class="it"><span class="dot ${i.prioridad==='critica'||i.fueraServicio?'cr':'wa'}"></span><div class="b"><b>${esc(i.folio)} · ${esc(i.tipo)}</b><div class="mu sm">${esc(i.desc||'')} · ${i.responsable==='concesionaria'?'Concesionaria':'Hospital'}</div></div></div>`).join('')}`:''}
   ${bqs.length?`<h3 style="margin:16px 0 6px">Bloqueos vigentes y próximos</h3>${bqs.map(b=>`<div class="it"><span class="dot wa"></span><div class="b"><b>${esc(b.motivo)}</b><div class="mu sm">${fD(Date.parse(b.desde+'T12:00'))}${b.hasta!==b.desde?' a '+fD(Date.parse(b.hasta+'T12:00')):''} · ${b.responsable==='concesionaria'?'Concesionaria':'Hospital'}</div></div></div>`).join('')}`:''}
@@ -1932,7 +2078,7 @@ function calcOcup(dia){const META=85,now=nowMs();
     const cs=L('cirugias').filter(c=>c.pabellon===p._id&&c.fecha===dia).map(c=>{const s=c.inicioReal&&['realizada','en_curso'].includes(c.estado)?mm(c.inicioReal):hm(c.hIni);const d=c.estado==='realizada'?(+c.durReal||+c.durMin):+c.durMin;return {c,s,e:s+d,d}}).sort((a,b)=>a.s-b.s);
     const act=fs?[]:cs.filter(b=>b.c.estado!=='suspendida');const susp=cs.filter(b=>b.c.estado==='suspendida');
     /* segmentos de la jornada: ocupado / recambio / libre, luego cortados por la hora actual */
-    const seg=[];let cur=ini;act.forEach((b,i)=>{const s=Math.max(b.s,ini),e=Math.min(b.e,fin);if(s>cur)seg.push({a:cur,b:Math.min(s,fin),t:cur>ini&&s-cur<=30?'rec':'lib'});if(e>Math.max(s,cur))seg.push({a:Math.max(s,cur),b:e,t:'occ'});cur=Math.max(cur,Math.min(b.e,fin))});if(fin>cur)seg.push({a:cur,b:fin,t:'lib'});
+    const seg=[];let cur=ini;act.forEach((b,i)=>{const s=Math.max(b.s,ini),e=Math.min(b.e,fin);const lim=i?(+stdDe(act[i-1].c.procedimiento).aseo.min)+10:30;if(s>cur)seg.push({a:cur,b:Math.min(s,fin),t:cur>ini&&s-cur<=lim?'rec':'lib'});if(e>Math.max(s,cur))seg.push({a:Math.max(s,cur),b:e,t:'occ'});cur=Math.max(cur,Math.min(b.e,fin))});if(fin>cur)seg.push({a:cur,b:fin,t:'lib'});
     const strip=[];seg.forEach(g=>{[[g.a,Math.min(g.b,NOW),'p'],[Math.max(g.a,NOW),g.b,'f']].forEach(([a,b,w2])=>{if(b<=a)return;const k=fs?(w2==='p'?'perd':'bloq'):g.t==='occ'?(w2==='p'?'uso':'prog'):g.t==='rec'?(w2==='p'?'rec':'prog'):(w2==='p'?'perd':'queda');strip.push({a,b,k})})});
     const t={uso:0,prog:0,rec:0,perd:0,queda:0,bloq:0};strip.forEach(s=>t[s.k]+=s.b-s.a);
     const extra=act.reduce((a,b)=>a+Math.max(0,b.e-Math.max(b.s,fin)),0);const bien=t.uso+t.prog+t.rec;const pctB=bien/jor*100;
@@ -2002,7 +2148,7 @@ function notifItem(n,nueva){const [t,c]=PRIO[n.nivel]||['',''];const href=n.ref?
 function canales(){const r=S.rol;const lc=lect().canales||{};const ms=L('mensajes');
   const cs=[{id:'general',n:'Coordinación quirúrgica'},{id:'u-'+r,n:'Unidad · '+unidadN(r)},...L('pabellones').sort(pabOrd).map(p=>({id:'pab-'+p._id,n:p.nombre})),
     ...L('incidencias').filter(i=>i.estado!=='cerrada').map(i=>({id:'inc-'+i._id,n:'Incidencia '+i.folio}))];
-  if(r==='concesionaria')cs.splice(0,cs.length,{id:'u-concesion',n:'Contrato de concesión'},...cs.filter(c=>c.id.startsWith('inc-')));
+  if(r==='concesionaria')cs.splice(0,cs.length,{id:'u-concesion',n:'Contrato de concesión'},...cs.filter(c=>c.id.startsWith('inc-')&&byId('incidencias',c.id.slice(4))?.responsable==='concesionaria'));
   return cs.map(c=>({...c,nl:ms.filter(m=>m.canal===c.id&&m.p!==ak()&&m.ts>(lc[ak()+'|'+c.id]||'')).length}))}
 function noLeidosMsg(){if(!S)return 0;try{return canales().reduce((a,c)=>a+c.nl,0)}catch(e){return 0}}
 function marcarCanal(){const c=window._canal;if(!c)return;const l=lect();const k=ak()+'|'+c;const last=L('mensajes').filter(m=>m.canal===c).map(m=>m.ts).sort().at(-1)||'';if(!last||(l.canales||{})[k]>=last)return;put('lecturas',me.id,{...clean(l),canales:{...(l.canales||{}),[k]:last}})}
@@ -2027,17 +2173,17 @@ const MANUAL={
    ['Definir acciones correctivas','',['En Gestión › Last Planner revise el Pareto de causas.','Use «+ Acción correctiva»: queda como compromiso con responsable y plazo.']]]},
  jefpab:{t:'Jefe de Pabellones',fin:'Supervisar los pabellones, aprobar cambios de programación y cerrar incidencias.',
   ve:['Hoy: estado de cada pabellón, pendientes y excepciones.','Línea de tiempo y Programación.','Incidencias, liberación de pabellones y compromisos.'],
-  tareas:[['Aprobar un cambio de programación','',['Abra la solicitud en «Mis pendientes».','Revise pabellón, hora y motivo.','Toque «✓ Aprobar». Coordinación, enfermería, anestesia y camas reciben el aviso.']],
+  tareas:[['Programar la dotación de personal','En Quirófanos › Dotación de personal se compara el equipo que requiere cada cirugía con el personal disponible.',['Elija el día y revise las tarjetas por cargo: verde cubre, rojo indica cuántas personas faltan en el momento de mayor demanda.','El mapa por hora muestra en rojo los tramos de 15 minutos sin dotación suficiente.','Ingrese las personas disponibles por cargo (hasta y desde las 17:00) y guarde para ese día o como base.']],['Programar con ciclos estándar','En Quirófanos › Tiempos estándar se fija la duración de cada tipo de operación y el aseo que necesita después. Ciclo = operación + aseo.',['Al programar una cirugía, elija el procedimiento del catálogo: la duración y el ciclo se completan solos y se sugiere la primera hora sin tiempo muerto.','En Programación, «Ciclos operación + aseo» marca en verde los recambios que calzan, en naranjo los minutos muertos y en rojo los aseos insuficientes.','«Ajustar al ciclo» mueve las cirugías aún programadas para que cada una ingrese al terminar el aseo de la anterior.']],['Aprobar un cambio de programación','',['Abra la solicitud en «Mis pendientes».','Revise pabellón, hora y motivo.','Toque «✓ Aprobar». Coordinación, enfermería, anestesia y camas reciben el aviso.']],
    ['Cerrar una incidencia','El cierre exige verificación en terreno: un aviso por chat no cierra la incidencia.',['Cuando llegue «Confirmar resolución de incidencia», verifique en el pabellón.','Toque «✓ Confirmar» o «⚠ Hay un problema» si persiste.']],
    ['Liberar un pabellón','',['En Pabellones inicie la liberación.','Cada paso (aseo terminal, equipos, condiciones clínicas) lo confirma su responsable.','Al completar los pasos, el pabellón vuelve a operativo.']]]},
  coordq:{t:'Coordinador de Programación Quirúrgica',fin:'Programar las cirugías y asegurar que estén listas antes del día.',
   ve:['Programación del día y de los próximos días.','Línea de tiempo por día, semana o mes, con espacios disponibles.','Last Planner: restricciones por liberar (lookahead).'],
-  tareas:[['Revisar que las cirugías estén listas','',['En Programación vea «Intervenciones en riesgo»: falta instrumental, insumos, cama, preparación o anestesia.','El sistema ya pidió cada confirmación a la unidad responsable; usted sigue el avance.']],
+  tareas:[['Publicar la tabla quirúrgica','La tabla pasa por borrador, preliminar (una semana antes) y definitiva (al menos 24 h antes). La suspensión se mide sobre la tabla publicada.',['En Programación, revise el aviso de la tabla del día y toque «Publicar tabla definitiva» antes del plazo indicado.','Marque como condicional al suplente que se programa más allá de las 8 h de tabla (máximo 10 %).','Use «Reunión de tabla» para revisar suspensiones de ayer, pacientes sin confirmar y requerimientos, y deje el acta.']],['Programar la dotación de personal','En Quirófanos › Dotación de personal se compara el equipo que requiere cada cirugía con el personal disponible.',['Elija el día y revise las tarjetas por cargo: verde cubre, rojo indica cuántas personas faltan en el momento de mayor demanda.','El mapa por hora muestra en rojo los tramos de 15 minutos sin dotación suficiente.','Ingrese las personas disponibles por cargo (hasta y desde las 17:00) y guarde para ese día o como base.']],['Programar con ciclos estándar','En Quirófanos › Tiempos estándar se fija la duración de cada tipo de operación y el aseo que necesita después. Ciclo = operación + aseo.',['Al programar una cirugía, elija el procedimiento del catálogo: la duración y el ciclo se completan solos y se sugiere la primera hora sin tiempo muerto.','En Programación, «Ciclos operación + aseo» marca en verde los recambios que calzan, en naranjo los minutos muertos y en rojo los aseos insuficientes.','«Ajustar al ciclo» mueve las cirugías aún programadas para que cada una ingrese al terminar el aseo de la anterior.']],['Revisar que las cirugías estén listas','',['En Programación vea «Intervenciones en riesgo»: falta instrumental, insumos, cama, preparación o anestesia.','El sistema ya pidió cada confirmación a la unidad responsable; usted sigue el avance.']],
    ['Reprogramar una cirugía suspendida','',['Abra la solicitud de reprogramación.','Proponga nueva fecha y confirme la cama con Gestión de Camas.']],
    ['Llenar espacios disponibles','',['En la Línea de tiempo, vista Semana, busque tramos grises «disponible».','Programe ahí cirugías que ya tengan sus condiciones liberadas.']]]},
  enfermeria:{t:'Enfermero Supervisor de Pabellón',fin:'Confirmar la preparación preoperatoria y registrar inicio y término de cada cirugía.',
   ve:['Hoy: pabellones ahora y sus pendientes.','Programación y ficha de cada cirugía.','Camas y perioperatorio.'],
-  tareas:[['Validar la preparación preoperatoria','',['En «Mis pendientes» abra «Validar preparación preoperatoria».','Toque «✓ Confirmar» o «⚠ Hay un problema» con el motivo.']],
+  tareas:[['Programar la dotación de personal','En Quirófanos › Dotación de personal se compara el equipo que requiere cada cirugía con el personal disponible.',['Elija el día y revise las tarjetas por cargo: verde cubre, rojo indica cuántas personas faltan en el momento de mayor demanda.','El mapa por hora muestra en rojo los tramos de 15 minutos sin dotación suficiente.','Ingrese las personas disponibles por cargo (hasta y desde las 17:00) y guarde para ese día o como base.']],['Validar la preparación preoperatoria','',['En «Mis pendientes» abra «Validar preparación preoperatoria».','Toque «✓ Confirmar» o «⚠ Hay un problema» con el motivo.']],
    ['Registrar el término de una cirugía','Esto avisa a la concesionaria para el aseo de recambio.',['Abra la cirugía en curso desde la línea de tiempo o la ficha del pabellón.','Toque «Registrar término».','La concesionaria recibe «Aseo de recambio»; cuando lo termine, usted recibe «Pabellón listo».']]]},
  anestesia:{t:'Anestesiólogo',fin:'Confirmar la evaluación anestésica de cada paciente programado.',
   ve:['Hoy y Programación con las cirugías de los próximos días.'],
@@ -2107,13 +2253,15 @@ const UXI={
   luz:'<path d="M12 3a6 6 0 0 0-3 11v3h6v-3a6 6 0 0 0-3-11zM10 21h4"/>',
   clima:'<path d="M12 3v18M5 7l14 10M19 7L5 17"/>',gas:'<path d="M9 3h6v4l2 3v11H7V10l2-3z"/>',
   equipo:'<rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M8 19h8M12 15v4M7 10h3l1.5-3 2 6 1.5-3H17"/>',
-  infra:'<path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/>'
+  infra:'<path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/>',
+  confirmado:'<path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z"/>',
+  consentimiento:'<path d="M6 3h9l4 4v14H6z"/><path d="M9 16c1.5-2 2.5 1 4-1s2 0 3-1"/>'
 };
 const ico=(k,cls='')=>`<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true">${UXI[k]||''}</svg>`;
 
 /* ---------- Checklist con íconos ---------- */
 function chkIcons(c,now=nowMs()){if(!c||!c.checklist)return '';const rs=E.riesgosCirugia(c,now,cfg.horizonteH).map(r=>r.item);
-  return `<span class="cki" role="img" aria-label="Preparación">${Object.keys(E.CHECK).map(k=>{const st=c.checklist[k]?.estado;const cl=st==='ok'?'ok':rs.includes(k)?'cr':'pe';
+  return `<span class="cki" role="img" aria-label="Preparación">${Object.keys(E.CHECK).filter(k=>!E.CHECK[k].nuevo||k in c.checklist).map(k=>{const st=c.checklist[k]?.estado;const cl=st==='ok'?'ok':rs.includes(k)?'cr':'pe';
     return `<i class="${cl}" title="${esc(E.CHECK[k].n)}: ${cl==='ok'?'confirmado':cl==='cr'?'falta y está en riesgo':'pendiente'}">${ico(k)}</i>`}).join('')}</span>`}
 
 /* ---------- Contexto de un pabellón para la acción de 1 toque ---------- */
@@ -2161,7 +2309,7 @@ function carril(){const h=hoy(),now=nowMs();const cx=L('cirugias').filter(c=>c.f
     <i class="fl">›</i>${col('Cama o alta','cama',fin,c=>chip(c,`<small>${c.destino==='upc'?'UPC':c.destino==='ambulatorio'?'alta':'sala'}</small>`),'ok')}</div>`}
 
 /* ---------- Pantalla mural (TV) ---------- */
-function muralHTML(){const O=calcOcup(hoy()),N=O.NOW,now=nowMs();const k=E.kpis(datos(),hoy(),now);const vc=verCx();
+function muralHTML(){const O=calcOcup(hoy()),N=O.NOW,now=nowMs();const k=E.kpis(datos(),hoy(),now);const vc=false; /* pantalla en espacio común: nunca muestra procedimientos ni especialidades */
   const tiles=O.rows.map(r=>{const p=r.p,act=r.act,lib=p.estado!=='operativo'&&!r.fs;const cur=act.find(b=>b.s<=N&&N<b.e),nxt=act.find(b=>b.s>N&&b!==cur),prev=[...act].reverse().find(b=>b.e<=N);
     let cls,ph,big='',sub='';const t=aseoAbierta(p);
     if(r.fs){cls='fs';ph='Fuera de servicio';sub=r.bq?esc(r.bq.motivo):''}
@@ -2180,7 +2328,7 @@ function muralHTML(){const O=calcOcup(hoy()),N=O.NOW,now=nowMs();const k=E.kpis(
     <div class="mft"><span><i class="od op"></i>En cirugía</span><span><i class="od ov"></i>Excede lo programado</span><span><i class="od rc"></i>Recambio</span><span><i class="od li"></i>Aseo o liberación</span><span><i class="od lb"></i>Libre</span><span><i class="od fs"></i>Fuera de servicio</span><span class="sp1"></span><button class="btn s" onclick="document.documentElement.requestFullscreen?.().catch(()=>{})">Pantalla completa</button><button class="btn s" data-go="inicio">Volver a la app</button></div></div>`}
 
 /* ---------- Vista de puerta (QR) ---------- */
-function puertaHTML(id){const p=byId('pabellones',id)||L('pabellones').find(x=>x.nombre.replace('Pabellón ','P')===id);if(!p)return `<div class="card"><h2>Pabellón no encontrado</h2><a class="btn" href="#inicio">Ir al inicio</a></div>`;
+function puertaHTML(id){const p=byId('pabellones',id)||L('pabellones').find(x=>x.nombre.replace('Pabellón ','P')===id);if(!p)return `<div class="card"><h2>${id?'Pabellón no encontrado. ':''}Elija el pabellón de esta puerta</h2><p class="mu sm">La vista de puerta se deja abierta en la tablet o pantalla junto al acceso del pabellón.</p><div class="pselg">${L('pabellones').map(x=>`<a class="btn psel" href="#puerta/${x._id}">${esc(x.nombre)}</a>`).join('')}</div></div>`;
   const O=calcOcup(hoy()),N=O.NOW,r=O.rows.find(x=>x.p._id===p._id);const cur=r&&r.act.find(b=>b.s<=N&&N<b.e),nxt=r&&r.act.find(b=>b.s>N&&b!==cur);const t=aseoAbierta(p);const vc=verCx();
   const fsx=r&&r.fs;const est=fsx?['fs','Fuera de servicio']:t?['li','Aseo pendiente']:p.estado!=='operativo'?['li','En liberación']:cur?['op','En cirugía']:['lb','Disponible'];
   const a1=r?accion1({p,cur,nxt,bloq:null,N,fs:fsx}):null;
@@ -2220,7 +2368,7 @@ function tourPasos(){const r=S?.rol,a=ACC1[r];
     {sel:['.orb .ochs','.orb .cki','.orb .ords'],t:'3. Alertas con íconos',d:`Las etiquetas avisan lo urgente sin leer: ${ico('aseo','s')} aseo y minutos del plazo, ${ico('cama','s')} paciente esperando cama, ${ico('warn','s')} riesgo de suspensión. Los íconos verdes o rojos muestran qué está listo para la próxima cirugía. La barra inferior es el día del pabellón: rayado = tiempo perdido.`},
     {sel:['.carril'],t:'4. Flujo del paciente',d:'De izquierda a derecha: por ingresar, en pabellón, en recuperación y con cama o alta. Si un paciente queda en rojo, está detenido y hay que actuar.'},
     {sel:['#nav a[href="#tareas"]','#tabs a[href="#tareas"]'],t:'5. Sus pendientes',d:'Aquí llegan las solicitudes para su cargo. El número rojo indica cuántas tiene. Se confirman con un toque desde la misma tarjeta.'},
-    {sel:['#nav .nrep','.top .brand','.side .brand'],t:'6. Informe y menú',d:'El botón azul genera al instante el informe de situación en PDF. Tocando el logo de Qronos encontrará la pantalla mural, el manual de uso y el tamaño de letra.'}
+    {sel:['.side .brand','.top .brand'],t:'6. Menú del logo',d:'Tocando el logo de Qronos encontrará el informe de situación actual en PDF, la pantalla mural, el manual de uso y el tamaño de letra.'}
   ]}
 const visible=el=>{if(!el)return false;const r=el.getBoundingClientRect();return r.width>0&&r.height>0&&getComputedStyle(el).visibility!=='hidden'};
 function tourTarget(st){for(const s of st.sel){const el=[...document.querySelectorAll(s)].find(visible);if(el)return el}return null}
@@ -2253,6 +2401,326 @@ function prefsHTML(){const seg=(k,opts,def)=>`<div class="seg s${opts.length}">$
   <span class="mu sm">Avisos en este dispositivo</span>${pn==='granted'?'<span class="sm t-ok">✓ Activados</span>':pn==='denied'?'<span class="sm mu">Bloqueados en el navegador</span>':pn==='na'?'<span class="sm mu">No disponibles en este navegador</span>':'<button class="btn s" data-a="push">Activar avisos</button>'}</div>`}
 
 setInterval(()=>{if(S&&route()[0]==='mural'&&$('#modal').hidden)render()},20000);
+
+/* ===================================================================
+   Qronos · Dotación de personal por tipo de operación
+   Cada operación requiere un equipo tipo (cirujanos, anestesiólogo,
+   enfermería, arsenalería, pabellonería, TENS). La dotación disponible
+   se programa por día y tramo, y se compara con la demanda simultánea.
+   Solo se trabaja con cantidades por cargo: no se registran nombres.
+   Valores iniciales referenciales: deben validarse con el Jefe de
+   Pabellones, Enfermería y Anestesia.
+   =================================================================== */
+const RH=[{id:'cir',n:'Cirujano/a',s:'Cirujano',c:'#007aff'},{id:'ayu',n:'Cirujano/a ayudante',s:'Ayudante',c:'#5ac8fa'},{id:'ane',n:'Anestesiólogo/a',s:'Anestesia',c:'#5856d6'},
+  {id:'enf',n:'Enfermero/a de pabellón',s:'Enfermería',c:'#34c759'},{id:'ars',n:'Arsenalero/a',s:'Arsenalería',c:'#ff9500'},{id:'pab',n:'Pabellonero/a',s:'Pabellonería',c:'#af52de'},{id:'tan',n:'TENS de anestesia',s:'TENS',c:'#ff2d55'}];
+const EQ_DEF=[{id:'menor',n:'Equipo menor',r:{cir:1,ayu:0,ane:1,enf:.5,ars:1,pab:1,tan:1}},{id:'mediana',n:'Equipo mediano',r:{cir:1,ayu:1,ane:1,enf:.5,ars:1,pab:1,tan:1}},
+  {id:'mayor',n:'Equipo mayor',r:{cir:1,ayu:1,ane:1,enf:1,ars:1,pab:1,tan:1}},{id:'compleja',n:'Equipo complejo',r:{cir:1,ayu:2,ane:1,enf:1,ars:2,pab:1,tan:1}}];
+const DOT_BASE={dia:{cir:17,ayu:14,ane:16,enf:12,ars:17,pab:17,tan:16},tarde:{cir:5,ayu:3,ane:5,enf:3,ars:5,pab:5,tan:5}};
+const TRAMO_CORTE=17*60;/* desde las 17:00 rige la dotación de tarde */
+function eqSugerido(min,proc){if(/urgencia/i.test(proc||''))return 'mayor';return min<=45?'menor':min<=90?'mediana':min<=180?'mayor':'compleja'}
+function equipos(){const E2=estandares();return (E2.equipos&&E2.equipos.length?E2.equipos:EQ_DEF)}
+function eqDe(proc){const E2=estandares();const p=E2.procs.find(x=>x.proc===proc);const id=p?.eq||eqSugerido(p?+p.min:90,proc);return equipos().find(e=>e.id===id)||equipos()[1]}
+const puedeDot=()=>['coordq','jefpab','enfermeria','admin','subop'].includes(S?.rol);
+const fmtN=v=>Number.isInteger(+v)?String(+v):String(+v).replace('.',',');
+function dotDe(dia){if(window._dotDraft&&window._dotDraft.dia===dia)return window._dotDraft;const d=L('dotacion').find(x=>x._id===dia);const b=L('dotacion').find(x=>x._id==='base');
+  const src=d||b;const out={dia,dia_:{...DOT_BASE.dia,...(src?.dia||{})},tarde:{...DOT_BASE.tarde,...(src?.tarde||{})},propia:!!d,base:!!b};
+  const wd=new Date(dia+'T12:00').getDay();if(!d&&(wd===0||wd===6)){RH.forEach(r=>{out.dia_[r.id]=Math.ceil(out.dia_[r.id]*.3);out.tarde[r.id]=Math.ceil(out.tarde[r.id]*.6)})}
+  return out}
+/* Demanda por tramos de 15 minutos */
+function demanda(dia,extra){const SL=15,T0=7*60,T1=21*60;const n=(T1-T0)/SL;const dem=RH.map(()=>new Array(n).fill(0));
+  const cs=L('cirugias').filter(c=>c.fecha===dia&&c.estado!=='suspendida').map(c=>({proc:c.procedimiento,s:hm(c.hIni),d:c.estado==='realizada'?(+c.durReal||+c.durMin):+c.durMin}));if(extra)cs.push(extra);
+  cs.forEach(c=>{const eq=eqDe(c.proc);for(let i=0;i<n;i++){const t=T0+i*SL;if(c.s<t+SL&&t<c.s+c.d)RH.forEach((r,k)=>dem[k][i]+=+(eq.r[r.id]||0))}});
+  const D=dotDe(dia);const disp=i=>(T0+i*SL)>=TRAMO_CORTE?D.tarde:D.dia_;
+  const res=RH.map((r,k)=>{let pico=0,pt=0,def=[];dem[k].forEach((v,i)=>{if(v>pico){pico=v;pt=i}const av=disp(i)[r.id];if(v>av+1e-9)def.push(i)});return {r,dem:dem[k],pico,pt,def}});
+  return {SL,T0,T1,n,res,D,disp,cs}}
+function deficitTramos(Dm){const out=[];Dm.res.forEach(x=>{let a=null;const push=b=>{const max=Math.max(...x.dem.slice(a,b+1).map((v,i)=>v-Dm.disp(a+i)[x.r.id]));out.push({r:x.r,a:Dm.T0+a*Dm.SL,b:Dm.T0+(b+1)*Dm.SL,falta:Math.ceil(max-1e-9)})};
+  x.def.forEach((i,j)=>{if(a===null)a=i;if(x.def[j+1]!==i+1){push(i);a=null}})});return out.sort((p,q)=>p.a-q.a)}
+
+/* ---------- Vista: Dotación de personal ---------- */
+function dotacionHTML(){const now=nowMs(),dia=window._dia||manana();const dias=[0,1,2,3].map(n=>isoD(now+n*864e5));const Dm=demanda(dia);const D=Dm.D;const ed=puedeDot()&&dia>=hoy();const vc=verCx();
+  const def=deficitTramos(Dm);const hh=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0');
+  const card=x=>{const avD=D.dia_[x.r.id],avT=D.tarde[x.r.id];const picoD=Math.max(0,...x.dem.slice(0,(TRAMO_CORTE-Dm.T0)/Dm.SL)),picoT=Math.max(0,...x.dem.slice((TRAMO_CORTE-Dm.T0)/Dm.SL));const okD=picoD<=avD,okT=picoT<=avT;
+    const pct=Math.min(130,avD?picoD/avD*100:picoD?130:0);return `<div class="rhc ${!okD||!okT?'cr':picoD>=avD*.9?'wa':'ok'}" style="--c:${x.r.c}"><div class="rhh"><i></i><b>${esc(x.r.n)}</b></div>
+    <div class="rhn"><span><b>${fmtN(picoD)}</b> requeridos</span><span>de <b>${fmtN(avD)}</b> disponibles</span></div><div class="rhbar"><i style="width:${Math.min(100,pct)}%"></i>${pct>100?`<u style="left:${100/pct*100}%"></u>`:''}</div>
+    <div class="rhs">${okD?`<span class="t-ok">✓ cubre el día</span>`:`<span class="t-cr">Faltan ${fmtN(Math.ceil(picoD-avD))} en el pico</span>`}${picoT?` · tarde ${fmtN(picoT)}/${fmtN(avT)}${okT?'':' <b class="t-cr">déficit</b>'}`:''}</div></div>`};
+  const heat=`<div class="rhm"><div class="rhmh"><span></span>${Array.from({length:Dm.n},(_,i)=>{const t=Dm.T0+i*Dm.SL;return `<em>${t%60===0?String(t/60).padStart(2,'0'):''}</em>`}).join('')}</div>
+    ${Dm.res.map(x=>`<div class="rhmr"><span title="${esc(x.r.n)}"><i style="background:${x.r.c}"></i>${esc(x.r.s)}</span>${x.dem.map((v,i)=>{const av=Dm.disp(i)[x.r.id];const u=av?v/av:v?2:0;const cl=!v?'z':u>1?'r':u>=.9?'y':'g';return `<b class="${cl}" title="${hh(Dm.T0+i*Dm.SL)} · ${esc(x.r.n)}: ${fmtN(v)} requeridos de ${fmtN(av)}"></b>`}).join('')}</div>`).join('')}
+    <div class="lgd" style="margin-top:8px"><span><i style="background:#34c759"></i>Cubierto</span><span><i style="background:#ffcc00"></i>Al límite (90 % o más)</span><span><i style="background:#ff3b30"></i>Faltan personas</span><span><i style="background:var(--fill)"></i>Sin demanda</span></div></div>`;
+  const inp=(tr,r)=>ed?`<input class="in anum" type="number" min="0" max="99" step="1" data-dot="${tr}" data-r="${r.id}" value="${D[tr==='dia'?'dia_':'tarde'][r.id]}">`:`<b>${D[tr==='dia'?'dia_':'tarde'][r.id]}</b>`;
+  return head('Dotación de personal','Equipo humano que necesita cada tipo de operación, comparado con el personal disponible en cada tramo del día')+
+  `<div class="row" style="margin-top:4px;gap:10px;align-items:center"><div class="seg">${dias.map(d=>`<button data-a="dia" data-d="${d}" aria-pressed="${d===dia}">${d===hoy()?'Hoy':d===manana()?'Mañana':fD(d)}</button>`).join('')}</div><label class="dpk"><span>Otro día</span><input type="date" class="in" data-dpick="1" value="${dia}"></label></div>`+
+  `<div class="card note" style="margin-top:12px"><b>Valores referenciales para el prototipo.</b> Los equipos tipo y la dotación base son una propuesta inicial que deben validar el Jefe de Pabellones, Enfermería y Anestesia. Se registran solo cantidades por cargo, sin nombres de personas.</div>`+
+  sec('Cobertura del día',`${Dm.cs.length} cirugías · pico de personas requeridas al mismo tiempo frente a las disponibles${def.length?` · <b class="t-cr">${def.length} tramo${def.length>1?'s':''} con déficit</b>`:' · sin déficit'}`)+
+  `<div class="rhg">${Dm.res.map(card).join('')}</div>`+
+  sec('Mapa de cobertura por hora','Cada casilla son 15 minutos. Toque o pase el cursor para ver cuántas personas se requieren y cuántas hay')+`<div class="card" style="overflow-x:auto">${heat}</div>`+
+  (def.length?sec(`Momentos críticos <span class="chip cr">${def.length}</span>`,'Tramos en que la programación necesita más personas de las disponibles: reforzar dotación o mover cirugías')+`<div class="card">${def.map(x=>`<div class="it"><span class="dot cr"></span><div class="b"><b>${hh(x.a)}–${hh(x.b)} · faltan ${x.falta} ${esc(x.r.n.toLowerCase())}</b><div class="mu sm">${Dm.cs.filter(c=>c.s<x.b&&x.a<c.s+c.d).length} cirugías simultáneas en ese tramo</div></div></div>`).join('')}</div>`:'')+
+  sec('Dotación disponible',D.propia?'Programada para este día':D.base?'Se usa la dotación base (aún no se programa este día)':'Se usa la dotación referencial',ed?`<div class="row" style="gap:6px"><button class="btn s" data-a="dotGuardar" data-d="${dia}">Guardar para este día</button><button class="btn s" data-a="dotGuardar" data-d="base">Guardar como base</button></div>`:'')+
+  `<div class="card"><div class="ts"><table class="sm dott"><thead><tr><th>Cargo</th><th>Hasta 17:00</th><th>Desde 17:00</th></tr></thead><tbody>${RH.map(r=>`<tr><td><i class="rhdot" style="background:${r.c}"></i>${esc(r.n)}</td><td>${inp('dia',r)}</td><td>${inp('tarde',r)}</td></tr>`).join('')}</tbody></table></div>
+  <p class="mu sm" style="margin:8px 0 0">Los fines de semana, si no se programa, se asume 30 % del día y 60 % de la tarde. Enfermería de pabellón puede cubrir medio cargo por pabellón (0,5) en operaciones menores.</p></div>`+
+  sec('Equipos tipo','Personas que requiere cada tipo de operación. A cada operación se le asigna un equipo en «Tiempos estándar»','<a class="lnk" href="#estandares">Tiempos estándar ›</a>')+equiposHTML(ed)}
+function equiposHTML(ed){const EQ=equipos();const E2=estandares();
+  return `<div class="card"><div class="ts"><table class="sm dott"><thead><tr><th>Cargo</th>${EQ.map(e=>`<th>${esc(e.n)}<div class="mu sm" style="font-weight:500">${E2.procs.filter(p=>(p.eq||eqSugerido(+p.min,p.proc))===e.id).length} operaciones</div></th>`).join('')}</tr></thead><tbody>
+  ${RH.map(r=>`<tr><td><i class="rhdot" style="background:${r.c}"></i>${esc(r.n)}</td>${EQ.map((e,j)=>`<td>${ed&&['jefpab','coordq','admin'].includes(S.rol)?`<input class="in anum" type="number" min="0" max="6" step="0.5" data-eqr="${r.id}" data-j="${j}" value="${e.r[r.id]||0}">`:`<b>${fmtN(e.r[r.id]||0)}</b>`}</td>`).join('')}</tr>`).join('')}
+  <tr><td><b>Total personas</b></td>${EQ.map(e=>`<td><b>${fmtN(RH.reduce((a,r)=>a+(+e.r[r.id]||0),0))}</b></td>`).join('')}</tr></tbody></table></div>
+  ${ed&&['jefpab','coordq','admin'].includes(S.rol)?`<div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn s" data-a="stdGuardar">Guardar equipos</button></div>`:''}</div>`}
+function eqChips(eq){return `<span class="eqc">${RH.filter(r=>+eq.r[r.id]).map(r=>`<i style="--c:${r.c}" title="${esc(r.n)}">${fmtN(eq.r[r.id])} ${esc(r.s)}</i>`).join('')}</span>`}
+async function dotGuardar(dest,dia){const D=dotDe(dia);await put('dotacion',dest,{dia:D.dia_,tarde:D.tarde,ts:new Date(nowMs()).toISOString(),por:S.rol});window._dotDraft=null;
+  log('Programa dotación de personal',dest==='base'?'Dotación base':dest,{atrib:'Registrar'});toast(dest==='base'?'✓ Dotación base guardada: se usa en los días sin programación propia':'✓ Dotación guardada para '+fD(Date.parse(dest+'T12:00')))}
+function dotEdit(t){const dia=window._dia||manana();const D=window._dotDraft&&window._dotDraft.dia===dia?window._dotDraft:(window._dotDraft=JSON.parse(JSON.stringify(dotDe(dia))));D[t.dataset.dot==='dia'?'dia_':'tarde'][t.dataset.r]=Math.max(0,+t.value||0);render()}
+function eqEdit(t){const D=window._stdDraft||(window._stdDraft=JSON.parse(JSON.stringify(estandares())));if(!D.equipos||!D.equipos.length)D.equipos=JSON.parse(JSON.stringify(EQ_DEF));D.equipos[+t.dataset.j].r[t.dataset.eqr]=Math.max(0,+t.value||0);D.cambios=true;render()}
+
+/* ===================================================================
+   Qronos · Requisitos normativos (MINSAL / COMGES 2026 / REM A21)
+   - Ciclo formal de la tabla quirúrgica: borrador → preliminar → definitiva → ejecutada
+   - Pacientes condicionales y agregados
+   - Causas de suspensión agrupadas como REM A21 sección F
+   - Origen de cada cirugía en la lista de espera (GES, antigüedad, no GES, urgencia)
+   - Bloques quirúrgicos por especialidad y liberación con 72 h
+   - Reunión de tabla con acta
+   - Lista de chequeo de cirugía segura (registro sí/no)
+   - Indicadores COMGES 2026 y exportación REM A21
+   =================================================================== */
+const TABLA_H_DEF=24;              /* horas antes de la jornada para publicar la tabla definitiva (configurable 24-48) */
+const COND_MAX=10;                  /* % máximo de pacientes condicionales (COMGES 2026) */
+const RESERVA_ANT=20;               /* % de la tabla reservado para casos por antigüedad (COMGES: 10 a 50 %) */
+const BLOQUE_LIBERA_H=72;           /* horas antes para liberar un bloque poco usado */
+const CAT_REM={
+  'Paciente':['Paciente no se presenta','Condición clínica del paciente','Paciente rechaza la cirugía','Falta de ayuno o preparación'],
+  'Equipo quirúrgico':['Falta de cirujano','Falta de anestesiólogo','Falta de personal'],
+  'Unidades de apoyo':['Falta de cama','Falta de instrumental','Falta de insumos','Falta de sangre o hemoderivados'],
+  'Infraestructura y equipos':['Pabellón no disponible','Falla de equipamiento'],
+  'Administrativas y de programación':['Prolongación de tabla','Error de programación'],
+  'Otras':['Urgencia desplaza la tabla','Otra causa']};
+const catREM=c=>Object.keys(CAT_REM).find(k=>CAT_REM[k].includes(c))||'Otras';
+const causasOpts=()=>Object.entries(CAT_REM).flatMap(([k,a])=>a.map(x=>[x,k+' · '+x]));
+const ORIGEN={ges:'GES',antiguedad:'No GES · antigüedad',noges:'No GES',urgencia:'Urgencia'};
+const origenDe=c=>c.origen||(/urgencia/i.test(c.tipo||'')?'urgencia':'noges');
+const esElectiva=c=>origenDe(c)!=='urgencia'&&!/urgencia/i.test(c.tipo||'');
+const tablaH=()=>+(cfg.tablaH||TABLA_H_DEF);
+const DOW=['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+
+/* ---------- Tabla quirúrgica: estado por día ---------- */
+function tablaDe(dia){const d=L('tablas').find(x=>x._id===dia);if(d)return {...d,dia,implicita:false};
+  if(dia<hoy())return {dia,estado:'ejecutada',implicita:true};if(dia===hoy())return {dia,estado:'definitiva',implicita:true};
+  const dd=Math.round((Date.parse(dia)-Date.parse(hoy()))/864e5);return {dia,estado:dd<=7?'preliminar':'borrador',implicita:true}}
+const T_EST={borrador:['Borrador','#8e8e93'],preliminar:['Preliminar','#ff9500'],definitiva:['Definitiva publicada','#34c759'],ejecutada:['Ejecutada','#007aff']};
+function limitePub(dia){return Date.parse(dia+'T08:00')-tablaH()*36e5}
+function cxDeTabla(dia){const t=tablaDe(dia);const cs=L('cirugias').filter(c=>c.fecha===dia&&esElectiva(c));
+  if(t.snapshot)return cs.filter(c=>t.snapshot.includes(c._id));return cs.filter(c=>c.cond!=='agregado')}
+async function publicarTabla(dia,estado){const now=nowMs();const cs=L('cirugias').filter(c=>c.fecha===dia&&esElectiva(c)&&c.estado!=='suspendida'&&c.cond!=='agregado');
+  const ts=new Date(now).toISOString();const prev=byId('tablas',dia)||{};
+  const doc={estado,ver:(prev.ver||0)+1,por:S.rol,[estado==='definitiva'?'publicadaTs':'preliminarTs']:ts,...(estado==='definitiva'?(prev.snapshot?{snapshot:prev.snapshot,horas:prev.horas,publicadaTs:prev.publicadaTs}:{snapshot:cs.map(c=>c._id),horas:cs.reduce((a,c)=>a+(+c.durMin),0)}):{}),
+    hist:[...(prev.hist||[]),{ts,acc:(prev.snapshot&&estado==='definitiva'?'Vuelve a difundir la tabla definitiva (se mantiene la línea base original)':'Publica tabla '+T_EST[estado][0].toLowerCase()),rol:S.rol}],...(prev.publicadaTs&&estado!=='definitiva'?{publicadaTs:prev.publicadaTs}:{})};
+  await put('tablas',dia,{...clean(prev),...doc});
+  const roles=['jefpab','enfermeria','anestesia','esterilizacion','abastecimiento','camas','cirujano','concesionaria'];
+  notificar(estado==='definitiva'?'alta':'informativa',`Tabla ${estado} · ${fD(Date.parse(dia+'T12:00'))}`,`${cs.length} cirugías programadas${estado==='definitiva'?'. Desde ahora cada cambio queda registrado como cambio sobre la tabla publicada.':''}`,roles,{tipo:'tabla',id:dia},null,['hlf_tabla']);
+  log('Publica tabla quirúrgica',`${dia} · ${estado} · ${cs.length} cirugías`,{atrib:'Registrar'});
+  toast(estado==='definitiva'?`✓ Tabla definitiva publicada y difundida (${cs.length} cirugías)`:'✓ Tabla preliminar difundida')}
+function tablaBanner(dia){const t=tablaDe(dia);const now=nowMs();const [n,col]=T_EST[t.estado];const ed=['coordq','jefpab','admin'].includes(S.rol)&&dia>=hoy();
+  const lim=limitePub(dia);const faltan=Math.round((lim-now)/36e5);const atras=t.estado!=='definitiva'&&dia>hoy()&&now>lim;
+  const cs=L('cirugias').filter(c=>c.fecha===dia&&esElectiva(c)&&c.estado!=='suspendida');const nc=cs.filter(c=>c.cond==='condicional').length,na=L('cirugias').filter(c=>c.fecha===dia&&c.cond==='agregado').length;const pc=cs.length?nc/cs.length*100:0;
+  const cambios=t.publicadaTs?L('cirugias').filter(c=>c.fecha===dia).reduce((a,c)=>a+(c.hist||[]).filter(h=>h.ts>t.publicadaTs&&!/Programada/.test(h.acc)).length,0):0;
+  const ant=cs.filter(c=>origenDe(c)==='antiguedad').length,pAnt=cs.length?ant/cs.length*100:0,ges=cs.filter(c=>origenDe(c)==='ges').length;
+  return `<div class="tbn" style="--c:${col}"><div class="tbs"><span class="tbe"><i></i>${n}</span>${t.publicadaTs?`<span class="mu sm">Publicada ${fDT(t.publicadaTs)}${cambios?` · <b class="t-cr">${cambios} cambio${cambios>1?'s':''} posteriores</b>`:''}</span>`:t.implicita&&dia<=hoy()?'<span class="mu sm">Simulación: se asume publicada</span>':''}
+    ${dia>hoy()&&t.estado!=='definitiva'?`<span class="sm ${atras?'t-cr':''}">${atras?`⚠ Plazo vencido: debía publicarse ${tablaH()} h antes`:`Publicar definitiva antes de ${fDT(lim)} (faltan ${faltan} h)`}</span>`:''}</div>
+    <div class="tbk"><span title="Pacientes condicionales: suplentes más allá de las 8 h de tabla"><b class="${pc>COND_MAX?'t-cr':''}">${nc}</b> condicionales (${Math.round(pc)} %, máx. ${COND_MAX} %)</span><span><b>${na}</b> agregados</span><span><b>${ges}</b> GES</span><span title="Reserva de tabla para casos por antigüedad"><b class="${pAnt<RESERVA_ANT?'t-cr':''}">${Math.round(pAnt)} %</b> antigüedad (meta ${RESERVA_ANT} %)</span></div>
+    ${ed?`<div class="row" style="gap:6px">${t.estado==='borrador'?`<button class="btn s" data-a="pubTabla" data-d="${dia}" data-e="preliminar">Publicar preliminar</button>`:''}${t.estado!=='definitiva'?`<button class="btn p s" data-a="pubTabla" data-d="${dia}" data-e="definitiva">Publicar tabla definitiva</button>`:`<button class="btn s" data-a="pubTabla" data-d="${dia}" data-e="definitiva">Volver a publicar</button>`}${route()[0]!=='reunion'?'<a class="btn s" href="#reunion">Reunión de tabla</a>':''}</div>`:''}</div>`}
+
+/* ---------- Bloques quirúrgicos por especialidad ---------- */
+function bloquesBase(){const d=L('bloques').find(x=>x._id==='base');if(d&&d.grid)return d;
+  const g={};const desde=isoD(nowMs()-28*864e5);L('pabellones').forEach(p=>{g[p._id]={};for(let w=1;w<=5;w++){const cnt={};L('cirugias').filter(c=>c.pabellon===p._id&&c.fecha>=desde&&new Date(c.fecha+'T12:00').getDay()===w&&esElectiva(c)).forEach(c=>cnt[c.especialidad]=(cnt[c.especialidad]||0)+(+c.durMin));
+    const top=Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0];g[p._id][w]=/urgencia/i.test(p.tipo||'')?'Urgencia':top?top[0]:''}});return {grid:g,derivado:true,liberados:(d&&d.liberados)||{}}}
+const bloqueDe=(pab,dia)=>{const B=bloquesBase();const w=new Date(dia+'T12:00').getDay();if(B.liberados?.[dia+'|'+pab])return '__libre';return B.grid?.[pab]?.[w]||''};
+function usoBloque(pab,dia){const p=byId('pabellones',pab);const esp=bloqueDe(pab,dia);const jor=hm(p.fin)-hm(p.ini);const cs=L('cirugias').filter(c=>c.pabellon===pab&&c.fecha===dia&&c.estado!=='suspendida');
+  const prop=cs.filter(c=>c.especialidad===esp).reduce((a,c)=>a+(+c.durMin),0),otra=cs.filter(c=>c.especialidad!==esp).reduce((a,c)=>a+(+c.durMin),0);return {esp,jor,prop,otra,pct:jor?prop/jor*100:0,pctT:jor?(prop+otra)/jor*100:0}}
+function bloquesHTML(){const B=bloquesBase();const ed=['coordq','jefpab','admin'].includes(S.rol);const pabs=L('pabellones').sort(pabOrd);const esps=[...new Set([...L('cirugias').map(c=>c.especialidad),'Urgencia'])].filter(Boolean).sort();
+  const now=nowMs();const dias=[];for(let i=0;i<28;i++){const d=isoD(now-i*864e5);const w=new Date(d+'T12:00').getDay();if(w>=1&&w<=5)dias.push(d)}
+  const uso=(pab,w)=>{const ds=dias.filter(d=>new Date(d+'T12:00').getDay()===w&&d<=hoy()&&L('cirugias').some(c=>c.pabellon===pab&&c.fecha===d));if(!ds.length)return null;return ds.reduce((a,d)=>a+usoBloque(pab,d).pct,0)/ds.length};
+  const hrs={};pabs.forEach(p=>{for(let w=1;w<=5;w++){const e=B.grid?.[p._id]?.[w];if(e)hrs[e]=(hrs[e]||0)+(hm(p.fin)-hm(p.ini))/60}});
+  const prox=[];for(let i=1;i<=4;i++){const d=isoD(now+i*864e5);const w=new Date(d+'T12:00').getDay();if(w<1||w>5)continue;if((Date.parse(d+'T08:00')-now)/36e5>BLOQUE_LIBERA_H)continue;
+    pabs.forEach(p=>{if(bloqueDe(p._id,d)==='__libre'||p.estado==='fuera_servicio')return;const u=usoBloque(p._id,d);if(u.esp&&u.esp!=='Urgencia'&&u.pct<50)prox.push({p,d,u})})}
+  return head('Bloques quirúrgicos','Horario asignado a cada especialidad por pabellón y día. Se revisa cada mes según su uso, la lista de espera GES y no GES','')+
+  `<div class="card note" style="margin-top:4px">Según el COMGES 2026, el bloque quirúrgico es un módulo dinámico asignado a una especialidad según su demanda. Lo asigna quien coordina la tabla, con una evaluación mensual de la eficiencia de los quirófanos.${B.derivado?' <span class="mu">Esta grilla se dedujo de la programación de las últimas 4 semanas y aún no se ha guardado.</span>':''}</div>`+
+  sec('Grilla semanal',`Porcentaje = uso del bloque por su especialidad, promedio de las últimas 4 semanas`,ed?'<button class="btn s" data-a="bloqGuardar">Guardar grilla</button>':'')+
+  `<div class="card" style="overflow-x:auto"><table class="sm blqt"><thead><tr><th>Pabellón</th>${[1,2,3,4,5].map(w=>`<th>${DOW[w]}</th>`).join('')}</tr></thead><tbody>${pabs.map(p=>`<tr><td><b>${esc(p.nombre.replace('Pabellón ','P'))}</b><div class="mu sm">${p.ini}–${p.fin}</div></td>${[1,2,3,4,5].map(w=>{const e=B.grid?.[p._id]?.[w]||'';const u=uso(p._id,w);
+      return `<td class="blc" style="--u:${u==null?0:Math.min(100,u)}%;--k:${u==null?'#aeb8c4':u>=85?'#34c759':u>=60?'#ffcc00':'#ff3b30'}">${ed?`<select class="in" data-blq="${p._id}" data-w="${w}"><option value="">Sin asignar</option>${esps.map(x=>`<option ${x===e?'selected':''}>${esc(x)}</option>`).join('')}</select>`:`<b>${esc(e||'—')}</b>`}<div class="blu"><i></i></div><span class="mu sm">${u==null?'—':Math.round(u)+' % usado'}</span></td>`}).join('')}</tr>`).join('')}</tbody></table></div>`+
+  sec(`Bloques por liberar <span class="chip ${prox.length?'wa':'ok'}">${prox.length}</span>`,`Bloques de las próximas ${BLOQUE_LIBERA_H} h con menos de 50 % programado por su especialidad: se ofrecen a otras especialidades o a la lista de espera`)+
+  `<div class="card">${prox.length?prox.map(({p,d,u})=>`<div class="it"><span class="dot wa"></span><div class="b"><b>${esc(p.nombre)} · ${fD(Date.parse(d+'T12:00'))} · ${esc(u.esp)}</b><div class="mu sm">${Math.round(u.pct)} % programado por la especialidad${u.otra?` · ${Math.round(u.otra)} min de otras especialidades`:''}</div></div>${ed?`<button class="btn s" data-a="bloqLiberar" data-id="${p._id}" data-d="${d}">Liberar bloque</button>`:''}</div>`).join(''):'<p class="t-ok" style="margin:0">✓ Todos los bloques de los próximos días están bien programados.</p>'}</div>`+
+  sec('Horas asignadas por especialidad','Horas semanales de bloque')+`<div class="card"><div class="hbars">${Object.entries(hrs).sort((a,b)=>b[1]-a[1]).map(([e,h])=>`<div class="hbr"><span>${esc(e)}</span><div><i style="width:${h/Math.max(...Object.values(hrs))*100}%"></i></div><b>${Math.round(h)} h</b></div>`).join('')}</div></div>`}
+async function bloqGuardar(){const B=bloquesBase();const grid=JSON.parse(JSON.stringify(B.grid));document.querySelectorAll('[data-blq]').forEach(s=>{(grid[s.dataset.blq]=grid[s.dataset.blq]||{})[s.dataset.w]=s.value});
+  await put('bloques','base',{grid,liberados:B.liberados||{},ts:new Date(nowMs()).toISOString(),por:S.rol});log('Actualiza bloques quirúrgicos','Grilla semanal',{atrib:'Registrar'});toast('✓ Grilla de bloques guardada')}
+async function bloqLiberar(pab,dia){const B=bloquesBase();const lib={...(B.liberados||{}),[dia+'|'+pab]:true};await put('bloques','base',{grid:B.grid,liberados:lib,ts:new Date(nowMs()).toISOString(),por:S.rol});
+  notificar('informativa',`Bloque liberado · ${pabN(pab)} · ${fD(Date.parse(dia+'T12:00'))}`,'Disponible para otras especialidades o pacientes en lista de espera',['coordq','jefpab'],{tipo:'pabellon',id:pab},null,['hlf_bloque']);
+  log('Libera bloque quirúrgico',`${pabN(pab)} · ${dia}`,{atrib:'Registrar'});toast('✓ Bloque liberado y avisado')}
+
+/* ---------- Reunión de tabla ---------- */
+function reunionHTML(){const now=nowMs(),man=manana();let ay=isoD(now-864e5);for(let i=0;i<4&&[0,6].includes(new Date(ay+'T12:00').getDay());i++)ay=isoD(Date.parse(ay)-864e5);
+  const vc=verCx();const susp=L('cirugias').filter(c=>c.fecha===ay&&c.estado==='suspendida');const byCat={};susp.forEach(c=>{const k=catREM(c.causaSusp);byCat[k]=(byCat[k]||0)+1});
+  const csM=L('cirugias').filter(c=>c.fecha===man&&c.estado!=='suspendida');const sinConf=csM.filter(c=>c.checklist?.confirmado&&c.checklist.confirmado.estado!=='ok');
+  const riesgo=csM.map(c=>({c,r:E.riesgosCirugia(c,now,48)})).filter(x=>x.r.length);const R=periop();const camas=R.sv.filter(s=>s.saldoM<0);const def=deficitTramos(demanda(man));
+  const acta=byId('actas',hoy());const ed=['coordq','jefpab','admin','subop','director'].includes(S.rol);
+  const item=(cl,t,s,h)=>`<${h?`a href="${h}"`:'div'} class="it" style="text-decoration:none;color:inherit"><span class="dot ${cl}"></span><div class="b"><b>${t}</b>${s?`<div class="mu sm">${s}</div>`:''}</div>${h?'<span class="chev">›</span>':''}</${h?'a':'div'}>`;
+  return head('Reunión de tabla',`Reunión diaria, breve y resolutiva, que lidera la Subdirección Médica o quien delegue. Prepara la tabla de ${fD(Date.parse(man+'T12:00'))}`,'')+
+  sec('1. Estado de la tabla de mañana','Publicación, condicionales, agregados y reserva para lista de espera')+tablaBanner(man)+
+  sec(`2. Suspensiones del día anterior <span class="chip ${susp.length?'cr':'ok'}">${susp.length}</span>`,`${fD(Date.parse(ay+'T12:00'))} · agrupadas como el REM A21`)+
+  `<div class="card">${susp.length?`<div class="row" style="gap:6px;margin-bottom:8px">${Object.entries(byCat).map(([k,n])=>`<span class="chip">${esc(k)} · ${n}</span>`).join('')}</div>`+susp.map(c=>item('cr',`${vc?esc(c.procedimiento)+' · ':''}${esc(pabN(c.pabellon))} ${c.hIni}`,`${esc(catREM(c.causaSusp))} · ${esc(c.causaSusp||'sin causa')}`,vc?'#cx/'+c._id:'')).join(''):'<p class="t-ok" style="margin:0">✓ Sin suspensiones.</p>'}</div>`+
+  sec(`3. Pacientes de mañana sin confirmar <span class="chip ${sinConf.length?'wa':'ok'}">${sinConf.length}</span>`,'Contactabilidad: confirmar asistencia y preparación entre 48 y 72 h antes')+
+  `<div class="card">${sinConf.length?sinConf.map(c=>item('wa',`${esc(c.codigo)} · ${esc(pabN(c.pabellon))} ${c.hIni}`,`${vc?esc(c.procedimiento)+' · ':''}${ORIGEN[origenDe(c)]}`,vc?'#cx/'+c._id:'')).join(''):'<p class="t-ok" style="margin:0">✓ Todos confirmados.</p>'}</div>`+
+  sec(`4. Requerimientos y riesgos <span class="chip ${riesgo.length+camas.length+def.length?'wa':'ok'}">${riesgo.length+camas.length+def.length}</span>`,'Condiciones sin confirmar, déficit de camas y de personal')+
+  `<div class="card">${riesgo.slice(0,8).map(({c,r})=>item('wa',`${esc(c.codigo)} · ${esc(pabN(c.pabellon))} ${c.hIni}`,'Falta: '+r.map(x=>E.CHECK[x.item].n).join(', '),vc?'#cx/'+c._id:'')).join('')}
+   ${camas.map(s=>item('cr',`Faltan ${-s.saldoM} camas en ${esc(s.n)}`,'Para las cirugías de mañana','#perioperatorio')).join('')}
+   ${def.slice(0,4).map(x=>item('cr',`Faltan ${x.falta} ${esc(x.r.n.toLowerCase())}`,`${hhm(x.a)}–${hhm(x.b)}`,'#dotacion')).join('')}
+   ${riesgo.length+camas.length+def.length?'':'<p class="t-ok" style="margin:0">✓ Sin requerimientos pendientes.</p>'}</div>`+
+  sec('5. Acuerdos','Quedan en el acta del día, con su responsable')+
+  `<div class="card">${ed?`<form class="f" data-f="acta"><div class="fl"><label>Acuerdos de la reunión (sin datos de pacientes)</label><textarea class="in" name="txt" rows="5">${esc(acta?.txt||'')}</textarea></div><div class="row"><button class="btn p">Guardar acta</button>${acta?`<span class="mu sm">Guardada ${fDT(acta.ts)} · ${esc(rolN(acta.por))}</span>`:''}</div></form>`:acta?`<p style="white-space:pre-wrap">${esc(acta.txt)}</p>`:'<p class="mu">Sin acta registrada hoy.</p>'}</div>`}
+
+/* ---------- Lista de chequeo de cirugía segura (solo registro de aplicación) ---------- */
+function pedirLVCS(id){const c=byId('cirugias',id);if(!c)return;modal(`<div class="tour"><div class="tic">${ico('preop')}</div><h2>Lista de chequeo de cirugía segura</h2><p>¿Se aplicó en sus tres momentos (entrada, pausa y salida)? Solo se registra si se aplicó; el contenido queda en la ficha clínica.</p>
+  <div class="row" style="justify-content:center;gap:10px"><button class="btn" data-a="lvcs" data-id="${id}" data-v="0">No se aplicó</button><button class="btn p" data-a="lvcs" data-id="${id}" data-v="1">Sí, se aplicó</button></div></div>`)}
+async function guardarLVCS(id,v){const f=await fresh('cirugias',id);if(!f)return;const {_id,...x}=f;x.lvcs=!!v;x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:`Lista de chequeo de cirugía segura: ${v?'aplicada':'no aplicada'}`,u:ak(),rol:S.rol}];await put('cirugias',id,x);
+  log('Registra lista de chequeo de cirugía segura',`${f.codigo} · ${v?'aplicada':'no aplicada'}`,{atrib:'Registrar'});if(!v)notificar('alta','Lista de chequeo de cirugía segura no aplicada',f.codigo+' · '+pabN(f.pabellon),['jefpab'],{tipo:'cx',id},null,['hlf_lvcs']);cerrarModal()}
+
+/* ---------- Indicadores COMGES 2026 calculados en la plataforma ---------- */
+function comges(per='mes'){const now=nowMs();const ym=isoD(now).slice(0,7);const desde=per==='mes'?ym+'-01':isoD(now-28*864e5);
+  const dias=[...new Set(L('cirugias').map(c=>c.fecha))].filter(d=>d>=desde&&d<=hoy()&&![0,6].includes(new Date(d+'T12:00').getDay()));
+  let prog=0,susp=0,real=0,cond=0,tot=0;const cat={};dias.forEach(d=>{const cs=cxDeTabla(d).filter(c=>hm(c.hIni)<17*60);cs.forEach(c=>{const pas=d<hoy()||E.inicioCx(c)<=now;if(!pas)return;
+    if(c.cond==='condicional'){cond++;if(c.estado!=='realizada')return}prog++;if(c.estado==='suspendida'){susp++;const k=catREM(c.causaSusp);cat[k]=(cat[k]||0)+1}if(c.estado==='realizada')real++});
+    tot+=L('cirugias').filter(c=>c.fecha===d&&esElectiva(c)).length});
+  const rz=L('cirugias').filter(c=>c.fecha>=desde&&c.fecha<=hoy()&&c.estado==='realizada'&&esElectiva(c)&&c.tipo!=='Cirugía menor');const amb=rz.filter(c=>c.destino==='ambulatorio').length;
+  const lv=L('cirugias').filter(c=>c.fecha>=desde&&c.estado==='realizada');const lvs=lv.filter(c=>c.lvcs===true).length,lvr=lv.filter(c=>c.lvcs!=null).length;
+  const sv=prog?Math.trunc(susp/prog*1000)/10:null;const pts=v=>v==null?null:v<=6.5?4:v<=7?3:v<=8?2:v<=10?1:0;
+  return {dias:dias.length,prog,susp,real,cat,susp_:{v:sv,p:pts(sv)},amb:{v:rz.length?amb/rz.length*100:null,n:amb,d:rz.length},cond:{v:tot?cond/tot*100:null,n:cond},
+    cump:{v:prog?real/prog*100:null},lvcs:{v:lvr?lvs/lvr*100:null,n:lvs,d:lvr}}}
+function comgesHTML(){const C=comges('mes');const f1=n=>n==null?'—':(Math.trunc(n*10)/10).toLocaleString('es-CL');const col=(v,ok)=>v==null?'#8e8e93':ok?'#34c759':'#ff3b30';
+  const card=(cod,t,v,meta,ok,form,nota,pct)=>`<div class="ind"><span class="mu" style="font-size:.7rem;font-weight:700">${cod}</span><h3 style="margin:2px 0 0">${t}</h3><div class="row" style="gap:14px;margin:10px 0;flex-wrap:nowrap">${pct!=null?ring(Math.min(100,pct),col(v,ok),64):''}<div><div class="iv" style="color:${col(v,ok)}">${v}</div><div class="mu sm">Meta ${meta}</div></div></div><div class="sm"><b>Fórmula:</b> ${form}</div>${nota?`<div class="sm mu" style="margin-top:4px">${nota}</div>`:''}</div>`;
+  return sec('COMGES 2026 y normas de seguridad','Calculados sobre la tabla publicada, solo cirugías electivas en horario hábil','<button class="btn s" data-a="remA21">Exportar REM A21 (Excel)</button>')+`<div class="inds">
+  ${card('COMGES 1.2 · CG-SRA 30','Suspensión sobre tabla publicada',f1(C.susp_.v)+' %','≤ 6,5 % (puntaje hasta 10 %)',C.susp_.v!=null&&C.susp_.v<=6.5,'electivas suspendidas de la tabla publicada ÷ electivas programadas en horario hábil × 100',`${C.susp} de ${C.prog} · puntaje ${C.susp_.p??'—'} de 4 · los condicionales no operados no cuentan`,C.susp_.v!=null?Math.min(100,C.susp_.v/6.5*100):null)}
+  ${card('COMGES 1.1 · CG-SRA 29','Ambulatorización de cirugía mayor',f1(C.amb.v)+' %','≥ 50 % al cierre del trienio',C.amb.v!=null&&C.amb.v>=50,'cirugías mayores electivas ambulatorias ÷ cirugías mayores electivas realizadas × 100',`${C.amb.n} de ${C.amb.d} · CMA: alta antes de 24 h`,C.amb.v)}
+  ${card('COMGES 1.2 · definición','Pacientes condicionales',f1(C.cond.v)+' %','≤ '+COND_MAX+' % de la programación',C.cond.v!=null&&C.cond.v<=COND_MAX,'condicionales ÷ cirugías programadas × 100',`${C.cond.n} condicionales en el período`,C.cond.v!=null?C.cond.v/COND_MAX*100:null)}
+  ${card('Programación','Cumplimiento de la tabla publicada',f1(C.cump.v)+' %','≥ 95 % (COMGES 1.3, referencia)',C.cump.v!=null&&C.cump.v>=95,'cirugías realizadas de la tabla publicada ÷ programadas × 100','El COMGES 1.3 mide además el cumplimiento de la programación anual',C.cump.v)}
+  ${card('Norma MINSAL','Lista de chequeo de cirugía segura aplicada',f1(C.lvcs.v)+' %','100 %',C.lvcs.v!=null&&C.lvcs.v>=100,'cirugías con lista aplicada ÷ cirugías con registro × 100',`${C.lvcs.n} de ${C.lvcs.d}`,C.lvcs.v)}</div>`}
+
+/* ---------- Exportación REM A21 ---------- */
+async function remA21(){const now=nowMs();const ym=isoD(now).slice(0,7);const ini=ym+'-01';const pabs=L('pabellones');
+  const diasH=[];for(let d=new Date(ini+'T12:00');isoD(d)<=hoy();d=new Date(d.getTime()+864e5)){const w=d.getDay();if(w>=1&&w<=5)diasH.push(isoD(d))}
+  const hab=diasH.length?diasH.reduce((a,d)=>a+pabs.filter(p=>!bloqueoDe(p._id,d)&&!(d===hoy()&&p.estado==='fuera_servicio')).length,0)/diasH.length:0;
+  const mm=s=>{const x=new Date(s);return x.getHours()*60+x.getMinutes()};let hP=0,hH=0,hI=0,hF=0;
+  L('cirugias').filter(c=>c.fecha>=ini&&c.fecha<=hoy()).forEach(c=>{const w=new Date(c.fecha+'T12:00').getDay();const as=+stdDe(c.procedimiento).aseo.min||0;
+    if(esElectiva(c)&&w>=1&&w<=5&&c.cond!=='agregado')hP+=(+c.durMin)+as;if(c.estado!=='realizada')return;const s=c.inicioReal?mm(c.inicioReal):hm(c.hIni);const e=s+(+c.durReal||+c.durMin)+as;
+    if(w===0||w===6){hF+=e-s;return}const hb=Math.max(0,Math.min(e,17*60)-Math.max(s,8*60));hH+=hb;hI+=(e-s)-hb});
+  const h=m=>Math.round(m/60*10)/10;
+  const A=[['Quirófanos en dotación',pabs.length],['Promedio mensual de quirófanos habilitados',Math.round(hab*10)/10],['Promedio mensual de quirófanos en trabajo (con personal)',Math.round(hab*10)/10],
+    ['Días hábiles del período',diasH.length],['Horas habilitadas (8 h × días hábiles × habilitados)',Math.round(8*diasH.length*hab)],['Horas programadas en tabla (cirugía + preparación)',h(hP)],
+    ['Horas ocupadas en horario hábil (08:00–17:00)',h(hH)],['Horas ocupadas en horario inhábil lunes a viernes',h(hI)],['Horas ocupadas sábado, domingo y festivos',h(hF)]];
+  const C=comges('mes');const F=Object.entries(CAT_REM).flatMap(([k,arr])=>arr.map(x=>[k,x,L('cirugias').filter(c=>c.fecha>=ini&&c.fecha<=hoy()&&c.estado==='suspendida'&&c.causaSusp===x).length]));
+  const otras=L('cirugias').filter(c=>c.fecha>=ini&&c.fecha<=hoy()&&c.estado==='suspendida'&&!Object.values(CAT_REM).flat().includes(c.causaSusp)).length;if(otras)F.push(['Otras','Causa no clasificada',otras]);
+  await xlsx(`REM_A21_borrador_${ym}.xlsx`,[['A Capacidad y utilización',['Variable','Valor'],A.concat([['Nota','Borrador generado por Qronos con datos de la plataforma (simulación). Validar con Estadística antes de informar. Horas ocupadas incluyen preparación (aseo estándar).']])],
+    ['F Causas de suspensión',['Categoría','Causa','Cirugías electivas suspendidas'],F],
+    ['Indicadores COMGES',['Indicador','Valor','Meta'],[['Suspensión sobre tabla publicada (%)',C.susp_.v==null?'':Math.round(C.susp_.v*10)/10,'≤ 6,5'],['Ambulatorización cirugía mayor (%)',C.amb.v==null?'':Math.round(C.amb.v*10)/10,'≥ 50'],['Pacientes condicionales (%)',C.cond.v==null?'':Math.round(C.cond.v*10)/10,'≤ 10'],['Cumplimiento de tabla publicada (%)',C.cump.v==null?'':Math.round(C.cump.v*10)/10,'≥ 95'],['Lista de chequeo cirugía segura aplicada (%)',C.lvcs.v==null?'':Math.round(C.lvcs.v*10)/10,'100']]]]);
+  log('Exporta borrador REM A21',ym,{atrib:'Consultar'})}
+
+/* ===================================================================
+   Qronos · Tiempos estándar: duración por tipo de operación + tipo de aseo
+   posterior = ciclo completo (operación + limpieza). Permite programar sin
+   tiempos muertos ni recambios insuficientes.
+   Valores iniciales referenciales: deben validarse con Pabellones, IAAS y la
+   sociedad concesionaria antes de usarse como estándar vigente.
+   =================================================================== */
+const ASEO_DEF=[
+  {id:'recambio',n:'Recambio simple',min:15,c:'#34c759',d:'Cirugía limpia y menor: retiro de residuos y ropa, limpieza de superficies de contacto y piso del área de trabajo.'},
+  {id:'intermedio',n:'Aseo intermedio',min:25,c:'#ffcc00',d:'Cirugía limpia-contaminada o con mayor volumen de fluidos: recambio completo de superficies, mesa, lámparas y piso de todo el pabellón.'},
+  {id:'contaminado',n:'Aseo de cirugía contaminada',min:40,c:'#ff9500',d:'Cirugía contaminada o sucia (abscesos, peritonitis, aseos quirúrgicos): limpieza y desinfección completa con verificación.'},
+  {id:'aislamiento',n:'Aseo por aislamiento',min:60,c:'#ff3b30',d:'Paciente con precauciones adicionales (contacto, gotitas o aéreo): desinfección completa, tiempo de recambio de aire y verificación IAAS.'}];
+const ASEO_REGLA=[[/absceso|drenaje|aseo quir|laparotom|peritonit|amputa|desbrid/i,'contaminado'],[/cesárea|gastrect|colect|histerect|prostat|nefrect|osteos[ií]ntesis|cadera|rodilla|digestiv/i,'intermedio']];
+function aseoSugerido(proc,esp,dur){for(const [re,id] of ASEO_REGLA)if(re.test(proc||'')||re.test(esp||''))return id;return (+dur||0)>=120?'intermedio':'recambio'}
+function catalogoBase(){const by={};L('cirugias').forEach(c=>{const k=c.procedimiento;if(!k)return;const o=by[k]||(by[k]={proc:k,esp:c.especialidad||'',durs:{}});o.durs[c.durMin]=(o.durs[c.durMin]||0)+1});
+  return Object.values(by).map(o=>{const dur=+Object.entries(o.durs).sort((a,b)=>b[1]-a[1])[0][0];return {proc:o.proc,esp:o.esp,min:dur,aseo:aseoSugerido(o.proc,o.esp,dur)}}).sort((a,b)=>a.esp.localeCompare(b.esp)||a.proc.localeCompare(b.proc))}
+function estandares(){if(window._stdDraft)return window._stdDraft;const d=L('estandares').find(x=>x._id==='catalogo');const base=catalogoBase();
+  if(!d)return {aseos:ASEO_DEF.map(a=>({...a})),procs:base.map(p=>({...p,eq:eqSugerido(+p.min,p.proc)})),equipos:JSON.parse(JSON.stringify(EQ_DEF)),guardado:false};
+  const procs=[...(d.procs||[])];base.forEach(b=>{if(!procs.some(p=>p.proc===b.proc))procs.push({...b,eq:eqSugerido(+b.min,b.proc),nuevo:true})});procs.forEach(p=>{if(!p.eq)p.eq=eqSugerido(+p.min,p.proc)});
+  return {aseos:(d.aseos&&d.aseos.length?d.aseos:ASEO_DEF).map(a=>({...a})),procs,equipos:JSON.parse(JSON.stringify(d.equipos&&d.equipos.length?d.equipos:EQ_DEF)),guardado:true,por:d.por,ts:d.ts}}
+function stdDe(proc){const E2=estandares();const p=E2.procs.find(x=>x.proc===proc);const a=E2.aseos.find(x=>x.id===(p?.aseo||'recambio'))||E2.aseos[0];return {min:p?+p.min:null,aseo:a,ciclo:(p?+p.min:0)+(+a.min)}}
+function realDe(proc){const v=L('cirugias').filter(c=>c.procedimiento===proc&&c.estado==='realizada'&&+c.durReal>0).map(c=>+c.durReal).sort((a,b)=>a-b);if(!v.length)return null;
+  const q=f=>v[Math.min(v.length-1,Math.floor(v.length*f))];return {n:v.length,p50:q(.5),p80:q(.8)}}
+const puedeStd=()=>['coordq','jefpab','admin','subop'].includes(S?.rol);
+const hhm=m=>String(Math.floor(m/60)).padStart(2,'0')+':'+String(Math.round(m%60)).padStart(2,'0');
+
+/* ---------- Análisis de ciclos: entre cada cirugía y la siguiente del mismo pabellón ---------- */
+function ciclosPab(pab,dia){const cs=L('cirugias').filter(c=>c.pabellon===pab&&c.fecha===dia&&c.estado!=='suspendida').sort((a,b)=>hm(a.hIni)-hm(b.hIni));const out=[];
+  for(let i=0;i<cs.length-1;i++){const a=cs[i],b=cs[i+1];const st=stdDe(a.procedimiento);const fin=hm(a.hIni)+(+a.durMin);const listo=fin+(+st.aseo.min);const gap=hm(b.hIni)-fin;const dif=hm(b.hIni)-listo;
+    out.push({a,b,fin,listo,gap,aseo:st.aseo,dif,est:dif<0?'corto':dif>10?'muerto':'ok'})}
+  return out}
+function resumenCiclos(dia){let muerto=0,corto=0,nm=0,nc=0,ok=0;const porPab=[];L('pabellones').sort(pabOrd).forEach(p=>{const cy=ciclosPab(p._id,dia);let m=0,c=0;cy.forEach(x=>{if(x.est==='muerto'){m+=x.dif;nm++}else if(x.est==='corto'){c+=-x.dif;nc++}else ok++});muerto+=m;corto+=c;if(m||c)porPab.push({p,m,c,cy})});return {muerto,corto,nm,nc,ok,porPab}}
+/* Reprograma las cirugías aún programadas para que cada una ingrese justo al terminar el aseo estándar de la anterior */
+async function ajustarCiclos(pab,dia){if(!puedeStd())return toast('Solo Coordinación de Programación o Jefe de Pabellones');const p=byId('pabellones',pab);const now=nowMs();const nd=new Date(now);const N=dia===hoy()?nd.getHours()*60+nd.getMinutes():dia<hoy()?1e9:-1;
+  const cs=L('cirugias').filter(c=>c.pabellon===pab&&c.fecha===dia&&c.estado!=='suspendida').sort((a,b)=>hm(a.hIni)-hm(b.hIni));let cambios=0,fuera=0;let prevListo=null;const ts=new Date(now).toISOString();
+  for(const c of cs){const movible=c.estado==='programada'&&hm(c.hIni)>N&&!c.inicioReal;
+    if(movible&&prevListo!=null){const nuevo=Math.max(prevListo,N+5);if(Math.abs(nuevo-hm(c.hIni))>=5){const f=await fresh('cirugias',c._id);const {_id,...x}=f;const ant=x.hIni;x.hIni=hhm(nuevo);x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts,acc:`Ajuste a ciclo estándar: ${ant} → ${x.hIni}`,u:ak(),rol:S.rol}];await put('cirugias',c._id,x);c.hIni=x.hIni;cambios++}}
+    const ini=c.inicioReal&&['en_curso','realizada'].includes(c.estado)?(()=>{const d=new Date(c.inicioReal);return d.getHours()*60+d.getMinutes()})():hm(c.hIni);const dur=c.estado==='realizada'?(+c.durReal||+c.durMin):+c.durMin;
+    prevListo=ini+dur+(+stdDe(c.procedimiento).aseo.min);if(prevListo>hm(p.fin))fuera++}
+  const libre=Math.max(0,hm(p.fin)-prevListo);
+  log('Ajusta programación a ciclo estándar',`${p.nombre} · ${dia} · ${cambios} cirugía(s)`,{atrib:'Registrar'});
+  toast(cambios?`✓ ${cambios} cirugía(s) reprogramada(s) en ${p.nombre}. ${libre>=60?`Quedan ${Math.floor(libre/60)} h ${libre%60} min libres al final para programar.`:''}`:'La programación ya calza con el ciclo estándar');
+  if(fuera)toast(`Atención: ${fuera} cirugía(s) terminan después del cierre de la jornada (${p.fin})`)}
+
+/* ---------- Vista: Tiempos estándar ---------- */
+function cicloBar(op,aseo,col,max){const w=Math.max(op+aseo,1);return `<div class="cyb" style="width:${Math.max(18,Math.min(100,w/max*100))}%"><i style="flex:${op}"></i><i style="flex:${aseo};background:${col}"></i></div>`}
+function estandaresHTML(){const E2=estandares();const ed=puedeStd();const vc=verCx();const q=(F('stdq')||'').toLowerCase(),fe=F('stde')||'';
+  const esps=[...new Set(E2.procs.map(p=>p.esp))].sort();const max=Math.max(...E2.procs.map(p=>+p.min+(+(E2.aseos.find(a=>a.id===p.aseo)||{min:0}).min)),60);
+  const rows=E2.procs.map((p,i)=>({p,i})).filter(({p})=>(!q||p.proc.toLowerCase().includes(q))&&(!fe||p.esp===fe));
+  const aseoCards=`<div class="aseos">${E2.aseos.map((a,i)=>`<div class="aseo" style="--c:${a.c||'#af52de'}"><div class="ah"><i></i><b>${ed?`<input class="in ain" data-std="an" data-i="${i}" value="${esc(a.n)}">`:esc(a.n)}</b></div>
+    <div class="am">${ed?`<input class="in anum" type="number" min="5" max="240" step="5" data-std="am" data-i="${i}" value="${a.min}">`:`<b>${a.min}</b>`}<span>min</span></div><p>${esc(a.d||'')}</p><div class="mu sm">${E2.procs.filter(p=>p.aseo===a.id).length} tipos de operación</div></div>`).join('')}</div>`;
+  const head0=head('Tiempos estándar','Duración de cada tipo de operación, aseo que requiere después y equipo humano: el ciclo completo con que se programa',ed?`<button class="btn p" data-a="stdGuardar">Guardar estándares</button>`:'');
+  const aviso=`<div class="card note" style="margin-top:4px"><b>Valores referenciales para el prototipo.</b> Las duraciones salen de la programación simulada y los tiempos de aseo son una propuesta inicial. Antes de usarlos como estándar vigente deben validarlos el Jefe de Pabellones, el Comité de IAAS y la sociedad concesionaria (el aseo es un servicio contratado).${E2.guardado?` <span class="mu">Última actualización: ${fDT(E2.ts)}${E2.por?' · '+esc(rolN(E2.por)):''}</span>`:' <span class="mu">Aún no se han guardado cambios.</span>'}</div>`;
+  if(!vc)return head0+aviso+sec('Tipos de aseo y su tiempo estándar','La concesionaria ve los tiempos de aseo que se usan para programar; los procedimientos clínicos no se muestran')+aseoCards;
+  const R=resumenCiclos(window._dia||manana());
+  return head0+aviso+
+  sec('Tipos de aseo','Tiempo estándar que necesita el pabellón después de cada operación, según su tipo')+aseoCards+
+  sec('Ciclo por tipo de operación',`<span class="cyl"><i class="op"></i>Operación</span><span class="cyl"><i class="as"></i>Aseo posterior</span> · ciclo = tiempo hasta que puede ingresar el siguiente paciente`)+
+  `<div class="row" style="gap:8px;margin-bottom:10px"><input class="in" data-a="flt" data-k="stdq" placeholder="Buscar operación" value="${esc(F('stdq')||'')}" style="max-width:260px"><select class="in" data-a="flt" data-k="stde" style="max-width:230px"><option value="">Todas las especialidades</option>${esps.map(e=>`<option ${e===fe?'selected':''}>${esc(e)}</option>`).join('')}</select>${ed?`<button class="btn s" data-a="stdReal">Sugerir duración según datos reales</button>`:''}</div>
+  <div class="card" style="padding:0"><div class="ts"><table class="sm stdt"><thead><tr><th>Operación</th><th>Duración</th><th>Aseo posterior</th><th>Equipo humano</th><th>Ciclo completo</th><th>Real (mediana)</th></tr></thead><tbody>
+  ${rows.map(({p,i})=>{const a=E2.aseos.find(x=>x.id===p.aseo)||E2.aseos[0];const r=realDe(p.proc);const cy=+p.min+(+a.min);const dv=r?r.p50-p.min:null;
+    return `<tr><td><b>${esc(p.proc)}</b>${p.nuevo?' <span class="chip wa">nuevo</span>':''}<div class="mu sm">${esc(p.esp)}</div></td>
+    <td>${ed?`<input class="in anum" type="number" min="10" max="720" step="5" data-std="pm" data-i="${i}" value="${p.min}"> <span class="mu">min</span>`:`<b>${p.min}</b> min`}</td>
+    <td>${ed?`<select class="in" data-std="pa" data-i="${i}">${E2.aseos.map(x=>`<option value="${x.id}" ${x.id===p.aseo?'selected':''}>${esc(x.n)} · ${x.min} min</option>`).join('')}</select>`:`${esc(a.n)} · ${a.min} min`}</td>
+    <td>${(()=>{const q=equipos().find(x=>x.id===p.eq)||equipos()[1];return `${ed?`<select class="in" data-std="pe" data-i="${i}">${equipos().map(x=>`<option value="${x.id}" ${x.id===q.id?'selected':''}>${esc(x.n)}</option>`).join('')}</select>`:`<b>${esc(q.n)}</b>`}<div style="margin-top:4px">${eqChips(q)}</div>`})()}</td>
+    <td style="min-width:190px"><b>${cy} min</b>${cicloBar(+p.min,+a.min,a.c,max)}</td>
+    <td>${r?`${r.p50} min <span class="chip ${Math.abs(dv)<=10?'ok':dv>0?'cr':'wa'}">${dv>0?'+':''}${dv}</span><div class="mu sm">${r.n} casos · 80 % en ≤ ${r.p80} min</div>`:'<span class="mu">sin datos</span>'}</td></tr>`}).join('')||'<tr><td colspan="6" class="empty">Sin operaciones que coincidan</td></tr>'}
+  </tbody></table></div></div>
+  <p class="mu sm">«Real (mediana)»: duración típica registrada en las cirugías realizadas. Verde = el estándar calza (±10 min); rojo = las operaciones duran más que lo programado, lo que produce atrasos en cadena.</p>`+
+  sec('Efecto en la programación de '+(window._dia===hoy()?'hoy':fD(Date.parse((window._dia||manana())+'T12:00'))),'Comparación de cada recambio programado con el aseo estándar de la operación anterior','<a class="lnk" href="#programacion">Ir a programación ›</a>')+cicloResumenHTML(window._dia||manana())}
+function cicloResumenHTML(dia){if(!verCx())return '';const R=resumenCiclos(dia);const hrs=m=>m>=60?Math.floor(m/60)+' h '+(m%60?m%60+' min':''):m+' min';const ed=puedeStd()&&dia>=hoy();
+  return `<div class="kpis">${kpi('Recambios que calzan',R.ok,'entre ± 10 min del aseo estándar','',null)}${kpi('Tiempo muerto programado',hrs(R.muerto),`${R.nm} recambios más largos que el aseo`,R.muerto?'wa':'')}${kpi('Recambios insuficientes',R.nc,R.corto?`faltan ${hrs(R.corto)} de aseo · riesgo de atraso`:'sin riesgo',R.nc?'cr':'')}</div>
+  ${R.porPab.length?`<div class="card" style="margin-top:12px">${R.porPab.map(({p,m,c,cy})=>`<div class="cyrow"><b>${esc(p.nombre.replace('Pabellón ','P'))}</b><div class="cyx">${cy.map(x=>`<span class="cyc ${x.est}" title="${esc(x.a.codigo)} termina ${hhm(x.fin)} · ${esc(x.aseo.n)} ${x.aseo.min} min · siguiente ${x.b.hIni}">${x.a.hIni.slice(0,5)}→${x.b.hIni.slice(0,5)} <em>${x.est==='ok'?'✓':x.est==='muerto'?'+'+x.dif+' min':x.dif+' min'}</em></span>`).join('')}</div>
+    <span class="mu sm">${m?`${m} min muertos`:''}${m&&c?' · ':''}${c?`<span class="t-cr">${c} min de aseo faltantes</span>`:''}</span>${ed?`<button class="btn s" data-a="ajCiclo" data-id="${p._id}" data-d="${dia}">Ajustar al ciclo</button>`:''}</div>`).join('')}
+    ${ed?`<div class="row" style="justify-content:flex-end;margin-top:10px"><button class="btn p s" data-a="ajCicloTodos" data-d="${dia}">Ajustar todos los pabellones</button></div>`:''}<p class="mu sm" style="margin:8px 0 0">«Ajustar al ciclo» mueve las cirugías aún programadas para que cada una ingrese al terminar el aseo estándar de la anterior. Así el tiempo muerto queda junto al final de la jornada, donde se puede programar otra cirugía.</p></div>`:`<div class="card note" style="margin-top:12px">Todos los recambios programados calzan con el aseo estándar.</div>`}`}
+
+function stdEdit(t){const D=window._stdDraft||(window._stdDraft=JSON.parse(JSON.stringify(estandares())));const i=+t.dataset.i,k=t.dataset.std;
+  if(k==='an')D.aseos[i].n=t.value.trim()||D.aseos[i].n;if(k==='am')D.aseos[i].min=Math.max(5,+t.value||D.aseos[i].min);
+  if(k==='pm')D.procs[i].min=Math.max(10,+t.value||D.procs[i].min);if(k==='pa')D.procs[i].aseo=t.value;if(k==='pe')D.procs[i].eq=t.value;D.cambios=true;render()}
+async function stdGuardar(){const D=estandares();const ts=new Date(nowMs()).toISOString();
+  await put('estandares','catalogo',{aseos:D.aseos,procs:D.procs.map(({nuevo,...p})=>p),equipos:D.equipos||EQ_DEF,ts,por:S.rol,ver:(L('estandares').find(x=>x._id==='catalogo')?.ver||0)+1});
+  window._stdDraft=null;log('Actualiza tiempos estándar',`${D.procs.length} operaciones · ${D.aseos.length} tipos de aseo`,{atrib:'Registrar'});toast('✓ Tiempos estándar guardados. Se usan desde ahora para programar.')}
+function stdReal(){const D=window._stdDraft||(window._stdDraft=JSON.parse(JSON.stringify(estandares())));let n=0;D.procs.forEach(p=>{const r=realDe(p.proc);if(r&&r.n>=5&&Math.abs(r.p50-p.min)>=5){p.min=Math.round(r.p50/5)*5;n++}});D.cambios=true;render();toast(n?`${n} duraciones ajustadas a la mediana real (redondeada a 5 min). Revise y guarde.`:'Las duraciones ya calzan con los datos reales')}
+
+/* Ayuda del formulario de nueva cirugía: duración y ciclo estándar, hora sugerida */
+function cicloForm(f,campo){if(!f||!f.proc)return;const info=f.querySelector('#cicloInfo');const proc=f.proc.value;const p=estandares().procs.find(x=>x.proc===proc);
+  if(campo==='proc'&&p){f.esp.value=p.esp;f.dur.value=p.min}
+  if(!p){if(info)info.textContent='Elija el procedimiento para ver su ciclo estándar.';return}
+  const st=stdDe(proc),dur=+f.dur.value||p.min,pab=byId('pabellones',f.pab.value),dia=f.fecha.value;
+  const prev=L('cirugias').filter(c=>c.pabellon===f.pab.value&&c.fecha===dia&&c.estado!=='suspendida'&&hm(c.hIni)<=hm(f.h.value||'00:00')).sort((a,b)=>hm(b.hIni)-hm(a.hIni))[0];
+  const ult=L('cirugias').filter(c=>c.pabellon===f.pab.value&&c.fecha===dia&&c.estado!=='suspendida').sort((a,b)=>hm(b.hIni)+(+b.durMin)-hm(a.hIni)-(+a.durMin))[0];
+  const sug=ult?hm(ult.hIni)+(+ult.durMin)+(+stdDe(ult.procedimiento).aseo.min):hm(pab?.ini||'08:00');
+  const h=hm(f.h.value||'08:00'),listo=h+dur+(+st.aseo.min);let warn='';
+  if(prev){const lp=hm(prev.hIni)+(+prev.durMin)+(+stdDe(prev.procedimiento).aseo.min);if(h<lp)warn=`<div class="t-cr">⚠ La cirugía anterior (${prev.hIni}) más su aseo terminan a las ${hhm(lp)}: faltarían ${lp-h} min.</div>`;else if(h-lp>10)warn=`<div style="color:#b25000">Quedan ${h-lp} min muertos después de la cirugía anterior.</div>`}
+  if(pab&&listo>hm(pab.fin))warn+=`<div class="t-cr">⚠ El ciclo termina a las ${hhm(listo)}, después del cierre del pabellón (${pab.fin}).</div>`;
+  const eq=eqDe(proc);const Dm=demanda(dia,{proc,s:h,d:dur});const fal=deficitTramos(Dm).filter(x=>x.a<h+dur&&h<x.b);
+  const eqh=`<div><b>Equipo requerido:</b> ${esc(eq.n)} ${eqChips(eq)}</div>${fal.length?`<div class="t-cr">⚠ Con esta cirugía faltarían ${[...new Map(fal.map(x=>[x.r.id,x])).values()].map(x=>x.falta+' '+x.r.n.toLowerCase()).join(', ')} en ese horario. Revise «Dotación de personal».</div>`:'<div class="t-ok">✓ La dotación programada cubre este equipo en ese horario.</div>'}`;
+  const blq=f.pab.value&&dia?bloqueDe(f.pab.value,dia):'';const blw=blq&&blq!=='__libre'&&blq!=='Urgencia'&&f.esp.value&&blq!==f.esp.value?`<div style="color:#b25000">El bloque de ${esc(pab?.nombre||'')} ese día corresponde a ${esc(blq)}. Programe solo si la jefatura liberó el bloque.</div>`:'';
+  const tb=tablaDe(dia);const tbw=tb.estado==='definitiva'&&!f.cond.value?'<div style="color:#b25000">La tabla de ese día ya está publicada: esta cirugía quedará como «agregada».</div>':'';
+  if(info)info.innerHTML=`<div class="cyb big"><i style="flex:${dur}"><span>Operación ${dur}'</span></i><i style="flex:${st.aseo.min};background:${st.aseo.c||'#af52de'}"><span>${esc(st.aseo.n.split(' ')[0])} ${st.aseo.min}'</span></i></div>
+   <div>Ciclo completo <b>${dur+(+st.aseo.min)} min</b> · ${esc(st.aseo.n)}. El siguiente paciente puede ingresar a las <b>${hhm(listo)}</b>.</div>${warn}${eqh}${blw}${tbw}
+   ${sug<=hm(pab?.fin||'23:59')-dur&&hhm(sug)!==f.h.value?`<button type="button" class="btn s" data-a="usarHora" data-h="${hhm(sug)}">Usar hora sugerida ${hhm(sug)} (primer hueco sin tiempo muerto)</button>`:''}`}
 
 /* ===================== CONFIGURACIÓN, FORMULARIOS, ACCIONES Y DEMOSTRACIÓN ===================== */
 const ROLKEYS=Object.keys(E.ROLES);
@@ -2312,27 +2780,27 @@ demo(){const off=general.demo?.offsetMin||0;return `<div class="card"><h2>Escena
 
 /* ---------- Modal ---------- */
 function modal(html){const m=$('#modal');m.innerHTML=`<div class="card">${html}</div>`;m.hidden=false;setTimeout(()=>m.querySelector('input,textarea,select')?.focus(),50)}
-function cerrarModal(){$('#modal').hidden=true;$('#modal').innerHTML='';if(['tarea','cx'].includes(route()[0])){const base=window._base||(route()[0]==='tarea'?'tareas':'programacion');const y=window._baseY||scrollY;history.replaceState(null,'','#'+base);window._base=null;render();scrollTo(0,y)}}
+function cerrarModal(){window._volverCx=null;$('#modal').hidden=true;$('#modal').innerHTML='';if(['tarea','cx'].includes(route()[0])){const base=window._base||(route()[0]==='tarea'?'tareas':'programacion');const y=window._baseY||scrollY;history.replaceState(null,'','#'+base);window._base=null;render();scrollTo(0,y)}}
 const mHead=t=>`<div class="row sp"><h2 style="margin:0">${t}</h2><button class="btn s" data-a="cerrar" aria-label="Cerrar">✕</button></div>`;
 function abrirTarea(id,fromRoute){const t=byId('tareas',id);if(!t||!veTarea(t))return;if(!$('#modal').hidden&&fromRoute)return;
   const f=[['Identificador',t.folio],['Fecha y hora',fDT(t.ts)],['Origen',t.origen],['Unidad solicitante',rolN(t.unidadSol)],['Responsable asignado',rolNP(t.rolActual)+(t.nivel?` (escalamiento nivel ${t.nivel})`:'')],['Acción requerida',t.accion],['Plazo objetivo',fDT(t.plazo)],['Prioridad',PRIO[t.prioridad]?.[0]],['Ámbito',t.dominio],['Antecedentes',t.antecedentes],['Estado',EST[t.estado]?.[0]],['Observaciones',t.obs||'—'],['Evidencia',(t.evidencia||[]).length?'':'—'],['Cierre',t.cierre?fDT(t.cierre):'—']];
   modal(mHead('Solicitud '+esc(t.folio||''))+tareaCard(t,true)+`<table>${f.map(([a,b])=>`<tr><th style="width:38%">${a}</th><td>${esc(b)}</td></tr>`).join('')}</table>${(t.evidencia||[]).map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener">📎 evidencia</a> `).join('')}
   ${E.ABIERTA(t)&&(t.rolActual===S.rol)&&ASSETS?`<label class="btn s" style="margin-top:8px">Adjuntar evidencia<input type="file" hidden data-a="evid" data-id="${t._id}" accept="image/*,application/pdf"></label>`:''}
   <h3 style="margin-top:14px">Historial de decisiones</h3><div class="tl">${(t.hist||[]).map(h=>`<div><b>${esc(h.acc)}</b> · ${fDT(h.ts)} · ${esc(actorN(h.u))}${h.rol?' ('+esc(rolN(h.rol))+')':''}${h.ver?` · versión ${h.ver}`:''}${h.txt?`<div class="mu">${esc(h.txt)}</div>`:''}</div>`).join('')}</div>
-  <div class="row" style="margin-top:10px"><button class="btn s" data-a="chatTarea" data-id="${t._id}">Conversar sobre esta solicitud</button></div>`)}
+  <div class="row" style="margin-top:10px">${window._volverCx?`<button class="btn s" data-a="volverCx" data-id="${window._volverCx}">‹ Volver a la cirugía</button>`:''}<button class="btn s" data-a="chatTarea" data-id="${t._id}">Conversar sobre esta solicitud</button></div>`)}
 function abrirCx(id,fromRoute){const c=byId('cirugias',id);if(!c||!veClinico())return;if(!$('#modal').hidden&&fromRoute)return;
   const r=E.riesgosCirugia(c,nowMs(),cfg.horizonteH);const puedeCambio=P('reprogramar')&&['coordq','jefpab'].includes(S.rol)&&!['realizada','suspendida'].includes(c.estado);
   modal(mHead(esc(c.codigo)+' · '+esc(c.procedimiento))+`<p class="mu sm">${esc(c.especialidad)} · ${fD(c.fecha)} ${c.hIni} · ${c.durMin} min · ${esc(pabN(c.pabellon))} · ${esc(c.pacienteRef)} · ${esc(c.equipo||'')}</p>
   ${r.length?`<p class="banner" style="border-radius:9px">Riesgo de suspensión: ${r.map(x=>E.CHECK[x.item].n.toLowerCase()).join(', ')} sin confirmar.</p>`:''}
   <h3>Condiciones de la intervención</h3><table>${Object.entries(E.CHECK).map(([k,d])=>{const it=c.checklist?.[k]||{};const s=it.estado||'pendiente';const tk=byId('tareas',`cx-${c._id}-${k}`);
-   return `<tr><td>${d.n}<div class="mu sm">${esc(rolN(d.rol))}</div></td><td>${chip(s,s==='ok'?'ok':s==='alternativa'?'ac':s==='dificultad'?'cr':'wa')}${it.nota?`<div class="sm mu">${esc(it.nota)}</div>`:''}</td><td>${tk?`<a href="#tarea/${tk._id}" class="sm">${esc(tk.folio)}</a>`:''}${(s==='pendiente'||s==='dificultad')&&S.rol===d.rol&&!(tk&&E.ABIERTA(tk))?` <button class="btn s ok" data-a="confItem" data-id="${c._id}" data-k="${k}">Confirmar</button>`:''}</td></tr>`}).join('')}</table>
+   return `<tr><td>${d.n}<div class="mu sm">${esc(rolN(d.rol))}</div></td><td>${chip(s,s==='ok'?'ok':s==='alternativa'?'ac':s==='dificultad'?'cr':'wa')}${it.nota?`<div class="sm mu">${esc(it.nota)}</div>`:''}</td><td>${tk?`<button class="btn s solb" data-a="verTarea" data-id="${tk._id}" data-cx="${c._id}" title="Ver estado de la solicitud">${esc(tk.folio)} ${chip(EST[tk.estado]?.[0]||tk.estado,EST[tk.estado]?.[1]||'wa')}<span class="sm mu">${esc(rolNP(tk.rolActual))}</span> ›</button>`:''}${(s==='pendiente'||s==='dificultad')&&S.rol===d.rol&&!(tk&&E.ABIERTA(tk))?` <button class="btn s ok" data-a="confItem" data-id="${c._id}" data-k="${k}">Confirmar</button>`:''}</td></tr>`}).join('')}</table>
   <div class="acts" style="margin-top:10px">${puedeCambio?`<button class="btn" data-a="cambioCx" data-id="${c._id}">Proponer reprogramación</button><button class="btn cr" data-a="suspCx" data-id="${c._id}">Suspender</button>`:''}
    ${['enfermeria','jefpab'].includes(S.rol)&&c.fecha===hoy()&&['programada','confirmada'].includes(c.estado)?`<button class="btn" data-a="iniCx" data-id="${c._id}">Registrar inicio</button>`:''}
    ${['enfermeria','jefpab'].includes(S.rol)&&c.estado==='en_curso'?`<button class="btn ok" data-a="finCx" data-id="${c._id}">Registrar término</button>`:''}</div>
   <h3 style="margin-top:14px">Historial</h3><div class="tl">${(c.hist||[]).slice(-12).reverse().map(h=>`<div><b>${esc(h.acc)}</b> · ${fDT(h.ts)} · ${esc(actorN(h.u))}${h.txt?`<div class="mu">${esc(h.txt)}</div>`:''}</div>`).join('')||'<div class="mu">Sin cambios</div>'}</div>`)}
 
 function pedir(titulo,campos,cb){flowIni('form',1);
-  modal(mHead(titulo)+`<form class="f" data-f="pedir">${campos.map(c=>`<div class="fl"><label>${c.l}${c.req?' *':''}</label>${c.t==='sel'?`<select class="in" name="${c.k}">${c.o.map(([v,t])=>`<option value="${esc(v)}" ${v===c.v?'selected':''}>${esc(t)}</option>`).join('')}</select>`:c.t==='area'?`<textarea class="in" name="${c.k}" ${c.req?'required':''} placeholder="${esc(c.ph||'')}">${esc(c.v||'')}</textarea>`:`<input class="in" type="${c.t||'text'}" name="${c.k}" value="${esc(c.v||'')}" ${c.req?'required':''} ${c.t==='file'?'accept="image/*" capture="environment"':''}>`}${c.h?`<div class="h">${c.h}</div>`:''}</div>`).join('')}<div class="row"><button class="btn p">Confirmar</button><button type="button" class="btn" data-a="cerrar">Cancelar</button></div></form>`);
+  modal(mHead(esc(titulo))+`<form class="f" data-f="pedir">${campos.map(c=>`<div class="fl"><label>${c.l}${c.req?' *':''}</label>${c.t==='sel'?`<select class="in" name="${c.k}">${c.o.map(([v,t])=>`<option value="${esc(v)}" ${v===c.v?'selected':''}>${esc(t)}</option>`).join('')}</select>`:c.t==='area'?`<textarea class="in" name="${c.k}" ${c.req?'required':''} placeholder="${esc(c.ph||'')}">${esc(c.v||'')}</textarea>`:`<input class="in" type="${c.t||'text'}" name="${c.k}" value="${esc(c.v||'')}" ${c.req?'required':''} ${c.t==='file'?'accept="image/*" capture="environment"':''}>`}${c.h?`<div class="h">${c.h}</div>`:''}</div>`).join('')}<div class="row"><button class="btn p">Confirmar</button><button type="button" class="btn" data-a="cerrar">Cancelar</button></div></form>`);
   window._pedirCb=cb;
 }
 const pacienteOK=(...t)=>{const d=t.map(E.datosPaciente).find(Boolean);if(d){toast(`Bloqueado: el texto parece contener ${d}. No registre datos identificatorios de pacientes.`);return false}return true};
@@ -2352,7 +2820,14 @@ document.addEventListener('click',async e=>{
     salir:()=>salir(),cambiar:()=>salir('Elija el perfil con que desea actuar.'),cerrar:()=>{window._flow=null;cerrarModal()},
     appmenu:()=>{const m=$('#appmenu');if(!m.hidden){m.hidden=true;return}m.innerHTML=appMenuHTML();const r=b.getBoundingClientRect();m.style.left=Math.max(8,Math.min(r.left,innerWidth-292))+'px';m.style.top=(r.bottom+6)+'px';m.hidden=false},
     informeAhora:()=>informeAhora(),
-    q1:async()=>{e.preventDefault();e.stopPropagation();flowIni(route()[0]==='puerta'?'puerta':'q1',1);b.disabled=true;const m={ini:'iniCx',fin:'finCx',cama:'trasladoUrpa',chk:'confItem'}[b.dataset.q];if(m){await A[m]();toast('✓ '+(b.textContent||'Registrado').trim())}else await q1Extra(b)},
+    pubTabla:async()=>{const d=b.dataset.d,e=b.dataset.e;if(e==='definitiva'&&!confirm('¿Publicar la tabla definitiva? Se difunde a los equipos y unidades de apoyo, y desde ahora cada cambio queda registrado como cambio sobre la tabla publicada.'))return;await publicarTabla(d,e)},
+    bloqGuardar:()=>bloqGuardar(),bloqLiberar:()=>bloqLiberar(b.dataset.id,b.dataset.d),
+    lvcs:()=>guardarLVCS(b.dataset.id,b.dataset.v==='1'),remA21:()=>remA21(),
+    stdGuardar:()=>stdGuardar(),dotGuardar:()=>dotGuardar(b.dataset.d,window._dia||manana()),stdReal:()=>stdReal(),
+    ajCiclo:async()=>{await ajustarCiclos(b.dataset.id,b.dataset.d);if(!$('#modal').hidden&&route()[0]!=='tarea')$('#modal .card')&&($('#modal .card').innerHTML=fichaPab(b.dataset.id))},
+    ajCicloTodos:async()=>{if(!confirm('¿Ajustar la programación de todos los pabellones al ciclo estándar? Solo se mueven las cirugías aún programadas.'))return;for(const {p} of resumenCiclos(b.dataset.d).porPab)await ajustarCiclos(p._id,b.dataset.d)},
+    usarHora:()=>{const f=b.closest('form');f.h.value=b.dataset.h;cicloForm(f,'h')},
+    q1:async()=>{e.preventDefault();e.stopPropagation();flowIni(route()[0]==='puerta'?'puerta':'q1',1);b.disabled=true;const m={ini:'iniCx',fin:'finCx',cama:'trasladoUrpa',chk:'confItem'}[b.dataset.q];if(m){if((await A[m]())!==false)toast('✓ '+(b.textContent||'Registrado').trim());b.disabled=false}else await q1Extra(b)},
     fallaRapida:async()=>{flowIni('puerta',1);const pab=b.dataset.pab,tipo=b.dataset.tipo;const {iid,fol}=await fallaRapida(pab,tipo);
       modal(`<div class="tour"><div class="tic ok">${ico('ok')}</div><h2>Falla registrada</h2><p><b>${esc(fol)}</b> · ${esc(tipo)} · ${esc(pabN(pab))}<br>Ya se avisó a ${RESP_TIPO[tipo]==='concesionaria'?'la concesionaria':'Equipos Médicos'} y a Jefe de Pabellones.</p>
       <form class="f" data-f="fallaExtra" data-id="${iid}"><div class="fl"><label>Comentario (opcional, sin datos de pacientes)</label><textarea class="in" name="desc"></textarea></div>${ASSETS?'<div class="fl"><label>Foto (opcional, sin personas)</label><input class="in" type="file" name="foto" accept="image/*" capture="environment"></div>':''}
@@ -2386,7 +2861,10 @@ document.addEventListener('click',async e=>{
       {k:'fs',l:'¿Deja el pabellón fuera de servicio?',t:'sel',v:'no',o:[['no','No'],['si','Sí']]},{k:'desc',l:'Descripción breve',t:'area',req:1,ph:'Sin datos de pacientes'},...(ASSETS?[{k:'foto',l:'Fotografía (sin personas ni datos de pacientes)',t:'file'}]:[])],async v=>{
       if(!pacienteOK(v.desc))return false;const foto=v.foto?await subir(v.foto):null;const iid=uid();const y=new Date(nowMs()).getFullYear();const fol=`INC-${y}-${String(L('incidencias').length+1).padStart(3,'0')}`;
       await put('incidencias',iid,{folio:fol,pabellon:v.pab,tipo:v.tipo,responsable:v.resp,prioridad:v.prio,fueraServicio:v.fs==='si',desc:v.desc,fotos:foto?[foto]:[],estado:'abierta',ts:new Date(nowMs()).toISOString(),por:ak(),hist:[{ts:new Date(nowMs()).toISOString(),acc:'Registrada',u:ak(),rol:S.rol}]});
-      if(v.fs==='si'){const p=byId('pabellones',v.pab);await put('pabellones',v.pab,{...clean(p),estado:'fuera_servicio',ver:(p.ver||1)+1})}
+      if(v.fs==='si'){const p=byId('pabellones',v.pab);await put('pabellones',v.pab,{...clean(p),estado:'fuera_servicio',ver:(p.ver||1)+1});
+        const af=L('cirugias').filter(c=>c.pabellon===v.pab&&c.fecha>=hoy()&&['programada','confirmada'].includes(c.estado)&&(c.fecha>hoy()||E.inicioCx(c)>nowMs()));
+        if(af.length){const tid2=`reprog-${iid}`;await put('tareas',tid2,{folio:folio(),tipo:'cambio',origen:'Pabellón fuera de servicio ('+fol+')',unidadSol:S.rol,rolResp:'coordq',rolActual:'coordq',accion:`Reubicar ${af.length} cirugía${af.length>1?'s':''} de ${p.nombre}`,dominio:'operacional',prioridad:'alta',ts:new Date(nowMs()).toISOString(),plazo:new Date(nowMs()+cfg.plazoMin.alta*6e4).toISOString(),antecedentes:`${p.nombre} quedó fuera de servicio por ${v.tipo.toLowerCase()}. Cirugías afectadas: ${af.slice(0,12).map(c=>c.codigo+' ('+c.fecha.slice(5)+' '+c.hIni+')').join(', ')}${af.length>12?'…':''}. Proponga reprogramación de cada una o confirme que el pabellón vuelve a tiempo.`,ref:{tipo:'afectadas',id:iid,cx:af.map(c=>c._id)},estado:'pendiente',nivel:0,ver:1,hist:[{ts:new Date(nowMs()).toISOString(),acc:'Creada',txt:'Cierre de pabellón con cirugías programadas',u:'sistema'}]});
+          notificar('alta',`${af.length} cirugía${af.length>1?'s':''} afectada${af.length>1?'s':''} · ${p.nombre}`,`Pabellón fuera de servicio. Reubicar o confirmar.`,['coordq','jefpab'],{tipo:'tarea',id:tid2})}}
       const rr=v.resp==='concesionaria'?'concesionaria':'mantenimiento';const tid=`inc-${iid}-atender`;
       await put('tareas',tid,{folio:folio(),tipo:'incidencia',origen:'Incidencia '+fol,unidadSol:S.rol,rolResp:rr,rolActual:rr,accion:`Atender incidencia: ${v.tipo} · ${pabN(v.pab)}`,dominio:v.resp==='concesionaria'?'contractual':'operacional',prioridad:v.prio==='informativa'?'preventiva':v.prio,ts:new Date(nowMs()).toISOString(),plazo:new Date(nowMs()+(cfg.plazoMin[v.prio]||120)*6e4).toISOString(),antecedentes:v.desc+(v.resp==='concesionaria'?' · Requerimiento a la Sociedad Concesionaria; registrar respuesta y plazo según contrato.':''),evidencia:foto?[foto]:[],ref:{tipo:'incidencia',id:iid,etapa:'atender'},estado:'pendiente',nivel:0,ver:1,hist:[{ts:new Date(nowMs()).toISOString(),acc:'Creada',u:ak(),rol:S.rol}]});
       notificar(v.prio,`Incidencia ${v.tipo} · ${pabN(v.pab)}`,v.desc,[rr,'jefpab'],{tipo:'tarea',id:tid},null,['hlf_incidencia',v.tipo.toLowerCase()]);
@@ -2395,24 +2873,33 @@ document.addEventListener('click',async e=>{
       {k:'prio',l:'Prioridad',t:'sel',v:'alta',o:Object.keys(PRIO).map(k=>[k,PRIO[k][0]])},{k:'ant',l:'Antecedentes',t:'area'}],async v=>{if(!pacienteOK(v.acc,v.ant))return false;const tid=uid();const p=v.prio==='informativa'?'preventiva':v.prio;
       await put('tareas',tid,{folio:folio(),tipo:'manual',origen:'Solicitud de '+rolN(S.rol),unidadSol:S.rol,rolResp:v.rol,rolActual:v.rol,accion:v.acc,dominio:v.dom,prioridad:p,ts:new Date(nowMs()).toISOString(),plazo:new Date(nowMs()+cfg.plazoMin[p]*6e4).toISOString(),antecedentes:v.ant,estado:'pendiente',nivel:0,ver:1,hist:[{ts:new Date(nowMs()).toISOString(),acc:'Creada',u:ak(),rol:S.rol}]});
       notificar(p,'Nueva solicitud de validación',v.acc,[v.rol],{tipo:'tarea',id:tid},null,['hlf_validacion','Una unidad']);log('Crea solicitud',v.acc,{atrib:'Solicitar'});toast('Solicitud enviada')}),
-    nuevaCx:()=>pedir('Nueva cirugía (datos ficticios)',[{k:'cod',l:'Código de intervención',v:'CX-'+String(L('cirugias').length+1).padStart(4,'0')},{k:'pac',l:'Referencia ficticia del paciente',v:'PAC-'+String(1000+L('cirugias').length)+' (ficticio)',h:'Nunca nombres ni RUT.'},{k:'proc',l:'Procedimiento',req:1},{k:'esp',l:'Especialidad',req:1},
-      {k:'pab',l:'Pabellón',t:'sel',o:L('pabellones').map(p=>[p._id,p.nombre])},{k:'fecha',l:'Fecha',t:'date',v:manana()},{k:'h',l:'Hora',t:'time',v:'08:00'},{k:'dur',l:'Duración (min)',t:'number',v:'90'}],async v=>{if(!pacienteOK(v.pac,v.proc))return false;
-      const conf=L('cirugias').find(c=>c.pabellon===v.pab&&c.fecha===v.fecha&&c.estado!=='suspendida'&&hm(c.hIni)<hm(v.h)+(+v.dur)&&hm(v.h)<hm(c.hIni)+(+c.durMin));if(conf){toast(`Conflicto con ${conf.codigo} en el mismo pabellón y horario.`);return false}
-      const cid=uid();await put('cirugias',cid,{codigo:v.cod,pacienteRef:v.pac,procedimiento:v.proc,especialidad:v.esp,pabellon:v.pab,fecha:v.fecha,hIni:v.h,durMin:+v.dur,estado:'programada',checklist:Object.fromEntries(Object.keys(E.CHECK).map(k=>[k,{estado:'pendiente'}])),ver:1,hist:[{ts:new Date(nowMs()).toISOString(),acc:'Programada',u:ak(),rol:S.rol}]});log('Programa cirugía',v.cod,{atrib:'Registrar'});motor()}),
+    nuevaCx:()=>pedir('Nueva cirugía (datos ficticios)',[{k:'cod',l:'Código de intervención',v:'CX-'+String(L('cirugias').length+1).padStart(4,'0')},{k:'pac',l:'Referencia ficticia del paciente',v:'PAC-'+String(1000+L('cirugias').length)+' (ficticio)',h:'Nunca nombres ni RUT.'},{k:'proc',l:'Procedimiento',t:'sel',o:[['','Elegir del catálogo de tiempos estándar…'],...estandares().procs.map(p=>[p.proc,p.proc+' · '+p.esp])]},{k:'esp',l:'Especialidad',req:1},
+      {k:'pab',l:'Pabellón',t:'sel',o:L('pabellones').filter(p=>p.estado!=='fuera_servicio').sort(pabOrd).map(p=>[p._id,p.nombre])},{k:'fecha',l:'Fecha',t:'date',v:manana()},{k:'h',l:'Hora',t:'time',v:'08:00'},{k:'cond',l:'Tipo en la tabla',t:'sel',o:[['','Programado'],['condicional','Condicional (suplente, más allá de 8 h de tabla)'],['agregado','Agregado (autorizado por jefatura de pabellón)']]},{k:'origen',l:'Origen en lista de espera',t:'sel',o:Object.entries(ORIGEN)},{k:'dur',l:'Duración (min)',t:'number',v:'90',h:'<div id="cicloInfo" class="cyinfo">Elija el procedimiento para ver su ciclo estándar.</div>'}],async v=>{if(!v.proc){toast('Elija el procedimiento');return false}if(!pacienteOK(v.pac,v.proc))return false;
+      if(v.fecha<hoy()){toast('No se puede programar en una fecha pasada');return false}
+      const conf=choqueCx({pabellon:v.pab,fecha:v.fecha,hIni:v.h,durMin:+v.dur,procedimiento:v.proc});if(conf){toast(`Choca con ${conf.codigo} en ${pabN(v.pab)}, contando el aseo estándar entre ambas.`);return false}
+      {const pb=byId('pabellones',v.pab);if(pb&&hm(v.h)+(+v.dur)>hm(pb.fin||'17:00')&&!confirm(`La cirugía terminaría después del cierre de la jornada de ${pb.nombre} (${pb.fin}). ¿Programarla igual como extensión de jornada?`))return false}
+      const cid=uid();await put('cirugias',cid,{codigo:v.cod,pacienteRef:v.pac,procedimiento:v.proc,especialidad:v.esp,pabellon:v.pab,fecha:v.fecha,hIni:v.h,durMin:+v.dur,estado:'programada',origen:v.origen||'noges',...((v.cond||(tablaDe(v.fecha).estado==='definitiva'?'agregado':''))?{cond:v.cond||'agregado'}:{}),checklist:Object.fromEntries(Object.keys(E.CHECK).map(k=>[k,{estado:'pendiente'}])),ver:1,hist:[{ts:new Date(nowMs()).toISOString(),acc:'Programada',u:ak(),rol:S.rol}]});log('Programa cirugía',v.cod,{atrib:'Registrar'});motor()}),
     cambioCx:()=>{const c=byId('cirugias',id);pedir('Proponer reprogramación '+c.codigo,[{k:'fecha',l:'Fecha',t:'date',v:c.fecha},{k:'h',l:'Hora',t:'time',v:c.hIni},{k:'pab',l:'Pabellón',t:'sel',v:c.pabellon,o:L('pabellones').filter(p=>p.estado!=='fuera_servicio').map(p=>[p._id,p.nombre])},{k:'mot',l:'Motivo',t:'area',req:1}],async v=>{
-      const conf=L('cirugias').find(x=>x._id!==id&&x.pabellon===v.pab&&x.fecha===v.fecha&&x.estado!=='suspendida'&&hm(x.hIni)<hm(v.h)+(+c.durMin)&&hm(v.h)<hm(x.hIni)+(+x.durMin));if(conf){toast(`Conflicto con ${conf.codigo}.`);return false}
+      if(v.fecha<hoy()){toast('No se puede reprogramar a una fecha pasada');return false}const conf=choqueCx({...c,pabellon:v.pab,fecha:v.fecha,hIni:v.h},id);if(conf){toast(`Choca con ${conf.codigo}, contando el aseo estándar.`);return false}
       const tid=uid();await put('tareas',tid,{folio:folio(),tipo:'cambio',origen:'Propuesta de '+rolN(S.rol),unidadSol:S.rol,rolResp:'jefpab',rolActual:'jefpab',accion:`Aprobar cambio de programación · ${c.codigo}`,dominio:'clinico',prioridad:'alta',ts:new Date(nowMs()).toISOString(),plazo:new Date(nowMs()+cfg.plazoMin.alta*6e4).toISOString(),antecedentes:`De ${c.fecha} ${c.hIni} ${pabN(c.pabellon)} a ${v.fecha} ${v.h} ${pabN(v.pab)}. Motivo: ${v.mot}`,ref:{tipo:'cambio',id,cambio:{fecha:v.fecha,hIni:v.h,pabellon:v.pab},motivo:v.mot},estado:'pendiente',nivel:0,ver:1,hist:[{ts:new Date(nowMs()).toISOString(),acc:'Propuesta',txt:v.mot,u:ak(),rol:S.rol}]});
       notificar('alta','Cambio de programación por aprobar',c.codigo,['jefpab'],{tipo:'tarea',id:tid});log('Propone reprogramación',c.codigo,{atrib:'Reprogramar',motivo:v.mot});toast('Propuesta enviada a Jefe de Pabellones');cerrarModal()})},
-    suspCx:()=>{const c=byId('cirugias',id);pedir('Suspender '+c.codigo,[{k:'causa',l:'Causa',t:'sel',o:['Paciente no se presenta','Condición clínica del paciente','Falta de cama','Falta de instrumental','Falta de insumos','Pabellón no disponible','Prolongación de tabla','Falta de personal','Falla de equipamiento'].map(x=>[x,x])},{k:'f',l:'Fundamento',t:'area',req:1}],async v=>{
+    suspCx:()=>{const c=byId('cirugias',id);pedir('Suspender '+c.codigo,[{k:'causa',l:'Causa (categorías REM A21)',t:'sel',o:causasOpts()},{k:'f',l:'Fundamento',t:'area',req:1}],async v=>{
       const f=await fresh('cirugias',id);const {_id,...x}=f;x.estado='suspendida';x.causaSusp=v.causa;x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:'Suspendida: '+v.causa,txt:v.f,u:ak(),rol:S.rol}];await put('cirugias',id,x);
       notificar('alta','Cirugía suspendida',`${c.codigo} · ${v.causa}`,['coordq','jefpab'],{tipo:'programacion'});log('Suspende cirugía',c.codigo,{atrib:'Reprogramar',motivo:v.f,antes:{estado:f.estado},despues:{estado:'suspendida'}});cerrarModal()})},
-    iniCx:async()=>{const f=await fresh('cirugias',id);const {_id,...x}=f;x.estado='en_curso';x.inicioReal=new Date(nowMs()).toISOString();x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts:x.inicioReal,acc:'Inicio registrado',u:ak(),rol:S.rol}];await put('cirugias',id,x);log('Registra inicio de cirugía',f.codigo);cerrarModal()},
-    finCx:async()=>{const f=await fresh('cirugias',id);const {_id,...x}=f;x.estado='realizada';x.urpaIn=new Date(nowMs()).toISOString();x.durReal=Math.max(1,Math.round((nowMs()-Date.parse(f.inicioReal||nowMs()))/6e4));x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:'Término registrado',u:ak(),rol:S.rol}];await put('cirugias',id,x);log('Registra término de cirugía',f.codigo);
+    iniCx:async()=>{const f=await fresh('cirugias',id);if(!f||!['programada','confirmada'].includes(f.estado)){toast('La cirugía ya no está por iniciar');return false};const pb=byId('pabellones',f.pabellon);
+      const otra=L('cirugias').find(c=>c._id!==id&&c.pabellon===f.pabellon&&c.estado==='en_curso');if(otra){toast(`${pb?.nombre||'El pabellón'} tiene en curso ${otra.codigo}. Registre su término antes de iniciar otra.`);return false}
+      const av=[];if(pb&&pb.estado!=='operativo')av.push(`${pb.nombre} está ${({fuera_servicio:'fuera de servicio',por_liberar:'pendiente de liberación',en_liberacion:'en liberación'})[pb.estado]||pb.estado}`);if(pb&&aseoAbierta(pb))av.push('el aseo de recambio no está confirmado');
+      const pend=Object.keys(E.CHECK).filter(k=>f.checklist&&k in f.checklist&&['pendiente','dificultad'].includes(f.checklist[k].estado)).map(k=>E.CHECK[k].n.toLowerCase());if(pend.length)av.push('sin confirmar: '+pend.join(', '));
+      if(av.length&&!confirm(`Antes de iniciar ${f.codigo}: ${av.join('; ')}. ¿Registrar el inicio igual? Quedará anotado en el historial.`))return false;
+      const {_id,...x}=f;if(av.length)x.inicioConAlertas=av;x.estado='en_curso';x.inicioReal=new Date(nowMs()).toISOString();x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts:x.inicioReal,acc:'Inicio registrado',...(av.length?{txt:'Con alertas: '+av.join('; ')}:{}),u:ak(),rol:S.rol}];await put('cirugias',id,x);log('Registra inicio de cirugía',f.codigo);cerrarModal()},
+    finCx:async()=>{const f=await fresh('cirugias',id);if(!f||f.estado!=='en_curso'){toast('La cirugía no está en curso');return false};setTimeout(()=>pedirLVCS(id),900);const {_id,...x}=f;x.estado='realizada';x.urpaIn=new Date(nowMs()).toISOString();x.durReal=Math.max(1,Math.round((nowMs()-Date.parse(f.inicioReal||nowMs()))/6e4));x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:'Término registrado',u:ak(),rol:S.rol}];await put('cirugias',id,x);log('Registra término de cirugía',f.codigo);
       const nx=L('cirugias').filter(c=>c.pabellon===f.pabellon&&c.fecha===f.fecha&&hm(c.hIni)>hm(f.hIni)&&!['suspendida','realizada'].includes(c.estado)).sort((a,b)=>hm(a.hIni)-hm(b.hIni))[0];const ts=new Date(nowMs()).toISOString();
-      await put('tareas','aseo-'+id,{folio:folio(),tipo:'aseo',origen:'Término de cirugía '+f.codigo,unidadSol:S.rol,rolResp:'concesionaria',rolActual:'concesionaria',accion:`Aseo de recambio · ${pabN(f.pabellon)}${nx?` · próxima cirugía ${nx.hIni}`:''}`,dominio:'contractual',prioridad:'alta',nivel:0,ver:1,ts,plazo:new Date(nowMs()+25*6e4).toISOString(),antecedentes:'Pabellón desocupado. Meta de recambio: 25 minutos. Confirme al terminar para que enfermería ingrese al siguiente paciente.',ref:{tipo:'pabellon',id:f.pabellon},estado:'pendiente',hist:[{ts,acc:'Creada automáticamente al registrar término',u:'sistema'}]});
+      const sa=stdDe(f.procedimiento).aseo;await put('tareas','aseo-'+id,{folio:folio(),tipo:'aseo',tipoAseo:sa.id,origen:'Término de cirugía '+f.codigo,unidadSol:S.rol,rolResp:'concesionaria',rolActual:'concesionaria',accion:`${sa.n} (${sa.min} min) · ${pabN(f.pabellon)}${nx?` · próxima cirugía ${nx.hIni}`:''}`,dominio:'contractual',prioridad:'alta',nivel:0,ver:1,ts,plazo:new Date(nowMs()+sa.min*6e4).toISOString(),antecedentes:`Pabellón desocupado. Tipo de aseo según estándar: ${sa.n}, ${sa.min} minutos. ${sa.d||''} Confirme al terminar para que enfermería ingrese al siguiente paciente.`,ref:{tipo:'pabellon',id:f.pabellon},estado:'pendiente',hist:[{ts,acc:'Creada automáticamente al registrar término',u:'sistema'}]});
       notificar('alta','Aseo de recambio solicitado',pabN(f.pabellon),['concesionaria'],{tipo:'tarea',id:'aseo-'+id});cerrarModal()},
     confItem:async()=>{const c=await fresh('cirugias',id);const k=b.dataset.k;const {_id,...x}=c;x.checklist={...x.checklist,[k]:{estado:'ok',por:S.rol,ts:new Date(nowMs()).toISOString()}};x.ver=(c.ver||1)+1;x.hist=[...(c.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:`Checklist · ${E.CHECK[k].n}: ok`,u:ak(),rol:S.rol}];await put('cirugias',id,x);log('Confirma condición',c.codigo+' · '+E.CHECK[k].n,{atrib:'Validar'});cerrarModal()},
     trasladoUrpa:async()=>{const f=await fresh('cirugias',id);if(!f)return;const {_id,...x}=f;x.urpaOut=new Date(nowMs()).toISOString();x.ver=(f.ver||1)+1;x.hist=[...(f.hist||[]),{ts:x.urpaOut,acc:'Traslado desde recuperación',txt:'Destino: '+(f.destino==='upc'?'UPC':f.destino==='ambulatorio'?'alta ambulatoria':'sala'),u:ak(),rol:S.rol}];await put('cirugias',id,x);log('Registra traslado desde recuperación',f.codigo);toast('Traslado registrado')},
+    verTarea:()=>{const cx=b.dataset.cx;cerrarModal();window._volverCx=cx;abrirTarea(id)},
+    volverCx:()=>{window._volverCx=null;cerrarModal();abrirCx(id)},
     chatTarea:()=>{const t=byId('tareas',id);window._canal=t.ref?.tipo==='incidencia'?'inc-'+t.ref.id:'general';cerrarModal();location.hash='mensajes'},
     nuevoComp:()=>pedir('Nuevo compromiso',[{k:'tit',l:'Compromiso / acción correctiva',req:1},{k:'def',l:'Deficiencia detectada',t:'area',req:1},{k:'rol',l:'Responsable',t:'sel',o:ROLKEYS.filter(r=>r!=='admin').map(r=>[r,rolN(r)])},{k:'plazo',l:'Plazo',t:'date',v:isoD(nowMs()+7*864e5)}],async v=>{const cid=uid();
       await put('compromisos',cid,{titulo:v.tit,deficiencia:v.def,rol:v.rol,plazo:v.plazo+'T18:00:00',avance:0,estado:'en_curso',creador:S.rol,ts:new Date(nowMs()).toISOString(),hist:[{ts:new Date(nowMs()).toISOString(),acc:'Creado',u:ak(),rol:S.rol}]});notificar('preventiva','Nuevo compromiso asignado',v.tit,[v.rol],{tipo:'compromisos'});log('Crea compromiso',v.tit)}),
@@ -2454,6 +2941,10 @@ document.addEventListener('change',async e=>{const t=e.target;
   if(t.dataset&&t.dataset.dpick){if(t.value){window._dia=t.value;render()}return}
   if(t.id==='perSel'){const [m,x]=t.value.split(':');const r=m==='demo'?DEMO.find(y=>y.id===x)?.r:x;const el=$('#perDesc');if(el)el.textContent=(ROLQ[r]||'')+'.'+(persona(r)?` A cargo hoy: ${persona(r).n}${persona(r).s?' (subrogante)':''}.`:'');return}
   if(t.dataset.a==='flt'){window._F[t.dataset.k]=t.value;render();return}
+  if(t.dataset.std){stdEdit(t);return}
+  if(t.dataset.dot){dotEdit(t);return}
+  if(t.dataset.eqr){eqEdit(t);return}
+  if(t.closest&&t.closest('form[data-f=pedir]')&&['proc','pab','fecha','h','esp','cond'].includes(t.name)){cicloForm(t.form,t.name);return}
   if(t.dataset.a==='evid'&&t.files[0]){const u=await subir(t.files[0]);if(!u)return;const x=await fresh('tareas',t.dataset.id);const {_id,...b}=x;b.evidencia=[...(b.evidencia||[]),u];b.ver=(x.ver||1)+1;b.hist=[...(b.hist||[]),{ts:new Date(nowMs()).toISOString(),acc:'Evidencia adjunta',u:ak(),rol:S.rol}];await put('tareas',x._id,b);log('Adjunta evidencia',x.folio);cerrarModal();abrirTarea(x._id)}
   if(t.dataset.a==='rolN'){await put('config','general',{...clean(general),rolesN:{...(general.rolesN||{}),[t.dataset.r]:t.value.trim()}});log('Renombra perfil',t.dataset.r+' → '+t.value)}
 });
@@ -2462,7 +2953,7 @@ let buscaT;document.addEventListener('input',e=>{const t=e.target;
   if(t.dataset.a==='buscaU'){clearTimeout(buscaT);buscaT=setTimeout(async()=>{try{const r=await USER.search(t.value);$('#uSel').innerHTML='<option value="">— Seleccione —</option>'+(r||[]).map(h=>`<option value="${esc(h.id)}">${esc(h.name||h.email||h.id)}</option>`).join('')}catch(x){}},350)}});
 function confirmar(titulo,label,req,cb){pedir(titulo,[{k:'f',l:label,t:'area',req}],v=>cb(v.f))}
 document.addEventListener('submit',async e=>{const f=e.target;const k=f.dataset.f;if(!k)return;e.preventDefault();const fd=new FormData(f);const v=Object.fromEntries(fd);
-  if(k==='pedir'){const fl=f.querySelector('input[type=file]');if(fl)v[fl.name]=fl.files[0]||null;const btn=f.querySelector('.btn.p');btn.disabled=true;const r=await window._pedirCb?.(v);btn.disabled=false;if(r!==false)cerrarModal();return}
+  if(k==='pedir'){if(!pacienteOK(...Object.entries(v).filter(([n,x])=>typeof x==='string'&&!['pac'].includes(n)).map(([,x])=>x)))return;const fl=f.querySelector('input[type=file]');if(fl)v[fl.name]=fl.files[0]||null;const btn=f.querySelector('.btn.p');btn.disabled=true;const r=await window._pedirCb?.(v);btn.disabled=false;if(r!==false)cerrarModal();return}
   if(k==='solicitud'){await DB.doc('lecturas/'+me.id).set({solicitud:{cargo:v.cargo,ts:new Date().toISOString()}}).catch(x=>toast(errTxt(x)));render();return}
   if(k==='msg'){if(!v.texto.trim())return;if(!pacienteOK(v.texto))return;const file=f.querySelector('input[type=file]')?.files?.[0];const foto=file?await subir(file):null;
     await put('mensajes',uid(),{canal:window._canal,texto:v.texto.trim(),p:ak(),u:me.id,rol:S.rol,ts:new Date(nowMs()).toISOString(),prio:v.prio?'operacional':'normal',ref:v.ref?{tipo:'tarea',id:v.ref}:null,foto:foto||null});
@@ -2476,6 +2967,7 @@ document.addEventListener('submit',async e=>{const f=e.target;const k=f.dataset.
   if(k==='indext'){const num=x=>x===''||x==null?null:+x;const d={iemaT1:num(v.iemaT1),iemaT:num(v.iemaT),lePct:num(v.lePct),p75Pct:num(v.p75Pct),menorPct:num(v.menorPct),corte:v.corte||'',por:ak(),ts:new Date().toISOString()};const ant=byId('indicadores','externos');await put('indicadores','externos',d);log('Registra indicadores externos',v.corte||'',{atrib:'Registrar',antes:ant?clean(ant):null,despues:d});toast('Indicadores guardados');return}
   if(k==='censo'){for(const s of [...SVCQ,'urpa']){const c=byId('camas',s);if(!c)continue;const n={...clean(c)};if(s==='urpa'){if(v['dot_urpa']!=='')n.dot=+v['dot_urpa']}else{if(v['ocup_'+s]!=='')n.ocup=+v['ocup_'+s];if(v['altas_'+s]!=='')n.altas=+v['altas_'+s]}await put('camas',s,n)}
     await put('camas','censo',{corte:new Date(nowMs()).toISOString(),por:ak(),fuente:'Registro de '+rolN(S.rol)});log('Actualiza censo de camas','',{atrib:'Registrar'});toast('Censo guardado');return}
+  if(k==='acta'){if(!pacienteOK(v.txt))return;await put('actas',hoy(),{txt:v.txt||'',ts:new Date(nowMs()).toISOString(),por:S.rol});log('Registra acta de reunión de tabla',hoy(),{atrib:'Registrar'});toast('✓ Acta guardada');return}
   if(k==='fallaExtra'){const id=f.dataset.id;if(v.desc&&!pacienteOK(v.desc))return;const file=f.querySelector('[name=foto]')?.files?.[0];const foto=file?await subir(file):null;const i=await fresh('incidencias',id);if(i){const {_id,...x}=i;if(v.desc)x.desc=v.desc;if(foto)x.fotos=[...(x.fotos||[]),foto];x.ver=(i.ver||1)+1;await put('incidencias',id,x)}toast('✓ Información agregada');cerrarModal();return}
   if(k==='ficha'){const n=+v.n||0;const filas=[];for(let i=0;i<n;i++){const d=(v['a_'+i]||'').trim();if(d)filas.push([d,(v['b_'+i]||'').trim(),(v['c_'+i]||'').trim()])}
     await put('config','ficha',{filas,ts:new Date(nowMs()).toISOString(),por:S.rol});log('Edita datos del establecimiento',filas.length+' datos',{atrib:'Administrar configuraciones'});toast('Datos del establecimiento guardados');return}
@@ -2513,7 +3005,7 @@ function verInforme(id){const i=byId('informes',id);if(!i)return;const d=i.datos
   ${['semanal','mensual'].includes(i.tipo)?`<h3>Tendencia</h3>${tb(d.semanas,[['sem','Semana',fD],['prog','Programadas'],['real','Realizadas'],['susp','Suspendidas'],['util','Utilización',v=>pct(v)]])}`:''}
   <div class="acts noprint" style="margin-top:12px">${i.estado==='borrador'&&puedeVal?`<button class="btn ok" data-a="valInf" data-id="${id}">Validar información</button>`:''}${i.estado==='validado'&&P('informes')?`<button class="btn p" data-a="disInf" data-id="${id}">Distribuir</button>`:''}
   <button class="btn" data-a="xlsInf" data-id="${id}">Excel</button><button class="btn" data-a="pdfInf" data-id="${id}">PDF</button></div>`)}
-async function descargar(nombre,data,mime){try{const d=await claude.use('downloads');if(!d){toast('Esta vista no permite descargar archivos');return}await d.save({filename:nombre,data:new Blob([data],{type:mime})})}catch(e){if(e?.code!=='cancelled')toast('No se pudo descargar')}}
+async function descargar(nombre,data,mime){if(general.exportRestr!==false&&!P('informes')&&S?.rol!=='admin'){toast('Su perfil no puede exportar archivos. Solicítelo a quien emite informes.');log('Exportación bloqueada',nombre);return}log('Descarga de archivo',nombre,{atrib:'Emitir informes'});try{const d=await claude.use('downloads');if(!d){toast('Esta vista no permite descargar archivos');return}await d.save({filename:nombre,data:new Blob([data],{type:mime})})}catch(e){if(e?.code!=='cancelled')toast('No se pudo descargar')}}
 async function xlsx(nombre,hojas){const wb=new MiniXLSX.Workbook();hojas.forEach(([n,cols,rows])=>{const ws=wb.addWorksheet(n);ws.columns=cols.map(()=>({width:22}));cols.forEach((c,j)=>{const x=ws.getCell(1,j+1);x.value=c;x.font={bold:true,color:{argb:'FFFFFFFF'}};x.fill={type:'pattern',pattern:'solid',fgColor:{argb:'FF0B5CAD'}}});rows.forEach((r,i)=>r.forEach((v,j)=>ws.getCell(i+2,j+1).value=v))});
   const buf=await wb.xlsx.writeBuffer();await descargar(nombre,buf,'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')}
 function exportInforme(id){const i=byId('informes',id),d=i.datos||{},k=d.kpis||{};log('Exporta informe a Excel',i.titulo,{atrib:'Emitir informes'});
@@ -2547,7 +3039,7 @@ async function informeAhora(){$('#appmenu')&&($('#appmenu').hidden=true);toast('
   const doc=new jspdf.jsPDF({unit:'pt',format:'letter'}),W=doc.internal.pageSize.getWidth();let y=46;
   doc.setFillColor(11,92,173);doc.rect(0,0,W,6,'F');doc.setFontSize(16);doc.setTextColor(11,92,173);doc.text('Informe de situación actual de pabellones',40,y);doc.setTextColor(0);y+=16;doc.setFontSize(9);
   [`Hospital Clínico Dra. Eloísa Díaz Insunza de La Florida · Qronos™ · Coordinación de pabellones`,`Emitido: ${fDT(now)} · Corte de información: ${fH(now)} h`,`Emite: ${rolN(S.rol)}${p?' · '+p.n+(p.s?' (subrogante)':''):''}`].forEach(t=>{doc.text(t,40,y);y+=12});
-  doc.setTextColor(200,0,0);doc.text('VERSIÓN DE PRUEBA 0.1 · DATOS FICTICIOS · NO USAR PARA DECISIONES CLÍNICAS',40,y);doc.setTextColor(0);y+=6;
+  doc.setTextColor(200,0,0);doc.text('VERSIÓN DE PRUEBA 0.2 · DATOS FICTICIOS · NO USAR PARA DECISIONES CLÍNICAS',40,y);doc.setTextColor(0);y+=6;
   /* Página 1 gráfica: semáforo, cifras grandes y línea de tiempo por pabellón */
   {const est0=k.incCriticas||k.vencidas?[215,0,21,'REQUIERE ATENCIÓN']:k.riesgosManana||k.pabFuera?[196,81,0,'OPERACIÓN CON RIESGOS']:[36,138,61,'OPERACIÓN NORMAL'];y+=18;
    doc.setFillColor(...est0.slice(0,3));doc.roundedRect(40,y,W-80,34,8,8,'F');doc.setTextColor(255);doc.setFontSize(15);doc.text(est0[3],W/2,y+22,{align:'center'});doc.setTextColor(0);y+=48;
@@ -2589,8 +3081,8 @@ async function informeAhora(){$('#appmenu')&&($('#appmenu').hidden=true);toast('
   if(!['concesionaria','concesion'].includes(S.rol)){const R=periop();
     tab('Camas y recuperación',['Servicio','Libres','Altas previstas','Requiere hoy','Saldo hoy','Requiere mañana','Saldo mañana'],R.sv.map(s=>[s.n,s.libres,s.altas,s.reqH,s.saldoH,s.reqM,s.saldoM]));
     if(R.bloq.length)tab('Pacientes retenidos en recuperación',['Cirugía','Pabellón','Minutos esperando','Destino'],R.bloq.map(({c,min})=>[c.codigo,pabN(c.pabellon),min,c.destino==='upc'?'UPC':'Sala']))}
-  const np=doc.internal.getNumberOfPages();for(let i=1;i<=np;i++){doc.setPage(i);doc.setFontSize(7);doc.setTextColor(130);doc.text(`Qronos™ · Informe de situación ${fDT(now)} · Versión de prueba 0.1 · datos ficticios · página ${i} de ${np}`,40,doc.internal.pageSize.getHeight()-20);
-    doc.setTextColor(238);doc.setFontSize(46);doc.text('VERSIÓN DE PRUEBA 0.1',W/2,doc.internal.pageSize.getHeight()/2,{align:'center',angle:30});doc.setTextColor(0)}
+  const np=doc.internal.getNumberOfPages();for(let i=1;i<=np;i++){doc.setPage(i);doc.setFontSize(7);doc.setTextColor(130);doc.text(`Qronos™ · Informe de situación ${fDT(now)} · Versión de prueba 0.2 · datos ficticios · página ${i} de ${np}`,40,doc.internal.pageSize.getHeight()-20);
+    doc.setTextColor(238);doc.setFontSize(46);doc.text('VERSIÓN DE PRUEBA 0.2',W/2,doc.internal.pageSize.getHeight()/2,{align:'center',angle:30});doc.setTextColor(0)}
   log('Emite informe de situación actual',`Corte ${fH(now)}`,{atrib:'Consultar'});
   const d=new Date(now),st=isoD(now)+'_'+String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0');
   await descargar(`Qronos_situacion_${st}.pdf`,doc.output('arraybuffer'),'application/pdf')}
@@ -2608,7 +3100,7 @@ async function pruebaBD(){const el=$('#pbd');const out=[];const ok=(n,c,d='')=>o
 /* ---------- Escenario de demostración (todo ficticio) ---------- */
 async function seed(){
   toast('Cargando simulación…');const t=new Date();const off=0;
-  for(const c of ['camas','pabellones','cirugias','tareas','incidencias','liberaciones','mensajes','notifs','compromisos','informes','salidas','produccion','registro','bloqueos'])await Promise.all(L(c).slice().map(x=>del(c,x._id)));
+  for(const c of ['camas','pabellones','cirugias','tareas','incidencias','liberaciones','mensajes','notifs','compromisos','informes','salidas','produccion','registro','bloqueos','tablas','actas'])await Promise.all(L(c).slice().map(x=>del(c,x._id)));
   await put('config','general',{...clean(general),institucion:'Hospital Clínico Dra. Eloísa Díaz Insunza de La Florida',demo:{activo:true,offsetMin:off,sim:true,cargarSim:false}});
   const sim=generarSimulacion(t.getTime());
   for(const [c,docs] of Object.entries(sim))await Promise.all(Object.entries(docs).map(([id,d])=>put(c,id,d)));
